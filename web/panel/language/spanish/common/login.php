@@ -8,8 +8,8 @@ $_['text_login']     = 'Datos de Conexión';
 $_['text_forgotten'] = 'Olvidaste tu Contrase&#241;a?';
 
 // Entry
-$_['entry_username'] = 'Usuario:';
-$_['entry_password'] = 'Contrase&#241;a:';
+$_['entry_username'] = 'Usuario';
+$_['entry_password'] = 'Contrase&#241;a';
 
 // Button
 $_['button_login']   = 'Conectar';
