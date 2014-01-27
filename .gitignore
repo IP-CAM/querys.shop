@@ -2,6 +2,7 @@
 /web/.htaccess
 /web/config.php
 /web/admin/config.php
+/web/panel/config.php
 
 # System Cache Files
 /web/system/cache/*
