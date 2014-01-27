@@ -31,6 +31,7 @@
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
       jQuery(document).ready(function() {     
+        App.init();
         Login.init();
       });
    </script>
