@@ -1,7 +1,7 @@
 <?php echo $header_login; ?>
 <!-- BEGIN LOGO -->
 <div class="logo">
-  <img src="assets/images/logo_querys_ltda.png" alt="Corp. Querys Ltda"/>
+  <img src="assets/img/logo-big.png" alt=""/>
 </div>
 <!-- END LOGO -->
 <!-- BEGIN LOGIN -->
@@ -56,5 +56,4 @@
     <?php } ?>
   </form>
   <!-- END LOGIN FORM -->
-
 <?php echo $footer_login; ?>
