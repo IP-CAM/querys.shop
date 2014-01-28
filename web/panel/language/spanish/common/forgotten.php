@@ -9,7 +9,7 @@ $_['text_email']      = 'Introducir el Email asociado con tu Cuenta. Presionar a
 $_['text_success']    = 'Le ha sido enviado un Email con un enlace de confirmación';
 
 // Entry
-$_['entry_email']     = 'Email:';
+$_['entry_email']     = 'Email';
 $_['entry_password']  = 'Nueva Contrase&#241;a:';
 $_['entry_confirm']   = 'Confirmar:';
 

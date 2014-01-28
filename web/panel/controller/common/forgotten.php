@@ -93,8 +93,8 @@ class ControllerCommonForgotten extends Controller {
 
 		$this->template = 'common/forgotten.tpl';
 		$this->children = array(
-			'common/header',
-			'common/footer'
+			'common/header_login',
+			'common/footer_login'
 		);
 
 		$this->response->setOutput($this->render());		
