@@ -230,8 +230,15 @@ class ControllerCommonHeader extends Controller {
 					'name' => $result['name'],
 					'href' => $result['url']
 				);
-			}			
+			}	
+
+			$navigation_top_bar = new Template();
+			$this->data['navigation_top_bar'] = $navigation_top_bar->fetch('common/navigation_top_bar.tpl');		
+			$navigation_menu_sidebar = new Template();
+			$this->data['navigation_menu_sidebar'] = $navigation_menu_sidebar->fetch('common/navigation_menu_sidebar.tpl');		
 		}
+
+		
 
 		$this->template = 'common/header.tpl';
 
