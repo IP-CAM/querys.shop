@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']                    = 'Administración';
+$_['heading_title']                    = 'Panel Administración QShop';
 
 // Text
 $_['text_affiliate']                   = 'Afiliados';
@@ -18,7 +18,7 @@ $_['text_customer']                    = 'Clientes';
 $_['text_customer_group']              = 'Grupos de Clientes';
 $_['text_customer_ban_ip']             = 'IP bloqueada';
 $_['text_custom_field']                = 'Campos Personalizados';
-$_['text_dashboard']                   = 'Tablero';
+$_['text_dashboard']                   = 'Dashboard';
 $_['text_design']                      = 'Dise&#241;o';
 $_['text_download']                    = 'Descargas';
 $_['text_error_log']                   = 'Registro de Errores';
@@ -97,4 +97,9 @@ $_['text_openbay_order_import']        = 'Importar Ordenes';
 $_['text_paypal_manage']               = 'PayPal';
 $_['text_paypal_search']               = 'Buscar';
 $_['text_recurring_profile']           = 'Perfiles periódicos';
+
+
+
+$_['common/home']           = 'Dashboard';
+$_['catalog/category']      = 'Perfiles periódicos';
 ?>

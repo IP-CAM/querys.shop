@@ -332,7 +332,7 @@ class ControllerUserUserPermission extends Controller {
 		}
 
 		$ignore = array(
-			'common/home',
+			// 'common/home',
 			'common/startup',
 			'common/login',
 			'common/logout',
@@ -341,7 +341,9 @@ class ControllerUserUserPermission extends Controller {
 			'error/not_found',
 			'error/permission',
 			'common/footer',
-			'common/header'
+			'common/footer_login',
+			'common/header',
+			'common/header_login'
 		);
 
 		$this->data['permissions'] = array();

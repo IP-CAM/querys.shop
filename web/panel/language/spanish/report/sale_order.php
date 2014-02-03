@@ -6,7 +6,7 @@ $_['heading_title']     = 'Reporte de Ventas';
 $_['text_year']         = 'A&#241;os';
 $_['text_month']        = 'Meses';
 $_['text_week']         = 'Semanas';
-$_['text_day']          = 'Días';
+$_['text_day']          = 'D&iacute;as';
 $_['text_all_status']   = 'Detalles';
 
 // Column

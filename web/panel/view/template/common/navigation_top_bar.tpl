@@ -1,4 +1,4 @@
-<div class="header navbar navbar-inverse navbar-fixed-top">
+
 	<!-- BEGIN TOP NAVIGATION BAR -->
 	<div class="header-inner">
 		<!-- BEGIN LOGO -->
