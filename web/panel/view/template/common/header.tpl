@@ -84,9 +84,11 @@
 
     <link rel="stylesheet" type="text/css" href="view/stylesheet/stylesheet.css" />
 </head>
-<body class="page-header-fixed page-sidebar-fixed">
+<!-- <body class="page-header-fixed page-sidebar-fixed"> -->
+<body class="page-header-fixed">
   <!-- BEGIN HEADER -->
-    <div class="header navbar navbar-inverse navbar-fixed-top">
+    <!-- <div class="header navbar navbar-inverse navbar-fixed-top"> -->
+    <div class="header navbar navbar-inverse ">
     <!-- BEGIN TOP NAVIGATION BAR -->
       <?php echo $navigation_top_bar; ?>
     </div>

@@ -75,6 +75,18 @@ class User {
 		}
 	}
 
+	public function addPermission($key, $value) {
+		if (isset($this->permission[$key])) {
+			return in_array($value, $this->permission[$key]);
+		} else {
+			return false;
+		}
+	}
+
+	public function getPermission($index = 'access'){
+		return $this->permission[$index];
+	}
+
 	public function isLogged() {
 		return $this->user_id;
 	}
