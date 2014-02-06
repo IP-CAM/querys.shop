@@ -135,13 +135,12 @@ class ControllerCommonHeader extends Controller {
 			$this->load->model('catalog/option');
 			$this->load->model('catalog/manufacturer');
 			$this->load->model('catalog/category');
-			$option_groups = $this->model_catalog_option->getOptions();
-			$manufactures = $this->model_catalog_manufacturer->getManufacturers();
+			$this->load->model('extension/module');
+		
+			$option_groups 	= $this->model_catalog_option->getOptions();
+			$manufactures 	= $this->model_catalog_manufacturer->getManufacturers();
+			$modules 		= $this->model_extension_module->getModules();
 
-				// echo '<pre style="background-color: #FFFFCB; color: #135092; margin:0px">'; 
-				// 	print_r($manufactures); 
-				// echo '</pre>'; 
-				// //die();
 			$menu = array();
 			$menu['common'] 			  									= $this->menu(array('common/home')		, 					'fa-home' 	 	 , 'Dashboard'		, 'common');
 			$menu['catalog']		  										= $this->menu(array(), 										'fa-th-list' 	 , 'Catalogo'		, 'catalog');
@@ -157,7 +156,7 @@ class ControllerCommonHeader extends Controller {
 			$menu['catalog']['lvl2']['product']['lvl3']['request']			= $this->menu(array(), 										'fa-home' 		 , 'Request'		, 'catalog');
 			$menu['catalog']['lvl2']['product']['lvl3']['premios']			= $this->menu(array(), 										'fa-coffee' 	 , 'Premios'		, 'catalog');
 			$menu['catalog']['lvl2']['manufacturer']						= $this->menu(array(), 										'fa-th-list' 	 , 'Marcas' 		, 'catalog');
-			$menu['catalog']['lvl2']['manufacturer']['lvl3'][]				= $this->menu(array('catalog/manufacturer'), 				'fa-th-list' 	 , 'Listado' 		, 'catalog');
+			$menu['catalog']['lvl2']['manufacturer']['lvl3'][]				= $this->menu(array('catalog/manufacturer'), 				'fa-th-list' 	 , 'Listado' 		, 'catalog', array('num' => $this->model_catalog_manufacturer->getTotalManufacturers(), 'type' =>'info' ));
 			$menu['catalog']['lvl2']['manufacturer']['lvl3'][]				= $this->menu(array('catalog/product/insert'), 				'fa-plus-square' , 'Nueva' 			, 'catalog');
 			foreach ($manufactures as $key => $value) {
 				$menu['catalog']['lvl2']['manufacturer']['lvl3'][$value['name']]	= $this->menu(array('catalog/manufacturer/update','manufacturer_id='.$value['manufacturer_id']),	'fa-edit' , $value['name']		, 'catalog');
@@ -166,7 +165,6 @@ class ControllerCommonHeader extends Controller {
 			$menu['catalog']['lvl2']['attribute']['lvl3']['attribute']					= $this->menu(array(), 								'fa-home' 	, 'Atributos' 		, 'catalog');
 			$menu['catalog']['lvl2']['attribute']['lvl3']['attribute']['lvl4']['list']	= $this->menu(array('catalog/attribute'), 			'fa-home' 	, 'List' 			, 'catalog');
 			$menu['catalog']['lvl2']['attribute']['lvl3']['attribute']['lvl4']['add']	= $this->menu(array('catalog/attribute/insert'), 	'fa-home' 	, 'Add' 			, 'catalog');
-
 			$menu['catalog']['lvl2']['attribute']['lvl3'][]					= $this->menu(array('catalog/attribute_group'), 			'fa-home' 		 , 'Atributos de Grupo'	, 'catalog');
 			$menu['catalog']['lvl2']['download']							= $this->menu(array('catalog/download'), 					'fa-home' 		 , 'Descargas' 			, 'catalog');
 			$menu['catalog']['lvl2']['filter']								= $this->menu(array(), 										'fa-home' 		 , 'Filtros' 			, 'catalog');
@@ -185,11 +183,13 @@ class ControllerCommonHeader extends Controller {
 			$menu['catalog']['lvl2']['review']['lvl3']['add']				= $this->menu(array('catalog/review/add'), 					'fa-plus-square' , 'Nueva' 				, 'catalog');
 			$menu['catalog']['lvl2']['review']['lvl3']['settings']			= $this->menu(array('catalog/review'), 						'fa-cogs' 		 , 'Configuración' 		, 'catalog');
 			$menu['catalog']['lvl2']['review']['lvl3']['conceptos']			= $this->menu(array('catalog/review'), 						'fa-cogs' 		 , 'Conceptos' 			, 'catalog');
-			
 			$menu['sale']																	= $this->menu(array(), 								'fa-shopping-cart'	, 'Ventas' 		, 'sale');
 			$menu['sale']['lvl2']['orders']													= $this->menu(array(), 								'fa-sitemap' 	 	, 'Ordenes' 	, 'sale');
 			$menu['sale']['lvl2']['orders']['lvl3']['list']									= $this->menu(array('sale/order'), 					'fa-th-list' 		, 'List' 		, 'sale');
 			$menu['sale']['lvl2']['orders']['lvl3']['add']									= $this->menu(array('sale/order/insert'), 			'fa-plus-square' 	, 'Add' 		, 'sale');
+			$menu['sale']['lvl2']['quotation']												= $this->menu(array(), 								'fa-sitemap' 	 	, 'Cotización' 	, 'sale');
+			$menu['sale']['lvl2']['quotation']['lvl3']['list']								= $this->menu(array(), 					'fa-th-list' 		, 'List' 		, 'sale');
+			$menu['sale']['lvl2']['quotation']['lvl3']['add']								= $this->menu(array(), 			'fa-plus-square' 	, 'Add' 		, 'sale');
 			$menu['sale']['lvl2']['return']													= $this->menu(array(), 								'fa-sitemap' 	 	, 'Devoluciones', 'sale');
 			$menu['sale']['lvl2']['return']['lvl3']['list']									= $this->menu(array('sale/return'), 				'fa-th-list' 		, 'List' 		, 'sale');
 			$menu['sale']['lvl2']['return']['lvl3']['add']									= $this->menu(array('sale/return/insert'), 			'fa-plus-square' 	, 'Add' 		, 'sale');
@@ -206,19 +206,13 @@ class ControllerCommonHeader extends Controller {
 			$menu['sale']['lvl2']['customer']['lvl3']['gift']								= $this->menu(array(),					 			'fa-home' 			, 'Regalos'		, 'sale');
 			$menu['sale']['lvl2']['customer']['lvl3']['gift']['lvl4']['list']				= $this->menu(array('sale/customer_ban_ip'), 		'fa-home' 			, 'List' 		, 'sale');
 			$menu['sale']['lvl2']['customer']['lvl3']['gift']['lvl4']['add']				= $this->menu(array('sale/customer_ban_ip/insert'),	'fa-home' 			, 'Add' 		, 'sale');
-			
 		 	$menu['sale']['lvl2']['affiliate']												= $this->menu(array(), 								'fa-sitemap' 	 	, 'Afiliados'	, 'sale');
 			$menu['sale']['lvl2']['affiliate']['lvl3']['list']								= $this->menu(array('sale/affiliate'), 				'fa-th-list' 		, 'List' 		, 'sale');
 			$menu['sale']['lvl2']['affiliate']['lvl3']['add']								= $this->menu(array('sale/affiliate/insert'), 		'fa-plus-square' 	, 'Add' 		, 'sale');
 		 	$menu['sale']['lvl2']['recurring']												= $this->menu(array('sale/recurring'), 				'fa-sitemap' 	 	, 'Perfiles Periódicos'		, 'sale');
-		
-			$menu['sale']['lvl2']['profile']												= $this->menu(array(), 								'fa-sitemap' 	 	, 'Profiles'		, 'sale');
-			$menu['sale']['lvl2']['profile']['lvl3']['list']								= $this->menu(array('sale/customer_ban_ip'), 		'fa-th-list' 		, 'List' 		, 'sale');
-			$menu['sale']['lvl2']['profile']['lvl3']['add']									= $this->menu(array('sale/customer_ban_ip/insert'), 'fa-plus-square' 	, 'Add' 		, 'sale');
 			$menu['sale']['lvl2']['coupon']													= $this->menu(array(), 								'fa-sitemap' 	 	, 'Cupones'		, 'sale');
 			$menu['sale']['lvl2']['coupon']['lvl3']['list']									= $this->menu(array('sale/coupon'), 				'fa-th-list' 		, 'List' 		, 'sale');
 			$menu['sale']['lvl2']['coupon']['lvl3']['add']									= $this->menu(array('sale/coupon/insert'), 			'fa-plus-square' 	, 'Add' 		, 'sale');
-			
 			$menu['sale']['lvl2']['voucher']												= $this->menu(array(), 								'fa-sitemap' 	 	, 'Vales Regalo', 'sale');
 			$menu['sale']['lvl2']['voucher']['lvl3']['voucher']								= $this->menu(array(),					 			'fa-home' 			, 'Vales' 		, 'sale');
 			$menu['sale']['lvl2']['voucher']['lvl3']['voucher']['lvl4']['list']				= $this->menu(array('sale/voucher'), 				'fa-home' 			, 'List' 		, 'sale');
@@ -226,7 +220,41 @@ class ControllerCommonHeader extends Controller {
 			$menu['sale']['lvl2']['voucher']['lvl3']['voucher_theme']						= $this->menu(array(),					 			'fa-home' 			, 'Motivos'		, 'sale');
 			$menu['sale']['lvl2']['voucher']['lvl3']['voucher_theme']['lvl4']['list']		= $this->menu(array('sale/voucher_theme'), 			'fa-home' 			, 'List' 		, 'sale');
 			$menu['sale']['lvl2']['voucher']['lvl3']['voucher_theme']['lvl4']['add']		= $this->menu(array('sale/voucher_theme/insert'), 	'fa-home' 			, 'Add' 		, 'sale');
-		 	
+			$menu['sale']['lvl2']['contact']												= $this->menu(array('sale/contact'), 				'fa-sitemap' 	 	, 'Contacto'	, 'sale');
+			$menu['report']																= $this->menu(array(), 								'fa-bar-chart-o' 	 	, 'Reportes'	, 'report');
+			$menu['report']['lvl2']['sale']												= $this->menu(array(), 								'fa-sitemap' 	 	, 'Ventas'		, 'report');
+			$menu['report']['lvl2']['sale']['lvl3']['sale_order']						= $this->menu(array('report/sale_order'),			'fa-home' 			, 'Órdenes' 	, 'report');
+			$menu['report']['lvl2']['sale']['lvl3']['sale_tax']							= $this->menu(array('report/sale_tax'),				'fa-home' 			, 'Impuestos' 	, 'report');
+			$menu['report']['lvl2']['sale']['lvl3']['sale_shipping']					= $this->menu(array('report/sale_shipping'),		'fa-home' 			, 'Envíos' 		, 'report');
+			$menu['report']['lvl2']['sale']['lvl3']['sale_return']						= $this->menu(array('report/sale_return'),			'fa-home' 			, 'Devoluciones', 'report');
+			$menu['report']['lvl2']['sale']['lvl3']['sale_coupon']						= $this->menu(array('report/sale_coupon'),			'fa-home' 			, 'Cupones' 	, 'report');
+			$menu['report']['lvl2']['product']											= $this->menu(array(), 								'fa-sitemap' 	 	, 'Productos'	, 'report');
+			$menu['report']['lvl2']['product']['lvl3']['product_viewed']				= $this->menu(array('report/sale_order'),			'fa-home' 			, 'Visitados' 	, 'report');
+			$menu['report']['lvl2']['product']['lvl3']['product_purchased']				= $this->menu(array('report/product_purchased'),	'fa-home' 			, 'Comprados' 	, 'report');
+			$menu['report']['lvl2']['product']['lvl3']['product_stock']					= $this->menu(array(),								'fa-truck'			, 'Stock' 		, 'report');
+			$menu['report']['lvl2']['customer']											= $this->menu(array(), 								'fa-sitemap' 	 	, 'Clientes'	, 'report');
+			$menu['report']['lvl2']['customer']['lvl3']['customer_online']				= $this->menu(array('report/customer_online'),		'fa-home' 			, 'Online' 		, 'report');
+			$menu['report']['lvl2']['customer']['lvl3']['customer_order']				= $this->menu(array('report/customer_order'),		'fa-home' 			, 'Órdenes' 	, 'report');
+			$menu['report']['lvl2']['customer']['lvl3']['customer_reward']				= $this->menu(array('report/customer_reward'),		'fa-home'			, 'Recompensas' , 'report');
+			$menu['report']['lvl2']['customer']['lvl3']['customer_credit']				= $this->menu(array('report/customer_credit'),		'fa-home'			, 'Crédito' 	, 'report');
+			$menu['report']['lvl2']['affiliate']										= $this->menu(array(), 								'fa-sitemap' 	 	, 'Afliados'	, 'report');
+			$menu['report']['lvl2']['affiliate']['lvl3']['affiliate_commission']		= $this->menu(array('report/customer_online'),		'fa-home' 			, 'Comisión' 	, 'report');
+
+
+			$menu['extension']															= $this->menu(array(), 								'fa-cog' 			, 'Extensiones'		, 'extension');
+			$menu['extension']['lvl2']['module']										= $this->menu(array(), 								'fa-sitemap' 	 	, 'Módulos'			, 'extension');
+			$menu['extension']['lvl2']['module']['lvl3']['list']						= $this->menu(array('extension/module'), 			'fa-th-list' 	 	, 'List'			, 'extension');
+			foreach ($modules as $key => $value) {
+				$menu['extension']['lvl2']['module']['lvl3'][$value['code']]			= $this->menu(array($value['action'])		,	'fa-edit' 	, $value['name']	, 'extension');
+			}
+			$menu['extension']['lvl2']['shipping']										= $this->menu(array('extension/shipping')		, 	'fa-sitemap', 'Envíos'			, 'extension');
+			$menu['extension']['lvl2']['payment']										= $this->menu(array('extension/payment')		, 	'fa-sitemap', 'Pagos'			, 'extension');
+			$menu['extension']['lvl2']['total']											= $this->menu(array('extension/total')			, 	'fa-sitemap', 'Totales'			, 'extension');
+			$menu['extension']['lvl2']['feed']											= $this->menu(array('extension/feed')			, 	'fa-sitemap', 'RSS Productos'	, 'extension');
+
+			$menu['cms']															= $this->menu(array(), 								'fa-cog' 			, 'Content Manager'		, 'extension');
+			$menu['cms2']															= $this->menu(array(), 								'fa-cog' 			, 'Content Manager'		, 'extension');
+			$menu['cms3']															= $this->menu(array(), 								'fa-cog' 			, 'Content Manager'		, 'extension');
 			// echo '<pre style="background-color: #FFFFCB; color: #135092; margin:0px">'; 
 			// 	print_r($menu); 
 			// 	// print_r($this->user->getPermission('access')); 
@@ -236,9 +264,6 @@ class ControllerCommonHeader extends Controller {
 			$navigation_menu_sidebar->data['menus'] = $menu;
 				
 			$navigation_menu_sidebar->data['home'] 							= $this->url->link('common/home', 'token=' . $this->session->data['token'], 'SSL');
-			$navigation_menu_sidebar->data['affiliate'] 					= $this->url->link('sale/affiliate', 'token=' . $this->session->data['token'], 'SSL');
-			$navigation_menu_sidebar->data['attribute'] 					= $this->url->link('catalog/attribute', 'token=' . $this->session->data['token'], 'SSL');
-			$navigation_menu_sidebar->data['attribute_group'] 				= $this->url->link('catalog/attribute_group', 'token=' . $this->session->data['token'], 'SSL');
 			$navigation_menu_sidebar->data['backup'] 						= $this->url->link('tool/backup', 'token=' . $this->session->data['token'], 'SSL');
 			$navigation_menu_sidebar->data['banner'] 						= $this->url->link('design/banner', 'token=' . $this->session->data['token'], 'SSL');
 			$navigation_menu_sidebar->data['category'] 						= $this->url->link('catalog/category', 'token=' . $this->session->data['token'], 'SSL');
