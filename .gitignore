@@ -41,3 +41,8 @@
 /cgi-bin/*
 /log/
 /web/stats/
+/web/vqmod/logs/*
+/web/vqmod/vqcache/*
+/web/vqmod/mods.cache
+!/web/vqmod/vqmod.php
+/web/error/*
