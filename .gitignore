@@ -45,3 +45,4 @@
 /web/vqmod/vqcache/*
 /web/vqmod/mods.cache
 !/web/vqmod/vqmod.php
+/web/error/*
