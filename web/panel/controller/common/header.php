@@ -241,20 +241,53 @@ class ControllerCommonHeader extends Controller {
 			$menu['report']['lvl2']['affiliate']['lvl3']['affiliate_commission']		= $this->menu(array('report/customer_online'),		'fa-home' 			, 'Comisión' 	, 'report');
 
 
-			$menu['extension']															= $this->menu(array(), 								'fa-cog' 			, 'Extensiones'		, 'extension');
-			$menu['extension']['lvl2']['module']										= $this->menu(array(), 								'fa-sitemap' 	 	, 'Módulos'			, 'extension');
-			$menu['extension']['lvl2']['module']['lvl3']['list']						= $this->menu(array('extension/module'), 			'fa-th-list' 	 	, 'List'			, 'extension');
+			$menu['extension']															= $this->menu(array()						, 	'fa-cog' 			, 'Extensiones'		, 'extension');
+			$menu['extension']['lvl2']['module']										= $this->menu(array()						, 	'fa-sitemap' 	 	, 'Módulos'			, 'extension');
+			$menu['extension']['lvl2']['module']['lvl3']['list']						= $this->menu(array('extension/module')		, 	'fa-th-list' 	 	, 'List'			, 'extension');
 			foreach ($modules as $key => $value) {
 				$menu['extension']['lvl2']['module']['lvl3'][$value['code']]			= $this->menu(array($value['action'])		,	'fa-edit' 	, $value['name']	, 'extension');
 			}
-			$menu['extension']['lvl2']['shipping']										= $this->menu(array('extension/shipping')		, 	'fa-sitemap', 'Envíos'			, 'extension');
-			$menu['extension']['lvl2']['payment']										= $this->menu(array('extension/payment')		, 	'fa-sitemap', 'Pagos'			, 'extension');
-			$menu['extension']['lvl2']['total']											= $this->menu(array('extension/total')			, 	'fa-sitemap', 'Totales'			, 'extension');
-			$menu['extension']['lvl2']['feed']											= $this->menu(array('extension/feed')			, 	'fa-sitemap', 'RSS Productos'	, 'extension');
+			$menu['extension']['lvl2']['shipping']										= $this->menu(array('extension/shipping')	, 	'fa-sitemap', 'Envíos'			, 'extension');
+			$menu['extension']['lvl2']['payment']										= $this->menu(array('extension/payment')	, 	'fa-sitemap', 'Pagos'			, 'extension');
+			$menu['extension']['lvl2']['total']											= $this->menu(array('extension/total')		, 	'fa-sitemap', 'Totales'			, 'extension');
+			$menu['extension']['lvl2']['feed']											= $this->menu(array('extension/feed')		, 	'fa-sitemap', 'RSS Productos'	, 'extension');
 
-			$menu['cms']															= $this->menu(array(), 								'fa-cog' 			, 'Content Manager'		, 'extension');
-			$menu['cms2']															= $this->menu(array(), 								'fa-cog' 			, 'Content Manager'		, 'extension');
-			$menu['cms3']															= $this->menu(array(), 								'fa-cog' 			, 'Content Manager'		, 'extension');
+			$menu['setting']														= $this->menu(array()							,	'fa-cogs' 	, 'Sistema'				 , 'setting');
+			$menu['setting']['lvl2']['shipping']									= $this->menu(array('setting/store')			,	'fa-edit' 	, 'Tiendas'				 , 'setting');
+			$menu['setting']['lvl2']['local']										= $this->menu(array()							,	'fa-cog' 	, 'Local'				 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/language')	,	'fa-cog' 	, 'Idiomas'				 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/currency')	,	'fa-cog' 	, 'Monedas'				 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/stock_status'),	'fa-cog' 	, 'Estados Stock'		 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/order_status'),	'fa-cog' 	, 'Estados Órdenes'		 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/country')		,	'fa-cog' 	, 'Paises'				 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/geo_zone')	,	'fa-cog' 	, 'Zona Geográfica'		 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/zone')		,	'fa-cog' 	, 'Regiones'			 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array()							,	'fa-cog' 	, 'Comunas'				 , 'setting', array('num' => 'FALTA', 'type' =>'error' ));
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/length_class'),	'fa-cog' 	, 'Tipo Medidas'		 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3'][]								= $this->menu(array('localisation/weight_class'),	'fa-cog' 	, 'Tipo Peso'			 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3']['tax']						= $this->menu(array()							,	'fa-cog' 	, 'Impuestos'			 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3']['tax']['lvl4'][]				= $this->menu(array('localisation/tax_class')	,	'fa-cog' 	, 'Tipo de Impuesto'	 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3']['tax']['lvl4'][]				= $this->menu(array('localisation/tax_rate')	,	'fa-cog' 	, 'Tasa de Impuesto'	 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3']['return']						= $this->menu(array()							,	'fa-cog' 	, 'Devoluciones'		 , 'setting');
+			$menu['setting']['lvl2']['local']['lvl3']['return']['lvl4'][]			= $this->menu(array('localisation/return_status'),	'fa-cog' 	, 'Estados', 'setting');
+			$menu['setting']['lvl2']['local']['lvl3']['return']['lvl4'][]			= $this->menu(array('localisation/return_action'),	'fa-cog' 	, 'Acciones', 'setting');
+			$menu['setting']['lvl2']['local']['lvl3']['return']['lvl4'][]			= $this->menu(array('localisation/return_reason'),	'fa-cog' 	, 'Motivos', 'setting');
+			
+
+			$menu['setting']['lvl2']['user']										= $this->menu(array()								,	'fa-cog', 'Usuarios'			, 'setting');
+			$menu['setting']['lvl2']['user']['lvl3'][]								= $this->menu(array('user/user')					,	'fa-cog', 'Listado'				, 'setting');
+			$menu['setting']['lvl2']['user']['lvl3'][]								= $this->menu(array('user/user/insert')				,	'fa-cog', 'Agregar'				, 'setting');
+			$menu['setting']['lvl2']['user']['lvl3'][]								= $this->menu(array('user/user_permission')			,	'fa-cog', 'Grupos Listado'		, 'setting');
+			$menu['setting']['lvl2']['user']['lvl3'][]								= $this->menu(array('user/user_permission/insert')	,	'fa-cog', 'Grupos Agregar'		, 'setting');
+			
+
+			$menu['setting']['lvl2']['design']										= $this->menu(array()								,	'fa-cog', 'Diseño'				, 'setting');
+			$menu['setting']['lvl2']['design']['lvl3'][]							= $this->menu(array('design/layout')				,	'fa-cog', 'Posiciones'			, 'setting');
+			$menu['setting']['lvl2']['design']['lvl3'][]							= $this->menu(array('design/banner')				,	'fa-cog', 'Banners'				, 'setting');
+		
+			$menu['setting']['lvl2']['error_log']									= $this->menu(array('tool/error_log')				,	'fa-cog', 'Registro Errores'		, 'setting');
+			$menu['setting']['lvl2']['backup']										= $this->menu(array('tool/backup')					,	'fa-cog', 'Respaldo & Restauración'	, 'setting');
+
 			// echo '<pre style="background-color: #FFFFCB; color: #135092; margin:0px">'; 
 			// 	print_r($menu); 
 			// 	// print_r($this->user->getPermission('access')); 
