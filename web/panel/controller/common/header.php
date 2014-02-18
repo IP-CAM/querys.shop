@@ -181,7 +181,6 @@ class ControllerCommonHeader extends Controller {
 			$menu['setting']['lvl2']['user']['lvl3'][]								= $this->menu(array('user/user/insert')				,	'fa-cog', 'Agregar'				, 'setting');
 			$menu['setting']['lvl2']['user']['lvl3'][]								= $this->menu(array('user/user_permission')			,	'fa-cog', 'Grupos Listado'		, 'setting');
 			$menu['setting']['lvl2']['user']['lvl3'][]								= $this->menu(array('user/user_permission/insert')	,	'fa-cog', 'Grupos Agregar'		, 'setting');
-			
 
 			$menu['setting']['lvl2']['design']										= $this->menu(array()								,	'fa-cog', 'Diseño'				, 'setting');
 			$menu['setting']['lvl2']['design']['lvl3'][]							= $this->menu(array('design/layout')				,	'fa-cog', 'Posiciones'			, 'setting');
@@ -190,6 +189,18 @@ class ControllerCommonHeader extends Controller {
 			$menu['setting']['lvl2']['error_log']									= $this->menu(array('tool/error_log')				,	'fa-cog', 'Registro Errores'		, 'setting');
 			$menu['setting']['lvl2']['backup']										= $this->menu(array('tool/backup')					,	'fa-cog', 'Respaldo & Restauración'	, 'setting');
 
+			$menu['blog']										= $this->menu(array()								,	'fa-cog', 'Content Manager'				, 'blog');
+			$menu['blog']['lvl2'][]								= $this->menu(array('blog/blog')					,	'fa-cog', 'Home'						, 'blog');
+			$menu['blog']['lvl2'][]								= $this->menu(array('blog/article')					,	'fa-cog', 'Artículo'					, 'blog');
+			$menu['blog']['lvl2'][]								= $this->menu(array('blog/category')				,	'fa-cog', 'Categorías'					, 'blog');
+			$menu['blog']['lvl2'][]								= $this->menu(array('blog/comment')					,	'fa-cog', 'Comentarios'					, 'blog');
+			$menu['blog']['lvl2'][]								= $this->menu(array('blog/author')					,	'fa-cog', 'Autores'						, 'blog');
+			$menu['blog']['lvl2'][]								= $this->menu(array('blog/setting')					,	'fa-cog fa-spin', 'Configuraciones'		, 'blog');
+			$menu['blog']['lvl2'][]								= $this->menu(array('catalog/information')			,	'fa-cog', 'Information'					, 'blog');
+			$menu['blog']['lvl2']['video']						= $this->menu(array()								,	'fa-youtube-play', 'Videos'				, 'blog');
+			$menu['blog']['lvl2']['video']['lvl3'][]			= $this->menu(array('catalog/videoGallery_album')	,	'fa-youtube-play', 'Video Gallery'		, 'blog');
+			$menu['blog']['lvl2']['video']['lvl3'][]			= $this->menu(array('catalog/videoGallery_video')	,	'fa-youtube-play', 'Videos'				, 'blog');
+			
 			$navigation_menu_sidebar->data['menus'] = $menu;
 			$this->data['navigation_menu_sidebar'] = $navigation_menu_sidebar->fetch('common/navigation_menu_sidebar.tpl');	
 			//End Menu Lateral
