@@ -97,4 +97,9 @@ $_['text_openbay_order_import']        = 'Importar Ordenes';
 $_['text_paypal_manage']               = 'PayPal';
 $_['text_paypal_search']               = 'Buscar';
 $_['text_recurring_profile']           = 'Perfiles periódicos';
+
+$_['text_videoGallery']           	   = 'Video Galería';
+$_['text_videoGallery_video']     	   = 'Videos';
+$_['text_videoGallery_album']     	   = 'Videos Album';
+
 ?>
