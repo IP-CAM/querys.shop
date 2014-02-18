@@ -188,6 +188,7 @@ class ControllerCommonHeader extends Controller {
 		
 			$menu['setting']['lvl2']['error_log']									= $this->menu(array('tool/error_log')				,	'fa-cog', 'Registro Errores'		, 'setting');
 			$menu['setting']['lvl2']['backup']										= $this->menu(array('tool/backup')					,	'fa-cog', 'Respaldo & Restauración'	, 'setting');
+			$menu['setting']['lvl2']['storelocation']								= $this->menu(array('module/storelocation/listing')	,	'fa-truck', 'Ubicacion Tiendas'	, 'module');
 
 			$menu['blog']										= $this->menu(array()								,	'fa-cog', 'Content Manager'				, 'blog');
 			$menu['blog']['lvl2'][]								= $this->menu(array('blog/blog')					,	'fa-cog', 'Home'						, 'blog');
