@@ -2,7 +2,7 @@
 	<!-- BEGIN TOP NAVIGATION BAR -->
 	<div class="header-inner">
 		<!-- BEGIN LOGO -->
-		<a class="navbar-brand" href="index.html">
+		<a class="navbar-brand" href="<?php echo $home; ?>">
 			<img src="assets/img/logo.png" alt="logo" class="img-responsive"/>
 		</a>
 		<!-- END LOGO -->
@@ -14,8 +14,40 @@
 		<!-- BEGIN TOP NAVIGATION MENU -->
 		<ul class="nav navbar-nav pull-right">
 			<!-- BEGIN NOTIFICATION DROPDOWN -->
+			<li class="dropdown" id="header_stores">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<i class="fa fa-shopping-cart"></i>
+				</a>
+				<ul class="dropdown-menu extended notification">
+					<li>
+						<p>
+							<?php if($stores>1): $s = 's'; endif;?>
+							Visitar tus <?php echo (count($stores)); ?> canales de venta
+						</p>
+					</li>
+					<li>
+						<ul class="dropdown-menu-list scroller" style="height: 250px;">
+						<?php foreach ($stores as $key => $value) { ?>
+							<li>
+								<a href="<?php echo $value['href']; ?>" target="_blank">
+								<span class="label label-sm label-icon label-success">
+									<i class="fa fa-shopping-cart"></i>
+								</span>
+								&nbsp; <?php echo $value['name']; ?>
+								</a>
+							</li>
+						<?php } ?>
+						</ul>
+					</li>
+					<li class="external">
+						<a href="<?php echo $store_list; ?>">Ver todas las Tiendas <i class="m-icon-swapright"></i></a>
+					</li>
+				</ul>
+			</li>
+
+
 			<li class="dropdown" id="header_notification_bar">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 				<i class="fa fa-warning"></i>
 				<span class="badge">
 					6
@@ -30,7 +62,7 @@
 					<li>
 						<ul class="dropdown-menu-list scroller" style="height: 250px;">
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-success">
 									<i class="fa fa-plus"></i>
 								</span>
@@ -41,7 +73,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-danger">
 									<i class="fa fa-bolt"></i>
 								</span>
@@ -52,7 +84,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-warning">
 									<i class="fa fa-bell-o"></i>
 								</span>
@@ -63,7 +95,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-info">
 									<i class="fa fa-bullhorn"></i>
 								</span>
@@ -74,7 +106,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-danger">
 									<i class="fa fa-bolt"></i>
 								</span>
@@ -85,7 +117,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-danger">
 									<i class="fa fa-bolt"></i>
 								</span>
@@ -96,7 +128,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-warning">
 									<i class="fa fa-bell-o"></i>
 								</span>
@@ -107,7 +139,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-info">
 									<i class="fa fa-bullhorn"></i>
 								</span>
@@ -118,7 +150,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="label label-sm label-icon label-danger">
 									<i class="fa fa-bolt"></i>
 								</span>
@@ -131,14 +163,14 @@
 						</ul>
 					</li>
 					<li class="external">
-						<a href="#">See all notifications <i class="m-icon-swapright"></i></a>
+						<a href="javascript:;">See all notifications <i class="m-icon-swapright"></i></a>
 					</li>
 				</ul>
 			</li>
 			<!-- END NOTIFICATION DROPDOWN -->
 			<!-- BEGIN INBOX DROPDOWN -->
 			<li class="dropdown" id="header_inbox_bar">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 				<i class="fa fa-envelope"></i>
 				<span class="badge">
 					5
@@ -153,7 +185,7 @@
 					<li>
 						<ul class="dropdown-menu-list scroller" style="height: 250px;">
 							<li>
-								<a href="inbox.html?a=view">
+								<a href="javascript:;">
 								<span class="photo">
 									<img src="./assets/img/avatar2.jpg" alt=""/>
 								</span>
@@ -171,7 +203,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="inbox.html?a=view">
+								<a href="javascript:;">
 								<span class="photo">
 									<img src="./assets/img/avatar3.jpg" alt=""/>
 								</span>
@@ -189,7 +221,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="inbox.html?a=view">
+								<a href="javascript:;">
 								<span class="photo">
 									<img src="./assets/img/avatar1.jpg" alt=""/>
 								</span>
@@ -207,7 +239,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="inbox.html?a=view">
+								<a href="javascript:;">
 								<span class="photo">
 									<img src="./assets/img/avatar2.jpg" alt=""/>
 								</span>
@@ -225,7 +257,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="inbox.html?a=view">
+								<a href="javascript:;">
 								<span class="photo">
 									<img src="./assets/img/avatar3.jpg" alt=""/>
 								</span>
@@ -252,7 +284,7 @@
 			<!-- END INBOX DROPDOWN -->
 			<!-- BEGIN TODO DROPDOWN -->
 			<li class="dropdown" id="header_task_bar">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 				<i class="fa fa-tasks"></i>
 				<span class="badge">
 					5
@@ -267,7 +299,7 @@
 					<li>
 						<ul class="dropdown-menu-list scroller" style="height: 250px;">
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="task">
 									<span class="desc">
 										New release v1.2
@@ -286,7 +318,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="task">
 									<span class="desc">
 										Application deployment
@@ -305,7 +337,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="task">
 									<span class="desc">
 										Mobile app release
@@ -324,7 +356,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="task">
 									<span class="desc">
 										Database migration
@@ -343,7 +375,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="task">
 									<span class="desc">
 										Web server upgrade
@@ -362,7 +394,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="task">
 									<span class="desc">
 										Mobile development
@@ -381,7 +413,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="javascript:;">
 								<span class="task">
 									<span class="desc">
 										New UI release
@@ -402,36 +434,36 @@
 						</ul>
 					</li>
 					<li class="external">
-						<a href="#">See all tasks <i class="m-icon-swapright"></i></a>
+						<a href="javascript:;">See all tasks <i class="m-icon-swapright"></i></a>
 					</li>
 				</ul>
 			</li>
 			<!-- END TODO DROPDOWN -->
 			<!-- BEGIN USER LOGIN DROPDOWN -->
 			<li class="dropdown user">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 				<img alt="" src="assets/img/avatar1_small.jpg"/>
 				<span class="username">
-					Bob Nilson
+					<?php echo $username; ?>
 				</span>
 				<i class="fa fa-angle-down"></i>
 				</a>
 				<ul class="dropdown-menu">
 					<li>
-						<a href="extra_profile.html"><i class="fa fa-user"></i> My Profile</a>
+						<a href="<?php echo $username_edit; ?>"><i class="fa fa-user"></i> My Profile</a>
 					</li>
 					<li>
-						<a href="page_calendar.html"><i class="fa fa-calendar"></i> My Calendar</a>
+						<a href="javascript:;"><i class="fa fa-calendar"></i> My Calendar</a>
 					</li>
 					<li>
-						<a href="inbox.html"><i class="fa fa-envelope"></i> My Inbox
+						<a href="javascript:;"><i class="fa fa-envelope"></i> My Inbox
 						<span class="badge badge-danger">
 							3
 						</span>
 						</a>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-tasks"></i> My Tasks
+						<a href="javascript:;"><i class="fa fa-tasks"></i> My Tasks
 						<span class="badge badge-success">
 							7
 						</span>
@@ -443,10 +475,7 @@
 						<a href="javascript:;" id="trigger_fullscreen"><i class="fa fa-move"></i> Full Screen</a>
 					</li>
 					<li>
-						<a href="extra_lock.html"><i class="fa fa-lock"></i> Lock Screen</a>
-					</li>
-					<li>
-						<a href="login.html"><i class="fa fa-key"></i> Log Out</a>
+						<a href="<?php echo $logout; ?>"><i class="fa fa-key"></i> Log Out</a>
 					</li>
 				</ul>
 			</li>
