@@ -98,8 +98,7 @@ $_['text_paypal_manage']               = 'PayPal';
 $_['text_paypal_search']               = 'Buscar';
 $_['text_recurring_profile']           = 'Perfiles periódicos';
 
-
-
-$_['common/home']           = 'Dashboard';
-$_['catalog/category']      = 'Perfiles periódicos';
+$_['text_videoGallery']           	   = 'Video Gallery';
+$_['text_videoGallery_video']     	   = 'Video';
+$_['text_videoGallery_album']     	   = 'Video Album';
 ?>

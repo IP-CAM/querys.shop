@@ -119,6 +119,10 @@ class ControllerCommonHeader extends Controller {
 		$this->data['text_paypal_express_search'] = $this->language->get('text_paypal_search');
 		$this->data['text_recurring_profile'] = $this->language->get('text_recurring_profile');
 
+		$this->data['text_videoGallery'] = $this->language->get('text_videoGallery');
+		$this->data['text_videoGallery_video'] = $this->language->get('text_videoGallery_video');
+		$this->data['text_videoGallery_album'] = $this->language->get('text_videoGallery_album');
+
 		if (!$this->user->isLogged() || !isset($this->request->get['token']) || !isset($this->session->data['token']) || ($this->request->get['token'] != $this->session->data['token'])) {
 			$this->data['logged'] = '';
 
@@ -208,6 +212,9 @@ class ControllerCommonHeader extends Controller {
 			$this->data['openbay_link_amazonus'] = $this->url->link('openbay/amazonus', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['openbay_link_amazonus_settings'] = $this->url->link('openbay/amazonus/settings', 'token=' . $this->session->data['token'], 'SSL');
 			$this->data['openbay_link_amazonus_links'] = $this->url->link('openbay/amazonus/itemLinks', 'token=' . $this->session->data['token'], 'SSL');
+
+			$this->data['videoGallery_album'] = $this->url->link('catalog/videoGallery_album', 'token=' . $this->session->data['token'], 'SSL');
+			$this->data['videoGallery_video'] = $this->url->link('catalog/videoGallery_video', 'token=' . $this->session->data['token'], 'SSL');
 
 			$this->data['openbay_markets'] = array(
 				'ebay' => $this->config->get('openbay_status'),
