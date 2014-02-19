@@ -80,7 +80,7 @@
 jQuery(document).ready(function() {    
    // Index.init();
    App.init();
-   TableManaged.init();
+   TableManaged.init(); //inicializa los datatables
 });
 </script>
 <!-- END JAVASCRIPTS -->

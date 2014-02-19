@@ -142,6 +142,8 @@ class ControllerCatalogCategory extends Controller {
 			'limit' => $this->config->get('config_admin_limit')
 		);
 
+		$data = array(); //lista todas las categorias
+
 		$category_total = $this->model_catalog_category->getTotalCategories();
 
 		$results = $this->model_catalog_category->getCategories($data);

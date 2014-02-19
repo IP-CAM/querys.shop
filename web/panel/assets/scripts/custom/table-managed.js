@@ -38,7 +38,7 @@ var TableManaged = function () {
                 ]
             });
 
-            jQuery('#sample_1 .group-checkable').change(function () {
+            jQuery('#datatable .group-checkable').change(function () {
                 var set = jQuery(this).attr("data-set");
                 var checked = jQuery(this).is(":checked");
                 jQuery(set).each(function () {
@@ -53,14 +53,12 @@ var TableManaged = function () {
                 jQuery.uniform.update(set);
             });
 
-            jQuery('#sample_1').on('change', 'tbody tr .checkboxes', function(){
+            jQuery('#datatable').on('change', 'tbody tr .checkboxes', function(){
                  $(this).parents('tr').toggleClass("active");
             });
 
-            jQuery('#sample_1_wrapper .dataTables_filter input').addClass("form-control input-medium input-inline"); // modify table search input
-            jQuery('#sample_1_wrapper .dataTables_length select').addClass("form-control input-xsmall"); // modify table per page dropdown
-            jQuery('#sample_1_wrapper .dataTables_length select').select2(); // initialize select2 dropdown
-
+            jQuery('#datatable_wrapper .dataTables_filter input').addClass("form-control input-medium input-inline"); // modify table search input
+            jQuery('#datatable_wrapper .dataTables_length select').addClass("form-control input-xsmall"); // modify table per page dropdown
         }
 
     };
