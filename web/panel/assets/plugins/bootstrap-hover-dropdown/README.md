@@ -1,5 +1,15 @@
-Twitter Bootstrap Hover Dropdown Plugin
-=======================================
+Bootstrap Hover Dropdown Plugin
+===============================
+
+**Version 2.0.1**
+
+#### Name Change
+
+*Twitter Bootstrap* is now just *Bootstrap*, and I've renamed this repo, **renamed the files** and change all references from *Twitter Bootstrap* to just *Bootstrap* in the docs/example to reflect that.
+
+No actual code changed, so I am keeping the current version (`2.0.1` at the time of this writing), but be aware of the lack of *twitter-* from the beginning of the JS files and how that might affect you.
+
+Sorry for any inconvenience!
 
 #### Updated for Bootstrap 3
 
@@ -7,11 +17,11 @@ I updated the demo with Bootstrap 3, as well as removed code associated to subme
 
 ## Introduction
 
-A simple plugin to enable twitter bootstrap dropdowns to activate on hover and provide a nice user experience.
+A simple plugin to enable Bootstrap dropdowns to activate on hover and provide a nice user experience.
 
 The dropdowns are dismissed after a configurable delay. This fixes an issue that can instantly close your nav because of a 1px gap between the button/nav item that activated the dropdown and the actual dropdown. It is also generally a better user experience, as users are not punished by going 1 pixel outside of the dropdown, which would instantly close the nav without a delay.
 
-**Note:** The HTML markup is the same as with any other Twitter Bootstrap dropdown. This will not interfere with Bootstrap's default activate-on-click method (i.e. this plugin combined with Bootstrap's default behavior work well to support both the ideal experience on desktop and mobile).
+**Note:** The HTML markup is the same as with any other Bootstrap dropdown. This will not interfere with Bootstrap's default activate-on-click method (i.e. this plugin combined with Bootstrap's default behavior work well to support both the ideal experience on desktop and mobile).
 
 ## Installation
 
@@ -21,15 +31,15 @@ You can simply download and extract the package downloaded from GitHub. Alternat
 bower install bootstrap-hover-dropdown
 ```
 
-which will also automatically install Twitter Bootstrap and jQuery if needed.
+which will also automatically install Bootstrap and jQuery if needed.
 
-Once you have the files downloaded, link to the files in your code *after* you include the main Twitter Bootstrap JS file(s):
+Once you have the files downloaded, link to the files in your code *after* you include the main Bootstrap JS file(s):
 
 ```html
 <!-- script order matters! -->
 <script src="/path/to/jquery.min.js"></script>
 <script src="/path/to/bootstrap.min.js"></script>
-<script src="/path/to/twitter-bootstrap-hover-dropdown.min.js"></script>
+<script src="/path/to/bootstrap-hover-dropdown.min.js"></script>
 ```
 
 ## Usage
@@ -62,7 +72,7 @@ Alternatively, you can initialize via JavaScript:
 $('.dropdown-toggle').dropdownHover(options);
 ```
 
-This also works with submenus without any other configuring since Twitter Bootstrap already supports this feature. Just use the markup like you were using before. Only the top level anchor tag needs any special markup for my plugin to work (see demo for proper markup).
+This also works with submenus without any other configuring since Bootstrap already supports this feature. Just use the markup like you were using before. Only the top level anchor tag needs any special markup for my plugin to work (see demo for proper markup).
 
 ## Options
 
@@ -71,7 +81,7 @@ This also works with submenus without any other configuring since Twitter Bootst
 
 ## Demo
 
-You can view a demo for this plugin on my site: http://cameronspear.com/demos/twitter-bootstrap-hover-dropdown/
+You can view a demo for this plugin on my site: http://cameronspear.com/demos/bootstrap-hover-dropdown/
 
 ### A Note on Choosing a Selector
 
@@ -83,6 +93,8 @@ This plugin purposedly lets you choose a selector (as opposed to apply this to e
 
 I'm a slacker and only started keeping track of changes/bug fixes starting in March of 2013.
 
+* **2013-12-05** Change all references of *Twitter Bootstrap* to *Bootstrap* to reflect Bootstrap's name change.
+* **2013-11-09** Disable this plugin for devices that support touch. The plugin was causing issues with some mobile devices, and it's not necessary for them.
 * **2013-08-02** Add support for Bootstrap 3. For Bootstrap 2.x.x, use the `bootstrap-2.x.x` branch.
 * **2013-06-10** Always instantly close submenu siblings when opening a new one. Issue #19.
 * **2013-06-10** A fix for my last fix that would sometimes cause the correct item to not trigger when it should. Issue #18.

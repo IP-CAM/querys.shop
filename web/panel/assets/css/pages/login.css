@@ -153,7 +153,7 @@ Login page
   margin: 0 auto; 
   padding: 10px;
   color: #999;
-  font-size: 11px;
+  font-size: 13px;
 }
 
 @media (max-width: 480px) {
@@ -165,7 +165,6 @@ Login page
   }
 
   .login .content {
-    padding1: 20px; 
     width: 280px;
   }
 

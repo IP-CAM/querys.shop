@@ -28,10 +28,14 @@ Page header
 /***
 Header Search
 ***/
+.header .search-form {
+  background-color: #241709;
+}
 
 .header .search-form .form-control{
   color: #ccc;
-  background-color: #623f18;  
+  border: 0; 
+  background-color: #241709;  
 }
 
 .header .search-form .submit {  
@@ -57,6 +61,13 @@ Hor menu
   color: #fff;
   background: #e02222 !important; 
 }
+
+.header .hor-menu ul.nav li.current > a,
+.header .hor-menu ul.nav li.current > a:hover {
+  color: #fff;
+  background: #e02222 !important; 
+}
+
 
 .header .hor-menu .dropdown-menu {  
     background: #5a3a16;
@@ -94,6 +105,18 @@ Hor menu
 .header .hor-menu .search-form form input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #ccc;
 }
+
+/***
+Mega Menu
+***/
+.mega-menu .mega-menu-submenu {  
+  border-right: 1px solid #6B451B;
+}
+
+.mega-menu .mega-menu-submenu li h3 {  
+  color: #fff;
+}
+
 /***
 Page sidebar
 ***/

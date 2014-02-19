@@ -2,7 +2,6 @@
  * @preserve 
  * bootpag - jQuery plugin for dynamic pagination
  *
- * modified by keenthemes for Bootstrap 3.0 support
  * Copyright (c) 2013 botmonster@7items.com
  *
  * Licensed under the MIT license:
@@ -11,7 +10,7 @@
  * Project home:
  *   http://botmonster.com/jquery-bootpag/
  *
- * Version:  1.0.4
+ * Version:  1.0.5
  *
  */
 (function($, window) {
@@ -84,7 +83,6 @@
                 $currPage = $page.filter('[data-lp='+page+']');
             }
             $currPage.addClass('disabled');
-            $owner.trigger('page', page);
             $owner.data('settings', settings);
         }
 
@@ -94,9 +92,9 @@
         }
 
         return this.each(function(){
-
+            
             var $bootpag, lp, me = $(this),
-                p = ['<ul class="bootpag '+ settings.paginationClass +'">']; // added settings.paginationClass setting by keenthemes to apply pagination classes for Bootstrap 3.0
+                p = ['<ul class="pagination bootpag">'];
 
             if(settings.prev){
                 p.push('<li data-lp="1" class="prev"><a href="'+href(1)+'">'+settings.prev+'</a></li>');
@@ -111,7 +109,7 @@
             }
             p.push('</ul>');
             me.find('ul.bootpag').remove();
-            me.append(p.join('')); // addClass('pagination') removed by keenthemes to support bootstrap 3.0
+            me.append(p.join(''));
             $bootpag = me.find('ul.bootpag');
             me.find('li').click(function paginationClick(){
             
@@ -119,7 +117,9 @@
                 if(me.hasClass('disabled')){
                     return;
                 }
-                renderPage($bootpag, parseInt(me.attr('data-lp'), 10));
+                var page = parseInt(me.attr('data-lp'), 10);
+                renderPage($bootpag, page);
+                $owner.trigger('page', page);
             });
             renderPage($bootpag, settings.page);
         });

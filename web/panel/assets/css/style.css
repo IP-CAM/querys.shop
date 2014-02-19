@@ -1,6 +1,6 @@
 /*   
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.0.3
-Version: 1.5.5
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.1.0
+Version: 2.0
 Author: KeenThemes
 Website: http://www.keenthemes.com/
 Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keentheme
@@ -27,20 +27,9 @@ light grey: #fafafa;
 *********************/
 
 /***
-Import fonts
-***/
-
-/*Load Open Sans Font from google fonts*/
-/*
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
-*/
-
-/* load Open Sans Font from local */
-@import url(../fonts/font.css);
-
-/***
 Reset and overrides  
 ***/
+
 /* general body settings */
 body { 
   color: #000; 
@@ -80,6 +69,39 @@ you can optionally include the following CSS and JavaScript to work around this 
 and thus doesn't properly apply the media queries in Bootstrap's CSS. To address this, following CSS code applied */
 @-ms-viewport { 
   width: auto !important; 
+}
+
+/***
+Custom Scrollbars
+***/
+
+::-webkit-scrollbar {  
+    width: 12px;  
+}  
+
+::-webkit-scrollbar-track {  
+    background-color: #eaeaea;  
+    border-left: 1px solid #cecece;  
+}  
+
+::-webkit-scrollbar-thumb {  
+    background-color: #cecece;  
+}  
+
+::-webkit-scrollbar-thumb:hover {  
+    background-color: #aaa;  
+}  
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    box-shadow: none;
+    border: 0; 
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    box-shadow: none;
+    border: 0; 
 }
 
 /***
@@ -172,7 +194,7 @@ General backgrounds. Can be applied to any block or panel
   color: #fff !important;
 }
 
-.be-grey {
+.bg-grey {
   background-image: none !important;
   background-color: #fafafa !important;
   border-color: #fafafa !important;
@@ -181,6 +203,7 @@ General backgrounds. Can be applied to any block or panel
 /***
 Font Awesome Icons
 ***/
+
 [class^="fa-"],
 [class*=" fa-"] {
   display: inline-block;
@@ -193,6 +216,7 @@ Font Awesome Icons
 /***
 Make font awesome icons fixed width(latest version issue)
 ***/
+
 li [class^="fa-"],
 li [class*=" fa-"] {
   display: inline-block;
@@ -203,6 +227,44 @@ li [class^="fa-"].icon-large,
 li [class*=" fa-"].icon-large {
   /* increased font size for icon-large */
   width: 1.5625em;
+}
+
+.fa-lg,
+.icon-lg {
+  font-size: 16px;
+}
+
+.fa-2x {
+  font-size: 2em;
+}
+.fa-3x {
+  font-size: 3em;
+}
+.fa-4x {
+  font-size: 4em;
+}
+.fa-5x {
+  font-size: 5em;
+}
+
+.icon-default {
+  color: #ccc;
+}
+
+.icon-success {
+  color: #468847;
+}
+
+.icon-info {
+  color: #27a9e3; 
+}
+
+.icon-warning {
+  color: #dbc056;
+}
+
+.icon-danger {
+  color: #B94A48;
 }
 
 /***
@@ -234,6 +296,7 @@ hr {
 /***
 Tools
 ***/
+
 .display-none,
 .display-hide {
   display: none;
@@ -242,6 +305,18 @@ Tools
 .no-space {
   margin: 0px !important;
   padding: 0px !important;
+}
+
+.no-margin {
+  margin:0;
+}
+
+.no-border {
+  border:0 !important;
+}
+
+.margin-bottom-5 {
+  margin-bottom: 5px;
 }
 
 .margin-bottom-10 {
@@ -288,9 +363,14 @@ Tools
   display: inline;
 }
 
+.text-align-reverse {
+  text-align: right;
+}
+
 /***
 ie8 & ie9 modes
 ***/
+
 .visible-ie8 {
   display: none;
 }
@@ -381,11 +461,10 @@ Header and header elements.
   background: none;
 }
 
-.header .navbar-nav {
+.header.navbar .navbar-nav {
   margin-right: 20px;
   display: block; 
 }
-
 
 .header .navbar-nav > li {
   margin: 0px;
@@ -420,7 +499,7 @@ Header and header elements.
 }
 
 .header .navbar-nav > li.dropdown.user .dropdown-toggle {
-  padding: 7px 4px 6px 9px;
+  padding: 7px 0px 6px 6px;
 }
 
 .header .navbar-nav > li.dropdown.user .dropdown-toggle:hover {
@@ -431,7 +510,7 @@ Header and header elements.
   color: #ddd;
 }
 
-.header .navbar-nav li.dropdown.user .dropdown-toggle i {
+.header .navbar-nav > li.dropdown.user .dropdown-toggle i {
   display: inline-block;
   margin-top: 5px;
   margin: 0;
@@ -455,13 +534,15 @@ Header Search
 .header .search-form {
   float: left;
   display: inline-block;
-  margin-top: 6px;
-  margin-left: 20px;
+  padding: 0;
+  height: 41px;
+  margin:0;
 }
 
 .header .search-form .form-control{
+  margin-top: 8px;
   border: 0;
-  padding-top: 3px;
+  padding-top: 1px;
   padding-right: 27px;
 }
 
@@ -501,7 +582,7 @@ Language Bar
 .header .navbar-nav > li.dropdown.language > a {
   color: #ddd;
   font-size: 13px;
-  padding: 10px 1px 12px 5px;
+  padding: 11px 1px 11px 5px;
 }
 
 .header .navbar-nav > li.dropdown.language > a > img {
@@ -523,6 +604,7 @@ Language Bar
 /***
 Page container
 ***/
+
 .page-container {
   margin: 0px;
   padding: 0px;
@@ -552,12 +634,13 @@ Page sidebar
   width: 225px;
   float: left;
   position: relative;
-  margin-left: -100%;
+  margin-right: -100%;
 }
 
 /***
 Page content
 ***/
+
 .ie8 .page-content-wrapper {
     float: left;
     width: 100%;
@@ -638,9 +721,14 @@ Page sidebar
   margin-bottom: 20px;
 }
 
+.page-sidebar-menu > li.open > a {
+  font-size: 14px;
+}
+
 .page-sidebar-menu > li.active > a {
   border: none; 
   text-shadow:none;
+  font-size: 14px;
 }  
 
 .page-sidebar-menu > li.active > a .selected {
@@ -870,6 +958,7 @@ Sidebar toggler(show/hide)
 }
 
 .header .sidebar-toggler {
+  float: left;
   display: inline-block;
   margin-top: 6px;
   margin-left: -42px;
@@ -1316,7 +1405,7 @@ Portlets
 }
 
 .portlet > .portlet-title > .actions > .btn-group {
-  margin-top: -12px;
+  margin-top: -13px;
 }
 
 .portlet > .portlet-title > .actions > .btn {
@@ -1331,7 +1420,7 @@ Portlets
 
 .portlet > .portlet-title > .actions > .btn.btn-sm {
   padding: 3px 8px;
-  margin-top: -14px;
+  margin-top: -13px;
 }
 
 .portlet > .portlet-title > .actions > .btn-group > .btn-sm {
@@ -1346,9 +1435,21 @@ Portlets
   margin-top: -4px;
 }
 
+@media (max-width: 767px) { 
+  .portlet > .portlet-title > .actions.btn-set > .btn-group,
+  .portlet > .portlet-title > .actions.btn-set > .btn {
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+}
+
 .portlet > .portlet-body {
   clear: both;  
   padding: 0;  
+}
+
+.portlet > .portlet-empty {
+  min-height: 125px; 
 }
 
 .portlet > .portlet-body.light-blue, .portlet.light-blue {
@@ -1464,7 +1565,6 @@ Solid colored portlet
 Box portlet
 ***/
 
-
 .portlet.box {
    padding:0px !important
 }
@@ -1473,10 +1573,6 @@ Box portlet
    padding:8px 10px 2px 10px;
    border-bottom: 1px solid #eee;
    color: #fff !important;
-}
-
-.portlet.box > .portlet-title > .actions > .btn > i {
-  color: #fff !important;
 }
 
 .portlet.box > .portlet-title > .tools {
@@ -1598,7 +1694,6 @@ Statistic lists
   margin-right: 10px;
   margin-top: 3px;
 }
-
 
 /***
 Chart tooltips
@@ -1995,7 +2090,6 @@ Custom tables
 .table-advance td.highlight div.danger {  
   border-left: 2px solid #e23e29;
 }
-
 
 /***
 Star rating
@@ -2446,6 +2540,20 @@ Vertical inline menu
 /***
 Custom tabs
 ***/
+.nav-tabs > li > a > .badge,
+.nav-pills > li > a > .badge {
+  margin-top: -3px;
+}
+
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  font-size: 14px;
+}
+
+.nav-tabs-sm > li > a,
+.nav-pills-sm > li > a {
+  font-size: 13px;
+}
 
 .tabbable-custom { 
   margin-bottom: 15px; 
@@ -2521,7 +2629,6 @@ Custom tabs
 
 /* below tabs */
 
-
 .tabs-below.tabbable-custom .nav-tabs > li > a { 
   border-top: none; 
   border-bottom: 2px solid transparent; 
@@ -2558,10 +2665,10 @@ Custom tabs
   padding:9px 15px;
 }
 
-
 /***
 Custom portlet tabs
 ***/
+
 .portlet-tabs > .nav-tabs {
     position: relative;
     top: -41px;
@@ -2651,9 +2758,21 @@ Custom portlet tabs
   margin-bottom: 0px;
 }
 
+/* reverse aligned tabs */
+
+.tabs-reversed > li {
+  float: right;
+}
+
+.tabs-reversed > li,
+.tabs-reversed > li > a {
+  margin-right: 0;
+}
+
 /***
 Dashboard container
 ***/
+
 #dashboard {
   overflow: hidden;
 }
@@ -2663,6 +2782,10 @@ Dashboard stats
 ***/
 .dashboard-stat {
   margin-bottom: 25px;
+}
+
+.portlet .dashboard-stat:last-child {
+  margin-bottom: 0;
 }
 
 .dashboard-stat:before,
@@ -2689,6 +2812,11 @@ Dashboard stats
   font-size: 65px;
   line-height: 65px;
   color: #fff;
+}
+
+.dashboard-stat .visual {
+  font-size: 35px;
+  line-height: 35px;
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {  
@@ -2789,12 +2917,45 @@ Dashboard stats
   background-color: #6e1881;
 } 
 
+/***
+Text Stats
+***/
+
+.text-stat h3 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+
+.text-stat span {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {  
+
+  .text-stat {
+    margin-top: 20px;
+  }  
+
+}
 
 /***
 Tiles(new in v1.1.1)
 ***/
+
 .tiles {
   margin-right: -10px;
+}
+
+.tiles:before,
+.tiles:after {
+  display: table;
+  content: " ";
+}
+
+.tiles:after {
+  clear: both;
 }
 
 .tile {
@@ -3185,6 +3346,78 @@ Top bar menu
 }
 
 /***
+Mega Menu(new in v1.6)
+***/
+
+.mega-menu .nav,
+.mega-menu .collapse,
+.mega-menu .mega-menu-dropup,
+.mega-menu .mega-menu-dropdown {
+  position: static;
+}
+.mega-menu .container {
+  position: relative;
+}
+.mega-menu .mega-menu-dropdown .dropdown-menu {
+  left: auto;
+  width: auto;
+}
+.mega-menu .nav.navbar-right .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+.mega-menu .mega-menu-content {
+  padding: 10px;
+  margin: 0;
+}
+.mega-menu .mega-menu-full .dropdown-menu {
+  left: 20px;
+  right: 20px;
+}
+
+.mega-menu-responsive-content {
+  padding: 10px 15px 10px 60px;
+}
+
+.page-boxed .mega-menu .mega-menu-dropdown .dropdown-menu {  
+  top: 42px;
+}
+
+.page-boxed .mega-menu .mega-menu-dropdown.mega-menu-full .dropdown-menu {
+  margin: 0;
+  padding: 0;
+  left: 18px;
+  right: 18px;
+}
+
+.mega-menu .mega-menu-submenu {
+  width: auto !important;
+  padding: 0px 15px !important;
+  margin: 0 !important;
+}
+
+.mega-menu .mega-menu-submenu:last-child {
+  border-right: 0;
+}
+
+.mega-menu .mega-menu-submenu li > h3 {
+  font-size: 14px;
+  margin-top: 10px;
+  padding-left: 5px;
+}
+
+.mega-menu .mega-menu-submenu li {
+  padding: 2px !important;
+  margin: 0 !important;
+  list-style: none;
+}
+
+.mega-menu .mega-menu-submenu li > a {
+  padding: 5px !important; 
+  margin: 0 !important;
+}
+
+/***
 Horezantal Menu(new in v1.2)
 ***/
 
@@ -3193,13 +3426,9 @@ Horezantal Menu(new in v1.2)
   float: left;
 }
 
-.header .hor-menu ul.nav li a {
+.header .hor-menu ul.nav li > a {
   font-size: 14px;
-  padding: 11px 18px; 
-}
-
-.header .hor-menu ul.nav li {
-  position: relative;
+  padding: 11px 10px; 
 }
 
 .header .hor-menu ul.nav li.current .selected,
@@ -3218,7 +3447,6 @@ Horezantal Menu(new in v1.2)
   margin-bottom:-6px;
 }
 
-
 /*drop-down*/
 .header .hor-menu .dropdown-menu {
     margin-top: 0;
@@ -3226,27 +3454,27 @@ Horezantal Menu(new in v1.2)
     box-shadow: none;
 }
 
-.header .hor-menu .dropdown-submenu > .dropdown-menu {
+.header .hor-menu .classic-menu-dropdown .dropdown-submenu > .dropdown-menu {
   top: 0;
 }
 
-.header .hor-menu .dropdown-submenu > a:after {
+.header .hor-menu .classic-menu-dropdown .dropdown-submenu > a:after {
   top: 8px;
   margin-right: 0px;
 } 
 
-.header .hor-menu .dropdown-menu li > a {
+.header .hor-menu .classic-menu-dropdown .dropdown-menu li > a {
     padding: 7px 18px !important; 
     margin-bottom:1px;
 }
 
-.header .hor-menu .dropdown-menu .arrow {
+.header .hor-menu .classic-menu-dropdown .dropdown-menu .arrow {
   display: none;
 }
 
-.header .hor-menu .dropdown-menu li > a:hover,
-.header .hor-menu .dropdown-menu li:hover > a,
-.header .hor-menu .dropdown-menu li.active > a {
+.header .hor-menu .classic-menu-dropdown .dropdown-menu li > a:hover,
+.header .hor-menu .classic-menu-dropdown .dropdown-menu li:hover > a,
+.header .hor-menu .classic-menu-dropdown .dropdown-menu li.active > a {
     filter:none !important;
 }
 
@@ -3276,7 +3504,7 @@ Horezantal Menu(new in v1.2)
   margin: 0;
   top:42px; 
   right:0px; 
-  padding:8px; 
+  padding:0 4px; 
   display:none;
   z-index:999; 
   position:absolute; 
@@ -3302,6 +3530,7 @@ Horezantal Menu(new in v1.2)
   background: none;
   width: 200px;
   border: none;
+  margin-top: 6px;
 }
 
 /***
@@ -3485,10 +3714,18 @@ Social Icons(new in v1.2.2)
 .social-icons .vk {background: url(../img/social/vk.png) no-repeat;}
 .social-icons .instagram {background: url(../img/social/instagram.png) no-repeat;}
 .social-icons .reddit {background: url(../img/social/reddit.png) no-repeat;}
+.social-icons .aboutme {background: url(../img/social/aboutme.png) no-repeat;}
+.social-icons .flickr {background: url(../img/social/flickr.png) no-repeat;}
+.social-icons .foursquare {background: url(../img/social/foursquare.png) no-repeat;}
+.social-icons .gravatar {background: url(../img/social/gravatar.png) no-repeat;}
+.social-icons .klout {background: url(../img/social/klout.png) no-repeat;}
+.social-icons .myspace {background: url(../img/social/myspace.png) no-repeat;}
+.social-icons .quora {background: url(../img/social/quora.png) no-repeat;}
 
 /***
 Inline Social Icons
 ***/
+
 .social-icon {
   display:inline-block !important;
   width:28px;
@@ -3532,6 +3769,13 @@ Inline Social Icons
 .social-icon.vk {background: url(../img/social/vk.png) no-repeat;}
 .social-icon.instagram {background: url(../img/social/instagram.png) no-repeat;}
 .social-icon.reddit {background: url(../img/social/reddit.png) no-repeat;}
+.social-icon.aboutme {background: url(../img/social/aboutme.png) no-repeat;}
+.social-icon.flickr {background: url(../img/social/flickr.png) no-repeat;}
+.social-icon.foursquare {background: url(../img/social/foursquare.png) no-repeat;}
+.social-icon.gravatar {background: url(../img/social/gravatar.png) no-repeat;}
+.social-icon.klout {background: url(../img/social/klout.png) no-repeat;}
+.social-icon.myspace {background: url(../img/social/myspace.png) no-repeat;}
+.social-icon.quora {background: url(../img/social/quora.png) no-repeat;}
 
 .social-icon:hover {
   background-position:0 -38px;
@@ -3545,7 +3789,6 @@ Inline Social Icons
 .social-icon-color:hover {
   opacity: 1;
 }
-
 
 /***
 Notes
@@ -3663,10 +3906,27 @@ Demo Utils
   }
 }
 
-
 /***
 Forms 
 ****/
+
+.static-info {
+  margin-bottom: 10px;
+}
+
+.static-info .name {
+  font-size: 14px;
+}
+
+.static-info .value {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.static-info.align-reverse .name,
+.static-info.align-reverse .value {
+  text-align: right;
+}
 
 input.placeholder,
 textarea.placeholder {
@@ -3812,11 +4072,19 @@ textarea.placeholder {
   padding-top: 1px;
 }
 
+.form-horizontal .radio-list > label {
+  margin-bottom: 0;
+}
+
+.form-horizontal .radio > span {
+  margin-top: 2px;
+}
+
 /* Rows seperated form layout */
 .form-row-seperated .form-group {
   margin: 0;
   border-bottom: 1px solid #efefef;
-  padding: 10px 10px 10px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 .form-row-seperated .form-group.last {
@@ -3979,7 +4247,7 @@ Responsive Flip Scroll Tables
 
 .flip-scroll table { width: 100%; }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   
   .flip-scroll .flip-content:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
   .flip-scroll * html .flip-content { zoom: 1; }
@@ -4024,4 +4292,57 @@ Responsive Flip Scroll Tables
   .flip-scroll th:last-child,
   .flip-scroll td:last-child { border-bottom: 1px solid #ddd; }
   
+}
+
+/***
+UI Loading
+***/
+
+.loading-message {
+  display: inline-block;
+  min-width: 125px;
+  padding: 10px;
+  margin: 0 auto;
+  color: #000 !important;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.loading-message span {
+  line-height:20px;
+  vertical-align: middle;
+}
+
+.loading-message.loading-message-boxed {
+  border: 1px solid #ddd;
+  background-color: #eee;  
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.page-loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 125px;
+  margin-left: -50px;
+  margin-top: -30px;
+  padding: 7px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  background-color: #eee;  
+  vertical-align: middle;
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.page-loading span {
+  line-height:20px;
+  vertical-align: middle;
 }

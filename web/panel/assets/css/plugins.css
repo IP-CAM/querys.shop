@@ -409,25 +409,10 @@ Select2 plugin css changes
 
 
 /***
-Fileuploader plugin css changes
+Jansy File Input plugin css changes
 ***/
-.fileupload .btn {
-  padding: 7px 14px ;
-}
-
-.fileupload-exists {
-  padding: 0px;
-}
-
-.fileupload .fileupload-preview {
-  background-color: #fff ;
-  background-image: none ;
-  filter:none ;
-}
-
-.fileupload .close {
-  position: relative;
-  top:0px ;
+.fileinput {
+  margin-bottom: 0;
 }
 
 
@@ -676,7 +661,6 @@ Fancy box fix overlay fix(in v1.2.4)
   z-index: 10000 ;
 }
 
-
 /***
 Datatables Plugin(in v1.3)
 ***/
@@ -768,6 +752,77 @@ Datatables Plugin(in v1.3)
   }
 }
 
+.dataTables_processing {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 125px;
+  margin-left: 0;
+  padding: 7px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  background-color: #eee;  
+  vertical-align: middle;
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.dataTables_processing span {
+  line-height:15px;
+  vertical-align: middle;
+}
+
+.dataTables_empty {
+  text-align: center; 
+}
+
+/***
+Extended Datatable
+***/
+
+.dataTables_extended_wrapper .seperator {
+  padding: 0 2px;
+}
+
+.dataTables_extended_wrapper .dataTables_paginate,
+.dataTables_extended_wrapper .dataTables_length,
+.dataTables_extended_wrapper .dataTables_info {
+  display: inline-block;
+  float: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: static !important;
+}
+
+@media (max-width: 480px) { 
+
+  .dataTables_extended_wrapper .dataTables_paginate,
+  .dataTables_extended_wrapper .dataTables_length,
+  .dataTables_extended_wrapper .dataTables_info {
+    display: block;
+    margin-bottom: 10px !important;
+  }
+
+  .dataTables_extended_wrapper .seperator {
+    display: none;
+  }
+}
+
+.dataTables_extended_wrapper .dataTables_length label {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 13px;
+  float: none !important;
+  display: inline-block !important;
+}
+
+.table-container .table-actions-wrapper {
+  display: none;
+}
+
 /***
 Password Strength(in v1.4)
 ***/
@@ -800,10 +855,6 @@ Uniform disabled checkbox, radio button fix(in v1.4)
   margin-right: 2px !important;
 }
 
-.radio > span {
-  margin-top: 2px;
-}
-
 .checker input,
 .radio input {
   outline: none !important;
@@ -817,6 +868,12 @@ div.checker.disabled.active span{
 div.checker.disabled:hover,
 div.radio.disabled:hover {
     cursor: not-allowed;  
+}
+
+div.radio,
+div.checker {
+ margin-right: 0;
+ margin-left: 3px;
 }
 
 /***
@@ -921,6 +978,28 @@ Bootstrap  Datetimepicker
 /* change z-index when opened in modal */
 .modal-open .datetimepicker {
   z-index: 10055 !important;
+}
+
+/***
+Bootstrap Time Picker
+***/
+.bootstrap-timepicker-widget table td a  {
+  padding: 4px 0;
+}
+
+.bootstrap-timepicker-widget input,
+.bootstrap-timepicker-widget input:focus {
+  outline: none !important;
+  border: 0;
+}
+
+.modal-open  .bootstrap-timepicker-widget {
+  z-index: 10055 !important;
+}
+
+.bootstrap-timepicker-widget.timepicker-orient-bottom:before,
+.bootstrap-timepicker-widget.timepicker-orient-bottom:after {
+  top: auto;
 }
 
 /***
@@ -1068,13 +1147,8 @@ FuelUX Spinners
   width: 22px;
   padding-left: 6px;
   padding-right: 6px;
+  padding-top: 0px;
 } 
-
-.spinner-buttons.btn-group-vertical .btn .icon-angle-down {
-  display: inline-block;
-  position: relative;
-  top: -2px;
-}
 
 
 /***
@@ -1154,12 +1228,20 @@ Google reCaptcha
   padding: 5px;
 }
 
+iframe[src="about:blank"] {
+  display:none;
+}
+
 /***
 Bootstrap Markdown
 ***/
 .md-input {
   padding: 5px !important;
   border-bottom: 0 !important;
+}
+
+.md-editor .btn-toolbar {
+  margin-left: 0px;
 }
 
 .md-editor.active {
@@ -1219,4 +1301,200 @@ Bootstrap Modal
 
 .modal-scrollable {
   overflow: hidden !important;
+}
+
+
+/***
+jQuery Notific8 Plugin
+***/
+
+.jquery-notific8-message {
+  font-size: 13px;
+}
+
+[class*="jquery-notific8"],
+[class*="jquery-notific8"]:after,
+[class*="jquery-notific8"]:before {
+   -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+           box-sizing: content-box;
+}
+
+.right .jquery-notific8-close-sticky span,
+.left .jquery-notific8-close-sticky span {
+    font-size: 10px;  
+}
+
+.jquery-notific8-heading {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+/***
+jQuery File Upload
+***/
+
+.blueimp-gallery .close {  
+  background-image: url("../img/portlet-remove-icon-white.png") !important;
+  margin-top: -2px;
+}
+
+.blueimp-gallery .prev,
+.blueimp-gallery .next {
+  border-radius: 23px !important;
+}
+
+/***
+Bootstrap Switch 
+***/
+
+.has-switch {
+  border-color: #e5e5e5;
+}
+
+.has-switch:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/***
+Jstree
+***/
+
+.jstree-default .jstree-clicked {
+  border: 0;
+  background-color: #e1e1e1;
+  box-shadow:none;
+}
+
+.jstree-default .jstree-hovered {
+  border: 0;
+  background-color: #eee;
+  box-shadow:none;
+}
+
+.jstree-default .jstree-wholerow-clicked,
+.jstree-wholerow .jstree-wholerow-clicked {
+  background: none;
+  border: 0;
+  background-color: #e1e1e1;
+  box-shadow:none;
+}
+
+.jstree-default .jstree-wholerow-hovered,
+.jstree-wholerow .jstree-wholerow-hovered {
+  border: 0;
+  background-color: #eee;
+  box-shadow:none;
+} 
+
+.jstree-icon.icon-lg {
+  margin-top: 1px;
+}
+
+.jstree-open > .jstree-anchor > .fa-folder:before {
+  margin-left: 2px;
+  content: "\f07c"; 
+}
+
+.jstree-default.jstree-rtl .jstree-last {
+  background: transparent;
+  background-repeat: no-repeat;
+}
+
+.vakata-context,
+.vakata-context ul {
+  padding: 0;
+  min-width: 125px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);  
+  font-size: 14px;
+  font-family: "Segoe UI",Helvetica, Arial, sans-serif;
+  border: 1px solid #ddd;
+}
+
+.vakata-context li a {
+  padding: 0 10px;
+}
+
+.vakata-context .vakata-context-hover > a,
+.vakata-context li a:hover {
+  background-color: #eee;
+  color: #333;
+  box-shadow: none;
+}
+
+.vakata-context li a span,
+.vakata-context li a ins {
+  display: none;
+}
+
+.vakata-context .vakata-context-separator a, 
+.vakata-context-rtl .vakata-context-separator a {
+  margin: 0;
+}
+
+.jstree-rename-input {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e5e5 !important;
+  outline: none !important;
+  padding: 2px 6px !important;
+  margin-right: -4px !important;
+}
+
+/***
+Bootstrap Select
+***/
+
+.bootstrap-select .btn {
+  border-color: #e5e5e5;
+}
+
+.bootstrap-select.open .btn1 {
+  border-color: #999999;
+}
+
+.bootstrap-select.open.dropup .btn1 {
+  border-color: #999999;
+}
+
+.bootstrap-select .btn:focus {
+    outline: none !important;
+    outline-offset: 0;
+}
+
+.bootstrap-select.btn-group .dropdown-menu {
+  margin-top: 1px;
+}
+
+.bootstrap-select.btn-group .dropdown-menu > li > dt > .text {
+  font-weight: 600;
+  font-family: 'Open Sans';
+  font-size: 14px;
+}
+
+.bootstrap-select.btn-group .dropdown-menu .text-muted {
+  color: #999 !important;
+}
+
+.bootstrap-select .caret {
+  border: 0;
+  width: auto;
+  height: auto;
+  margin-top: -10px !important;
+}
+
+.bootstrap-select .caret:before {
+    content: "\f107";
+    display: inline-block;
+    border: 0; 
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.bootstrap-select .selected i {
+  color: #aaa;
 }

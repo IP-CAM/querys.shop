@@ -48,7 +48,7 @@ Login page
 }
 
 .login .content .forget-form {
-  /*display: none;*/
+  display: none;
 }
 
 .login .content .register-form {
@@ -142,7 +142,7 @@ Login page
   margin: 0 auto; 
   padding: 10px;
   color: #eee;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 @media (max-width: 480px) {
