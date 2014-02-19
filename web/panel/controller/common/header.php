@@ -9,6 +9,9 @@ class ControllerCommonHeader extends Controller {
 			$this->data['base'] = HTTP_SERVER;
 		}
 
+		
+
+
 		$this->data['description'] = $this->document->getDescription();
 		$this->data['keywords'] = $this->document->getKeywords();
 		$this->data['links'] = $this->document->getLinks();	
@@ -18,6 +21,7 @@ class ControllerCommonHeader extends Controller {
 		$this->data['direction'] = $this->language->get('direction');
 
 		$this->language->load('common/header');
+		$this->data['text_confirm'] = $this->language->get('text_confirm');
 
 		if (!$this->user->isLogged() || !isset($this->request->get['token']) || !isset($this->session->data['token']) || ($this->request->get['token'] != $this->session->data['token'])) {
 			$this->data['logged'] = '';

@@ -30,14 +30,31 @@ Page header
 /***
 Header Search
 ***/
+.header .search-form {
+  background-color: #000;
+}
 
-.header .search-form .form-control{
+.header .search-form .form-control {
   color: #999;
-  background-color: #3d3d3d;  
+  border: 0; 
+  background-color: #000;  
+}
+
+.header .search-form .form-control::-webkit-input-placeholder { /* WebKit browsers */
+    color: #777;
+}
+.header .search-form .form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #777;
+}
+.header .search-form .form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #777;
+}
+.header .search-form .form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #777;
 }
 
 .header .search-form .submit {  
-  background: url(../../img/search-icon.png);
+  background: url(../../img/search-icon-light.png);
 }
 
 /***
@@ -102,6 +119,17 @@ Hor menu
 }
 .header .hor-menu .search-form form input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #999;
+}
+
+/***
+Mega Menu
+***/
+.mega-menu .mega-menu-submenu {  
+  border-right: 1px solid #444;
+}
+
+.mega-menu .mega-menu-submenu li h3 {  
+  color: #fff;
 }
 
 /***

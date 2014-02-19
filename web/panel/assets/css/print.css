@@ -1,6 +1,7 @@
-/***
-Import fonts
-***/
+body {
+    background-color: #fff !important;
+}
+
 .header {
 	display: none;
 }
@@ -26,10 +27,12 @@ Import fonts
 }
 
 .page-container {
-	margin: 0px;
-	padding: 0px;
+	margin: 0px !important;
+	padding: 0px !important;
 }
 
 .page-content {
 	min-height: auto !important;
+	padding: 0px 20px 20px !important;
+	margin: 0 !important;
 }

@@ -3,7 +3,7 @@
 
 /*!=========================================================================
  *  Bootstrap TouchSpin
- *  v1.3.1
+ *  v2.5.0
  *
  *  A mobile and touch friendly input spinner component for Bootstrap 3.
  *
@@ -14,6 +14,7 @@
  *
  *  Thanks for the contributors:
  *      Stefan Bauer - https://github.com/sba
+ *      amid2887 - https://github.com/amid2887
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
@@ -34,12 +35,34 @@
 
     $.fn.TouchSpin = function(options) {
 
+        var defaults = {
+            min: 0,
+            max: 100,
+            initval: "",
+            step: 1,
+            decimals: 0,
+            stepinterval: 100,
+            forcestepdivisibility: 'round',  // none | floor | round | ceil
+            stepintervaldelay: 500,
+            prefix: "",
+            postfix: "",
+            prefix_extraclass: "",
+            postfix_extraclass: "",
+            booster: true,
+            boostat: 10,
+            maxboostedstep: false,
+            mousewheel: true,
+            buttondown_class: "btn btn-default",
+            buttonup_class: "btn btn-default"
+        };
+
         return this.each(function() {
 
             var settings,
                 originalinput = $(this),
+                originalinput_data = originalinput.data(),
                 container,
-                elements, // added by keenthemes to set fixed input groups
+                elements,
                 value,
                 downSpinTimer,
                 upSpinTimer,
@@ -50,8 +73,7 @@
 
             init();
 
-            function init()
-            {
+            function init() {
                 if (originalinput.data("alreadyinitialized")) {
                     return;
                 }
@@ -64,6 +86,7 @@
                 }
 
                 _initSettings();
+                _setInitval();
                 _checkValue();
                 _buildHtml();
                 _initElements();
@@ -71,52 +94,111 @@
                 _bindEventsInterface();
             }
 
-            function _initSettings()
-            {
-                settings = $.extend({
-                    min: 0,
-                    max: 100,
-                    step: 1,
-                    decimals: 0,
-                    stepinterval: 100,
-                    stepintervaldelay: 500,
-                    prefix: "",
-                    postfix: "",
-                    booster: true,
-                    boostat: 10,
-                    maxboostedstep: false,
-                    mousewheel: true
-                }, options);
+            function _setInitval() {
+                if (settings.initval !== "" && originalinput.val() === "") {
+                    originalinput.val(settings.initval);
+                }
             }
 
-            function _buildHtml()
-            {
-                originalinput.data("initvalue", originalinput.val()).val(Number(originalinput.val()).toFixed(settings.decimals));
+            function changeSettings(newsettings) {
+                _updateSettings(newsettings);
+                _checkValue();
 
-                var html = '<div class="input-group bootstrap-touchspin '+(settings.inputGroupClass ? settings.inputGroupClass : '')+'" style=""><span class="input-group-btn"><button class="btn '+(settings.spinDownClass ? settings.spinDownClass : 'btn-default')+' bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix">' + settings.prefix + '</span><span class="input-group-addon bootstrap-touchspin-postfix">' + settings.postfix + '</span><span class="input-group-btn"><button class="btn '+(settings.spinUpClass ? settings.spinUpClass : 'btn-default')+' bootstrap-touchspin-up" type="button">+</button></span></div>';
+                var value = Number(elements.input.val());
+                elements.input.val(value.toFixed(settings.decimals));
+            }
+
+            function _initSettings() {
+                settings = $.extend({}, defaults, originalinput_data, options);
+            }
+
+            function _updateSettings(newsettings) {
+                settings = $.extend({}, settings, newsettings);
+            }
+
+            function _buildHtml() {
+                var initval = originalinput.val(),
+                    parentelement = originalinput.parent();
+
+                if (initval !== "") {
+                    initval = Number(initval).toFixed(settings.decimals);
+                }
+
+                originalinput.data("initvalue", initval).val(initval);
+                originalinput.addClass("form-control");
+
+                $("<style type='text/css'>.bootstrap-touchspin-prefix:empty,.bootstrap-touchspin-postfix:empty{display:none;}</style>").appendTo("head");
+
+                if (parentelement.hasClass("input-group")) {
+                    _advanceInputGroup(parentelement);
+                }
+                else {
+                    _buildInputGroup();
+                }
+
+            }
+
+            function _advanceInputGroup(parentelement) {
+                parentelement.addClass("bootstrap-touchspin");
+
+                var prev = originalinput.prev(),
+                    next = originalinput.next();
+
+                var downhtml,
+                    uphtml,
+                    prefixhtml = '<span class="input-group-addon bootstrap-touchspin-prefix">' + settings.prefix + '</span>',
+                    postfixhtml = '<span class="input-group-addon bootstrap-touchspin-postfix">' + settings.postfix + '</span>';
+
+                if (prev.hasClass("input-group-btn")) {
+                    downhtml = '<button class="' + settings.buttondown_class + ' bootstrap-touchspin-down" type="button">-</button>',
+                    prev.append(downhtml);
+                }
+                else {
+                    downhtml = '<span class="input-group-btn"><button class="' + settings.buttondown_class + ' bootstrap-touchspin-down" type="button">-</button></span>';
+                    $(downhtml).insertBefore(originalinput);
+                }
+
+                if (next.hasClass("input-group-btn")) {
+                    uphtml = '<button class="' + settings.buttonup_class + ' bootstrap-touchspin-up" type="button">+</button>',
+                    next.prepend(uphtml);
+                }
+                else {
+                    uphtml = '<span class="input-group-btn"><button class="' + settings.buttonup_class + ' bootstrap-touchspin-up" type="button">+</button></span>';
+                    $(uphtml).insertAfter(originalinput);
+                }
+
+                $(prefixhtml).insertBefore(originalinput);
+                $(postfixhtml).insertAfter(originalinput);
+
+                container = parentelement;
+            }
+
+            function _buildInputGroup() {
+                var html = '<div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button class="' + settings.buttondown_class + ' bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix">' + settings.prefix + '</span><span class="input-group-addon bootstrap-touchspin-postfix">' + settings.postfix + '</span><span class="input-group-btn"><button class="' + settings.buttonup_class + ' bootstrap-touchspin-up" type="button">+</button></span></div>';
 
                 container = $(html).insertBefore(originalinput);
 
                 $(".bootstrap-touchspin-prefix", container).after(originalinput);
 
-                $("<style type='text/css'>.bootstrap-touchspin-prefix:empty,.bootstrap-touchspin-postfix:empty{display:none;}</style>").appendTo("head");
-
-                originalinput.addClass("form-control");
+                if (originalinput.hasClass("input-sm")) {
+                    container.addClass("input-group-sm");
+                }
+                else if (originalinput.hasClass("input-lg")) {
+                    container.addClass("input-group-lg");
+                }
             }
 
-            function _initElements()
-            {
+            function _initElements() {
                 elements = {
                     down: $(".bootstrap-touchspin-down", container),
                     up: $(".bootstrap-touchspin-up", container),
                     input: $("input", container),
-                    prefix: $(".bootstrap-touchspin-prefix", container),
-                    postfix: $(".bootstrap-touchspin-postfix", container)
+                    prefix: $(".bootstrap-touchspin-prefix", container).addClass(settings.prefix_extraclass),
+                    postfix: $(".bootstrap-touchspin-postfix", container).addClass(settings.postfix_extraclass)
                 };
             }
 
-            function _bindEvents()
-            {
+            function _bindEvents() {
                 originalinput.on("keydown", function(ev) {
                     var code = ev.keyCode || ev.which;
 
@@ -145,9 +227,10 @@
                     else if (code === 40) {
                         stopSpin();
                     }
-                    else {
-                        _checkValue();
-                    }
+                });
+
+                originalinput.on("blur", function() {
+                    _checkValue();
                 });
 
                 elements.down.on("keydown", function(ev) {
@@ -261,7 +344,7 @@
                 });
 
                 if (settings.mousewheel) {
-                    originalinput.bind("mousewheel DOMMouseScroll", function(ev) {
+                    originalinput.on("mousewheel DOMMouseScroll", function(ev) {
                         var delta = ev.originalEvent.wheelDelta || -ev.originalEvent.detail;
 
                         ev.stopPropagation();
@@ -299,12 +382,36 @@
                 originalinput.on('touchspin.stopspin', function() {
                     stopSpin();
                 });
+
+                originalinput.on('touchspin.updatesettings', function(e, newsettings) {
+                    changeSettings(newsettings);
+                });
+            }
+
+            function _forcestepdivisibility(value) {
+                switch(settings.forcestepdivisibility) {
+                    case 'round':
+                        return (Math.round(value / settings.step) * settings.step).toFixed(settings.decimals);
+                        break;
+                    case 'floor':
+                        return (Math.floor(value / settings.step) * settings.step).toFixed(settings.decimals);
+                        break;
+                    case 'ceil':
+                        return (Math.ceil(value / settings.step) * settings.step).toFixed(settings.decimals);
+                        break;
+                    default:
+                        return value;
+                }
             }
 
             function _checkValue() {
                 var val, parsedval, returnval;
 
                 val = originalinput.val();
+
+                if (val === "") {
+                    return;
+                }
 
                 if (settings.decimals > 0 && val === ".") {
                     return;
@@ -329,6 +436,8 @@
                 if (parsedval > settings.max) {
                     returnval = settings.max;
                 }
+
+                returnval = _forcestepdivisibility(returnval);
 
                 if (Number(val).toString() !== returnval.toString()) {
                     originalinput.val(returnval);
@@ -355,6 +464,8 @@
             }
 
             function upOnce() {
+                _checkValue();
+
                 value = parseFloat(elements.input.val());
                 if (isNaN(value)) {
                     value = 0;
@@ -379,6 +490,8 @@
             }
 
             function downOnce() {
+                _checkValue();
+
                 value = parseFloat(elements.input.val());
                 if (isNaN(value)) {
                     value = 0;

@@ -33,6 +33,7 @@
 <link href="assets/plugins/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css"/>
 <link href="assets/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css"/>
 <link href="assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="assets/plugins/data-tables/DT_bootstrap.css"/>
 
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN THEME STYLES -->
@@ -82,7 +83,7 @@
       });
     </script>
 
-    <link rel="stylesheet" type="text/css" href="view/stylesheet/stylesheet.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="view/stylesheet/stylesheet.css" /> -->
 </head>
 <!-- <body class="page-header-fixed page-sidebar-fixed"> -->
 <body class="page-header-fixed">

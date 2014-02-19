@@ -87,3 +87,15 @@ Promo Page
 .block-carousel .carousel-indicators li.active {
   background-color: #333;
 }
+
+@media (max-width: 991px) { 
+
+  .block-carousel {
+    margin-top: -20px;
+  }
+
+  .block-carousel .carousel-inner {
+    padding-top: 20px;
+  }
+
+}

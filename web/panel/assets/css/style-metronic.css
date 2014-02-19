@@ -276,8 +276,8 @@ Buttons & Dropdown Buttons
 
 .btn-sm,
 .btn-xs {
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: 4px 10px 5px 10px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -431,6 +431,17 @@ Popover
   color:#C09853;
 }
 
+.popovers.yellow + .popover {
+    background: yellow;
+}
+
+.popovers.yellow + .popover .popover-title {
+    background: yellow;
+}
+
+.popovers.yellow + .popover .popover-content {
+    background: yellow;
+}
 
 /***
 Dropdown
@@ -621,8 +632,6 @@ Dropdown Menu
   }
 
 }
- 
-/* bagin: sidebar menu badges */
 
 /***
 Dropdown Checkboxes (in v1.3)
@@ -720,6 +729,10 @@ fieldset[disabled] .form-control {
   background-color: #eeeeee;
 }
 
+.form-control.height-auto {
+  height: auto;
+}
+
 .uneditable-input {
   padding: 6px 12px;
   min-width: 206px;
@@ -775,8 +788,12 @@ textarea[readonly] {
   display: inline-block !important;
 }
 
+.input-mini {
+  width: 45px !important;
+}
+
 .input-xsmall {
-  width: 60px !important;
+  width: 80px !important;
 }
 
 .input-small {
@@ -793,6 +810,28 @@ textarea[readonly] {
 
 .input-xlarge {
   width: 480px !important;
+}
+
+.input-inline {
+  display: inline-block;
+  width: auto;  
+  vertical-align: middle;
+}
+
+.form-group .input-inline  {
+  margin-right: 5px;
+}
+
+.input-sm {
+  height: 28px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+select.input-sm {
+  height: 28px;
+  line-height: 28px;
+  padding: 2px 10px;
 }
 
 /***
@@ -1248,16 +1287,26 @@ Bootstrap modal
   font-weight: 300;
 }
 
-.modal-small {
-  width: 400px !important;
+.modal-small.modal-dialog {
+  width: 400px;
 }
 
-.modal-wide {
-  width: 60% !important;
+.modal-wide.modal-dialog {
+  width: 60%;
 }
 
-.modal-full {
-  width: 100% !important;
+.modal-full.modal-dialog {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  .modal-small.modal-dialog,
+  .modal-wide.modal-dialog, 
+  .modal-full.modal-dialog {
+    width: auto;
+  }
+
 }
 
 /***
@@ -1404,6 +1453,10 @@ Bootstrap Tables
   background-color: #017ebc;
 }
 
+.table .heading > th {
+  background-color: #eee !important;
+}
+
 /***
 Bootstrap Panel
 ***/
@@ -1412,4 +1465,46 @@ Bootstrap Panel
   -webkit-box-shadow: none !important;
      -moz-box-shadow: none !important;
           box-shadow: none !important;
+}
+
+.panel .panel-title > a:hover {
+  text-decoration: none;
+}
+
+.accordion .panel-heading {
+  padding: 0;
+}
+
+.accordion  .panel-title {
+  padding: 0;
+}
+
+.accordion  .panel-title .accordion-toggle {
+  display: block;
+  padding: 10px 15px;
+}
+
+.accordion .accordion-toggle.accordion-toggle-styled {
+  background: url("../img/accordion-plusminus.png") no-repeat;
+  background-position: right -19px;
+  margin-right: 15px;
+}
+
+.accordion .accordion-toggle.accordion-toggle-styled.collapsed {
+  background-position: right 12px;
+}
+
+/***
+Responsive Image
+***/
+.table td .img-responsive{
+  width:100%;
+}
+
+/***
+Unstyled List
+***/
+
+.list-unstyled li > .list-unstyled {
+  margin-left: 25px;
 }

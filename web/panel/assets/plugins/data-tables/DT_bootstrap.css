@@ -1,7 +1,12 @@
-
 div.dataTables_length label {
 	float: left;
-	text-align: left;
+	text-align: left; 
+}
+
+div.dataTables_length label .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
 }
 
 div.dataTables_length select {
@@ -160,16 +165,12 @@ div.DTFC_LeftFootWrapper table {
 	border-top: none;
 }
 
-.dataTables_processing {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 180px;
-	height: 40px;
-	margin-left: -90px;
-	padding: 10px 0 10px 0;
-	text-align: center;
-	color: #333;
-	font-size: 13px;
-	background-color: #ddd;
+/***
+Extended pagination
+***/
+.paging_bootstrap_extended {
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  font-size: 13px;
 }
