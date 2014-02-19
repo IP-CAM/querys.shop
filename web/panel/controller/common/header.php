@@ -9,7 +9,7 @@ class ControllerCommonHeader extends Controller {
 			$this->data['base'] = HTTP_SERVER;
 		}
 
-		
+
 
 
 		$this->data['description'] = $this->document->getDescription();
@@ -235,8 +235,6 @@ class ControllerCommonHeader extends Controller {
 			$this->data['navigation_top_bar'] = $navigation_top_bar->fetch('common/navigation_top_bar.tpl');
 			//End Menu Superior
 		}
-
-		
 
 		$this->template = 'common/header.tpl';
 

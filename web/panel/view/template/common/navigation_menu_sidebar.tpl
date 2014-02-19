@@ -44,6 +44,9 @@
 								<?php if( isset($menu_lvl2['lvl3']) ) : ?>
 									<span class="arrow"></span>
 								<?php endif; ?>
+								<?php if(isset($menu_lvl2['info']) && $menu_lvl2['info']['num']): ?>
+									<span class="badge badge-<?php echo $menu_lvl2['info']['type'];?>"><?php echo $menu_lvl2['info']['num'];?></span>
+								<?php endif; ?>
 								<!-- <span class="badge badge-roundless badge-warning">new</span> -->
 							</a>
 							<?php if( isset($menu_lvl2['lvl3']) ) : ?>
