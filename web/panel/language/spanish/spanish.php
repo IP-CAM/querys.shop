@@ -12,8 +12,8 @@ $_['thousand_point']          		= ',';
 // Text
 $_['text_yes']                		= 'Si';
 $_['text_no']                 		= 'No';
-$_['text_enabled']            		= 'Habilitado';
-$_['text_disabled']           		= 'Deshabilitado';
+$_['text_enabled']            		= 'Activo';
+$_['text_disabled']           		= 'Inactivo';
 $_['text_none']               		= ' --- Ninguno --- ';
 $_['text_select']             		= ' --- Favor de Seleccionar --- ';
 $_['text_select_all']         		= 'Seleccionar Todos';
@@ -27,6 +27,8 @@ $_['text_separator']          		= ' &gt; ';
 $_['text_edit']               		= 'Editar';
 $_['text_view']               		= 'Ver';
 $_['text_home']               		= 'Inicio';
+$_['text_visible']               	= 'Visible';
+$_['text_hidden']               	= 'Oculto';
 
 // Button
 $_['button_insert']           		= 'Agregar';

@@ -26,6 +26,8 @@ $_['text_separator']                = ' &gt; ';
 $_['text_edit']                     = 'Edit';
 $_['text_view']                     = 'View';
 $_['text_home']                     = 'Home';
+$_['text_visible']               	= 'Visible';
+$_['text_hidden']               	= 'Hidden';
 
 // Button
 $_['button_insert']                 = 'Insert';

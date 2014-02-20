@@ -160,23 +160,34 @@ class ControllerCatalogCategory extends Controller {
 				'category_id' => $result['category_id'],
 				'name'        => $result['name'],
 				'sort_order'  => $result['sort_order'],
+				'products'    => $result['total'],
+				'top'  		  => $result['top'],
+				'status'  	  => $result['status'],
 				'selected'    => isset($this->request->post['selected']) && in_array($result['category_id'], $this->request->post['selected']),
 				'action'      => $action
 			);
 		}
 
-		$this->data['heading_title'] = $this->language->get('heading_title');
+		$this->data['heading_title'] 	 = $this->language->get('heading_title');
 
-		$this->data['text_no_results'] = $this->language->get('text_no_results');
+		$this->data['text_no_results'] 	 = $this->language->get('text_no_results');
 
-		$this->data['column_name'] = $this->language->get('column_name');
-		$this->data['column_id'] = $this->language->get('column_id');
+		$this->data['column_id']     	 = $this->language->get('column_id');
+		$this->data['column_name']   	 = $this->language->get('column_name');
+		$this->data['column_status'] 	 = $this->language->get('column_status');
 		$this->data['column_sort_order'] = $this->language->get('column_sort_order');
-		$this->data['column_action'] = $this->language->get('column_action');
+		$this->data['column_action'] 	 = $this->language->get('column_action');
+		$this->data['column_top'] 	 	 = $this->language->get('column_top');
+		$this->data['column_products'] 	 = $this->language->get('column_products');
+		
+		$this->data['text_enabled'] 	 = $this->language->get('text_enabled');
+		$this->data['text_disabled'] 	 = $this->language->get('text_disabled');
+		$this->data['text_visible'] 	 = $this->language->get('text_visible');
+		$this->data['text_hidden'] 	 	 = $this->language->get('text_hidden');
 
-		$this->data['button_insert'] = $this->language->get('button_insert');
-		$this->data['button_delete'] = $this->language->get('button_delete');
-		$this->data['button_repair'] = $this->language->get('button_repair');
+		$this->data['button_insert'] 	 = $this->language->get('button_insert');
+		$this->data['button_delete'] 	 = $this->language->get('button_delete');
+		$this->data['button_repair'] 	 = $this->language->get('button_repair');
 
 		if (isset($this->error['warning'])) {
 			$this->data['error_warning'] = $this->error['warning'];
