@@ -287,7 +287,7 @@ class ControllerSaleOrder extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['invoice'] = $this->url->link('sale/order/invoice', 'token=' . $this->session->data['token'], 'SSL');
@@ -738,7 +738,7 @@ class ControllerSaleOrder extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL'),				
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if (!isset($this->request->get['order_id'])) {
@@ -1522,7 +1522,7 @@ class ControllerSaleOrder extends Controller {
 			$this->data['breadcrumbs'][] = array(
 				'text'      => $this->language->get('heading_title'),
 				'href'      => $this->url->link('sale/order', 'token=' . $this->session->data['token'] . $url, 'SSL'),				
-				'separator' => ' :: '
+				'separator' => ' <i class="fa fa-angle-right"></i> '
 			);
 
 			$this->data['invoice'] = $this->url->link('sale/order/invoice', 'token=' . $this->session->data['token'] . '&order_id=' . (int)$this->request->get['order_id'], 'SSL');
@@ -1945,7 +1945,7 @@ class ControllerSaleOrder extends Controller {
 			$this->data['breadcrumbs'][] = array(
 				'text'      => $this->language->get('heading_title'),
 				'href'      => $this->url->link('error/not_found', 'token=' . $this->session->data['token'], 'SSL'),
-				'separator' => ' :: '
+				'separator' => ' <i class="fa fa-angle-right"></i> '
 			);
 
 			$this->template = 'error/not_found.tpl';
@@ -2268,7 +2268,7 @@ class ControllerSaleOrder extends Controller {
 			$this->data['breadcrumbs'][] = array(
 				'text'      => $this->language->get('heading_title'),
 				'href'      => $this->url->link('error/not_found', 'token=' . $this->session->data['token'], 'SSL'),
-				'separator' => ' :: '
+				'separator' => ' <i class="fa fa-angle-right"></i> '
 			);
 
 			$this->template = 'error/not_found.tpl';

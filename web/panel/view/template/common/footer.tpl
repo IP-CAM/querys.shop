@@ -75,7 +75,7 @@
 
 
 <script src="assets/scripts/core/app.js"></script>
-<script src="assets/scripts/custom/table-managed.js"></script>
+<!-- <script src="assets/scripts/custom/table-managed.js"></script> -->
 <script>
 jQuery(document).ready(function() {    
    // Index.init();

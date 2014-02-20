@@ -128,7 +128,7 @@ class ControllerCatalogCategory extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('catalog/category', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['insert'] = $this->url->link('catalog/category/insert', 'token=' . $this->session->data['token'] . $url, 'SSL');
@@ -170,6 +170,7 @@ class ControllerCatalogCategory extends Controller {
 		$this->data['text_no_results'] = $this->language->get('text_no_results');
 
 		$this->data['column_name'] = $this->language->get('column_name');
+		$this->data['column_id'] = $this->language->get('column_id');
 		$this->data['column_sort_order'] = $this->language->get('column_sort_order');
 		$this->data['column_action'] = $this->language->get('column_action');
 
@@ -267,7 +268,7 @@ class ControllerCatalogCategory extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('catalog/category', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if (!isset($this->request->get['category_id'])) {

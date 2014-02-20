@@ -58,7 +58,7 @@ class ControllerReportProductPurchased extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('report/product_purchased', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->load->model('report/product');

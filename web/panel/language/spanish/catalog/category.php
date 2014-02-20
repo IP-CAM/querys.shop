@@ -10,6 +10,7 @@ $_['text_browse']            = 'Buscar Imagen';
 $_['text_clear']             = 'Borrar Imagen';
 
 // Column
+$_['column_id']            	 = 'ID';
 $_['column_name']            = 'Nombre de Categoría';
 $_['column_sort_order']      = 'Orden';
 $_['column_action']          = 'Modificar';

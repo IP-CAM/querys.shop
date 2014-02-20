@@ -43,7 +43,7 @@ class ControllerSaleContact extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('sale/contact', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['cancel'] = $this->url->link('sale/contact', 'token=' . $this->session->data['token'], 'SSL');

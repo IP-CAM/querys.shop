@@ -321,7 +321,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, 'SSL'),       		
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['insert'] = $this->url->link('catalog/product/insert', 'token=' . $this->session->data['token'] . $url, 'SSL');
@@ -716,7 +716,7 @@ class ControllerCatalogProduct extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('catalog/product', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if (!isset($this->request->get['product_id'])) {

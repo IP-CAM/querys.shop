@@ -95,13 +95,13 @@ class ControllerPaymentPPExpress extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('text_payment'),
 			'href'      => $this->url->link('extension/payment', 'token=' . $this->session->data['token'], 'SSL'),     		
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('payment/pp_express', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		//button actions
@@ -598,13 +598,13 @@ class ControllerPaymentPPExpress extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('text_pp_express'),
 			'href'      => $this->url->link('payment/pp_express', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('payment/pp_express/refund', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		//button actions
@@ -898,13 +898,13 @@ class ControllerPaymentPPExpress extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('text_pp_express'),
 			'href'      => $this->url->link('payment/pp_express', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('payment/pp_express/search', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 
@@ -1119,13 +1119,13 @@ class ControllerPaymentPPExpress extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('text_pp_express'),
 			'href'      => $this->url->link('payment/pp_express', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('payment/pp_express/viewTransaction', 'token=' . $this->session->data['token'] . '&transaction_id=' . $this->request->get['transaction_id'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->template = 'payment/pp_express_view.tpl';

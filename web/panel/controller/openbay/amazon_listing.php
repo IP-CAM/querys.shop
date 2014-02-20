@@ -220,19 +220,19 @@ class ControllerOpenbayAmazonListing extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('extension/openbay', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => $this->language->get('lang_openbay'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('openbay/amazon', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => $this->language->get('lang_amazon'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('openbay/amazon_listing/create', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => $this->language->get('lang_title'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->response->setOutput($this->render(true), $this->config->get('config_compression'));
@@ -344,19 +344,19 @@ class ControllerOpenbayAmazonListing extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('extension/openbay', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => $this->language->get('lang_openbay'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('openbay/amazon', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => $this->language->get('lang_amazon'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('openbay/amazon_listing/edit', 'token=' . $this->session->data['token'] . '&product_id=' . $product_id . $url, 'SSL'),
 			'text' => $this->language->get('text_edit_heading'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['text_edit_heading'] = $this->language->get('text_edit_heading');
