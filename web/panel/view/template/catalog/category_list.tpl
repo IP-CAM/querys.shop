@@ -2,9 +2,9 @@
 <div id="content">
   <div class="row">
     <div class="col-md-12">
-     <!--  <h3 class="page-title">
-         <?php echo $heading_title;?> <small>managed datatable samples</small>
-      </h3> -->
+      <h3 class="page-title">
+        <img src="view/image/category.png" alt="" /> Listado <?php echo $heading_title;?>
+      </h3>
       <ul class="page-breadcrumb breadcrumb">
           <li class="btn-group">
             <button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
@@ -49,11 +49,6 @@
       <div class="portlet box blue">
         <div class="portlet-title">
           <div class="caption"><img src="view/image/category.png" alt="" /> <?php echo $heading_title; ?></div>
-          <div class="tools">
-            <!-- <a href="javascript:;" class="collapse"></a> -->
-            <!-- <a href="#portlet-config" data-toggle="modal" class="config"></a> -->
-            <!-- <a href="javascript:;" class="reload"></a> -->
-          </div>
         </div>
         <div class="portlet-body">
           <div class="table-toolbar">
@@ -124,7 +119,7 @@
                 <?php } ?>
                 <?php } else { ?>
                 <tr>
-                  <td class="center" colspan="5"><?php echo $text_no_results; ?></td>
+                  <td class="center" colspan="8"><?php echo $text_no_results; ?></td>
                 </tr>
                 <?php } ?>
               </tbody>
@@ -137,12 +132,10 @@
 </div>
 
 <script>
-
   var TableManaged = function () {
     return {
-        //main function to initiate the module
         init: function () {
-
+          <?php if(!$categories) : ?> return false; <?php endif; ?>
           $('#datatable').dataTable({
               "aoColumns": [
                   null,
@@ -156,10 +149,10 @@
               ],
               "aLengthMenu": [
                   [<?php echo $this->config->get('config_admin_limit') * 0.3; ?>, <?php echo $this->config->get('config_admin_limit') * 0.6  ; ?>, <?php echo $this->config->get('config_admin_limit') * 0.9; ?>, -1],
-                  [<?php echo $this->config->get('config_admin_limit') * 0.3; ?>, <?php echo $this->config->get('config_admin_limit') * 0.6  ; ?>, <?php echo $this->config->get('config_admin_limit') * 0.9; ?>, "All"] // change per page values here
+                  [<?php echo $this->config->get('config_admin_limit') * 0.3; ?>, <?php echo $this->config->get('config_admin_limit') * 0.6  ; ?>, <?php echo $this->config->get('config_admin_limit') * 0.9; ?>, "Todos"] // change per page values here
               ],
               // set the initial value
-              "iDisplayLength": <?php echo $this->config->get('config_admin_limit') * 0.3;?>,
+              "iDisplayLength": <?php echo $this->config->get('config_admin_limit') * 0.25;?>,
               "sPaginationType": "bootstrap",
               "oLanguage": {
                   "sLengthMenu": "_MENU_ registros",
@@ -196,7 +189,6 @@
           $('#datatable_wrapper .dataTables_filter input').addClass("form-control input-medium input-inline"); // modify table search input
           $('#datatable_wrapper .dataTables_length select').addClass("form-control input-xsmall"); // modify table per page dropdown
         }
-
     };
   }();
 </script>
