@@ -51,7 +51,7 @@
           <div class="caption"><img src="view/image/category.png" alt="" /> <?php echo $heading_title; ?></div>
         </div>
         <div class="portlet-body">
-          <div class="table-toolbar">
+          <div class="table-toolbar pull-right">
             <div class="btn-group">
               <a href="<?php echo $repair; ?>" class="btn yellow">
                 <?php echo $button_repair; ?> <i class="fa fa-refresh"></i>

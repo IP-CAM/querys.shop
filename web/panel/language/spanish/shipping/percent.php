@@ -7,8 +7,8 @@ $_['text_shipping']      = 'Envío';
 $_['text_success']       = 'Exito: Ha modificado Envío por Porcentaje!';
 
 // Entry
-$_['entry_percent']      = 'Porcentaje:<br /><span class="help">Porcentaje del Sub-Total a cargar por Envío</span>';
-$_['entry_freeshipping'] = 'Sub-Total:<br /><span class="help">Sub-Total necesario para ofrecer Envío GRATIS</span>';
+$_['entry_percent']      = 'Porcentaje:<br /><span class="help-block">Porcentaje del Sub-Total a cargar por Envío</span>';
+$_['entry_freeshipping'] = 'Sub-Total:<br /><span class="help-block">Sub-Total necesario para ofrecer Envío GRATIS</span>';
 $_['entry_tax']          = 'Impuesto:';
 $_['entry_geo_zone']     = 'Zona Geográfica:';
 $_['entry_status']       = 'Estado:';

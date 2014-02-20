@@ -7,13 +7,13 @@ $.fn.tabs = function() {
 		$(obj.attr('href')).hide();
 		
 		$(obj).click(function() {
-			$(selector).removeClass('selected');
+			$(selector).parent().removeClass('active');
 			
 			$(selector).each(function(i, element) {
 				$($(element).attr('href')).hide();
 			});
 			
-			$(this).addClass('selected');
+			$(this).parent().addClass('active');
 			
 			$($(this).attr('href')).show();
 			

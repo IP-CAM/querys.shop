@@ -52,7 +52,7 @@ $_['field_ftp_root_path_info']          = '(Sin diagonales ejemplo: httpdocs/www
 $_['desc_ftp_updates']                  = 'Habilitar actualizaciones desde aquí significa que no tienes que actualizar tu Modulo usando arrastrar y soltar en FTP. Tu info de FTP no es enviada al API<br />';
 
 //Updates
-$_['lang_run_patch_desc']               = 'Publicar actualización de Parche<span class="help">Solo necesario si la actualización es manual</span>';
+$_['lang_run_patch_desc']               = 'Publicar actualización de Parche<span class="help-block">Solo necesario si la actualización es manual</span>';
 $_['lang_run_patch']                    = 'Correr Parche';
 $_['update_error_username']             = 'Usuario necesario';
 $_['update_error_password']             = 'Contrase&#241;a necesario';

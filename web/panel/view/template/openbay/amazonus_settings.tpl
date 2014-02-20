@@ -130,7 +130,7 @@
                         <tr>
                             <td>
                                 <label for="customer_group_input"><?php echo $lang_customer_group ?></label><br />
-                                <span class="help"><?php echo $lang_customer_group_help ?></span>
+                                <span class="help-block"><?php echo $lang_customer_group_help ?></span>
                             </td>
                             <td>
                                 <select class="width120" name="openbay_amazonus_order_customer_group">

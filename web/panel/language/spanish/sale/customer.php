@@ -51,7 +51,7 @@ $_['entry_default']         = 'Dirección Predeterminada:';
 $_['entry_comment']         = 'Comentario:';
 $_['entry_description']     = 'Descripción:';
 $_['entry_amount']          = 'Monto:';
-$_['entry_points']          = 'Puntos:<br /><span class="help">Usar - para remover Puntos</span>';
+$_['entry_points']          = 'Puntos:<br /><span class="help-block">Usar - para remover Puntos</span>';
 
 // Error
 $_['error_warning']         = 'Advertencia: Favor revise el Formulario cuidadosamente por si tiene errores!';

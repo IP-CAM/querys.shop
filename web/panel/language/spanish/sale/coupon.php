@@ -22,18 +22,18 @@ $_['column_action']       = 'Modificar';
 
 // Entry
 $_['entry_name']          = 'Nombre Cupón:';
-$_['entry_code']          = 'Código:<br /><span class="help">El Código que el Cliente introduce para obtener el Descuento</span>';
-$_['entry_type']          = 'Tipo:<br /><span class="help">Porcentaje o Monto Fijo</span>';
+$_['entry_code']          = 'Código:<br /><span class="help-block">El Código que el Cliente introduce para obtener el Descuento</span>';
+$_['entry_type']          = 'Tipo:<br /><span class="help-block">Porcentaje o Monto Fijo</span>';
 $_['entry_discount']      = 'Descuento:';
-$_['entry_logged']        = 'Cliente Conectado:<br /><span class="help">Cliente debe estar Conectado para utilizar el Cupón</span>';
+$_['entry_logged']        = 'Cliente Conectado:<br /><span class="help-block">Cliente debe estar Conectado para utilizar el Cupón</span>';
 $_['entry_shipping']      = 'Envío Gratis:';
-$_['entry_total']         = 'Monto Total:<br /><span class="help">El monto total que antes debe alcanzar para que el Cupón sea válido</span>';
-$_['entry_category']      = 'Categoria:<br /><span class="help">Escoja todos los Productos de la Categoria seleccionada</span>';
-$_['entry_product']       = 'Productos:<br /><span class="help">Escoja Productos específicos donde pueda aplicar el Cupón. No seleccione Productos para aplicar el Cupón a todo el Carro de Compras</span>';
+$_['entry_total']         = 'Monto Total:<br /><span class="help-block">El monto total que antes debe alcanzar para que el Cupón sea válido</span>';
+$_['entry_category']      = 'Categoria:<br /><span class="help-block">Escoja todos los Productos de la Categoria seleccionada</span>';
+$_['entry_product']       = 'Productos:<br /><span class="help-block">Escoja Productos específicos donde pueda aplicar el Cupón. No seleccione Productos para aplicar el Cupón a todo el Carro de Compras</span>';
 $_['entry_date_start']    = 'Fecha Inicial:';
 $_['entry_date_end']      = 'Fecha Final:';
-$_['entry_uses_total']    = 'Usos por Cupón:<br /><span class="help">El máximo número de veces que el Cupón puede ser usado por cualquier ciiente. Déjelo en blanco para uso ilimitado</span>';
-$_['entry_uses_customer'] = 'Usos por Cliente:<br /><span class="help">El máximo número de veces que el Cupón puede ser usado por un solo Cliente. Déjelo en blanco para uso ilimitado</span>';
+$_['entry_uses_total']    = 'Usos por Cupón:<br /><span class="help-block">El máximo número de veces que el Cupón puede ser usado por cualquier ciiente. Déjelo en blanco para uso ilimitado</span>';
+$_['entry_uses_customer'] = 'Usos por Cliente:<br /><span class="help-block">El máximo número de veces que el Cupón puede ser usado por un solo Cliente. Déjelo en blanco para uso ilimitado</span>';
 $_['entry_status']        = 'Estado:';
 
 // Error

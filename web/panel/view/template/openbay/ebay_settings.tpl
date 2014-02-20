@@ -130,7 +130,7 @@
                         <tr>
                             <td>
                                 <?php echo $lang_app_currency; ?>
-                                <span class="help"><?php echo $lang_app_currency_msg; ?></span>
+                                <span class="help-block"><?php echo $lang_app_currency_msg; ?></span>
                             </td>
                             <td>
                                 <select name="openbay_def_currency" style="width:200px;">

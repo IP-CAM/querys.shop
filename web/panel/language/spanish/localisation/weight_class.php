@@ -14,7 +14,7 @@ $_['column_action']    = 'Modificar';
 // Entry
 $_['entry_title']      = 'Nombre del Peso:';
 $_['entry_unit']       = 'Unidad del Peso:';
-$_['entry_value']      = 'Valor:<br /><span class="help">Fijar 1.00000 si es su peso predeterminado</span>';
+$_['entry_value']      = 'Valor:<br /><span class="help-block">Fijar 1.00000 si es su peso predeterminado</span>';
 
 // Error
 $_['error_permission'] = 'Advertencia: No tiene permiso para modificar el tipo de peso!';

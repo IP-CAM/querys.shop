@@ -19,7 +19,7 @@ $_['entry_to']              = 'Para:';
 $_['entry_customer_group']  = 'Grupo de Clientes:';
 $_['entry_customer']        = 'Cliente:';
 $_['entry_affiliate']       = 'Afiliado:';
-$_['entry_product']         = 'Productos:<br /><span class="help">Enviar sólo a los Clientes que han ordenado los Productos en la lista</span>';
+$_['entry_product']         = 'Productos:<br /><span class="help-block">Enviar sólo a los Clientes que han ordenado los Productos en la lista</span>';
 $_['entry_subject']         = 'Asunto:';
 $_['entry_message']         = 'Mensaje:';
 

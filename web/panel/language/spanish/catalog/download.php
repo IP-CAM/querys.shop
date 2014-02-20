@@ -16,7 +16,7 @@ $_['entry_name']       = 'Nombre de la Descarga:';
 $_['entry_filename']   = 'Nombre de Archivo:';
 $_['entry_mask']       = 'Clave:';
 $_['entry_remaining']  = 'Total de Descargas permitidas:';
-$_['entry_update']     = 'Actualizar a Clientes anteriores:<br /><span class="help">Marque aquí para actualizar las versiones previamente compradas</span>';
+$_['entry_update']     = 'Actualizar a Clientes anteriores:<br /><span class="help-block">Marque aquí para actualizar las versiones previamente compradas</span>';
 
 // Error
 $_['error_permission'] = 'Advertencia: No tiene permiso para modificar Descargas!';

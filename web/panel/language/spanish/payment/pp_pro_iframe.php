@@ -130,11 +130,11 @@ $_['tab_order_status'] 					= 'Orden Estado';
 $_['tab_checkout_customisation'] 		= 'Personalizar el Pago';
 
 // Entry
-$_['entry_user'] 						= 'Usuario de API:<br /><span class="help">API username (this is not usually your PayPal email, it is created for you when you request API access)</span>';
-$_['entry_password'] 					= 'Contrase&#241;a de API:<br /><span class="help">API password (NOT your PayPal password)</span>';
-$_['entry_sig'] 						= 'Firma de API:<br /><span class="help">API signature key</span>';
-$_['entry_test'] 						= 'Test Mode:<br /><span class="help">Use the live or testing (sandbox) gateway server to process Transacccions? Test may fail in Internet Explorer</span>';
-$_['entry_total'] 						= 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active.</span>';
+$_['entry_user'] 						= 'Usuario de API:<br /><span class="help-block">API username (this is not usually your PayPal email, it is created for you when you request API access)</span>';
+$_['entry_password'] 					= 'Contrase&#241;a de API:<br /><span class="help-block">API password (NOT your PayPal password)</span>';
+$_['entry_sig'] 						= 'Firma de API:<br /><span class="help-block">API signature key</span>';
+$_['entry_test'] 						= 'Test Mode:<br /><span class="help-block">Use the live or testing (sandbox) gateway server to process Transacccions? Test may fail in Internet Explorer</span>';
+$_['entry_total'] 						= 'Total:<br /><span class="help-block">The checkout total the order must reach before this payment method becomes active.</span>';
 $_['entry_order_status'] 				= 'Orden Estado:';
 $_['entry_geo_zone'] 					= 'Geo Zona:';
 $_['entry_status'] 						= 'Estado:';

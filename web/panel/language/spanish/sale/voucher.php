@@ -22,7 +22,7 @@ $_['column_date_added'] = 'Fecha generado';
 $_['column_action']     = 'Modificar';
 
 // Entry
-$_['entry_code']        = 'Código:<br /><span class="help">El Código que el Cliente introduce para activar el Certificado de Regalo</span>';
+$_['entry_code']        = 'Código:<br /><span class="help-block">El Código que el Cliente introduce para activar el Certificado de Regalo</span>';
 $_['entry_from_name']   = 'Nombre Remitente:';
 $_['entry_from_email']  = 'Email Remitente:';
 $_['entry_to_name']     = 'Nombre Destinatario:';

@@ -46,17 +46,17 @@
               <input type="checkbox" name="selected[]" value="<?php echo $album['album_id']; ?>" />
               <?php } ?></td>
             <td class="left"><b><?php echo $album['name']; ?></b><br />
-            <span class="help">
+            <span class="help-block">
             <?php if(!$album['status']){ 
             	echo $text_disabled;
             }else{ 
             	echo $text_enabled;
             } ?>
             </span>
-            <span class="help">
+            <span class="help-block">
             	<?php echo $album['date_added']; ?>
             </span>
-            <span class="help">
+            <span class="help-block">
             	<?php echo $text_viewed. ':' .$album['viewed']; ?>
             </span>
             </td>

@@ -10,7 +10,7 @@ $_['text_moneybookers']	      = '<a onclick="window.open(\'https://www.moneybook
 // Entry					
 $_['entry_email']		      = 'Email:';
 $_['entry_secret']		      = 'Secret:';
-$_['entry_total']             = 'Total:<br /><span class="help">The checkout total the order must reach before this payment method becomes active</span>';
+$_['entry_total']             = 'Total:<br /><span class="help-block">The checkout total the order must reach before this payment method becomes active</span>';
 $_['entry_order_status']      = 'Order Status:';
 $_['entry_pending_status']    = 'Pending Status :';
 $_['entry_canceled_status']   = 'Canceled Status:';

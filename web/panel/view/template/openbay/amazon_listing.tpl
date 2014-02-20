@@ -98,7 +98,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><span class="required">*</span> <label for="sku"><?php echo $entry_sku; ?></label><br /><span class="help"><?php echo $help_sku ?></span></td>
+                                <td><span class="required">*</span> <label for="sku"><?php echo $entry_sku; ?></label><br /><span class="help-block"><?php echo $help_sku ?></span></td>
                                 <td><input type="text" name="sku" id="sku" value="<?php echo $sku ?>" class="width200" /></td>
                             </tr>
                             <tr>
@@ -133,7 +133,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td><?php echo $entry_sale_price ?><br /><span class="help"><?php echo $help_sale_price ?></span></td>
+                                <td><?php echo $entry_sale_price ?><br /><span class="help-block"><?php echo $help_sale_price ?></span></td>
                                 <td>
                                     <p>
                                         <label for="sale_price"><?php echo $entry_sale_price ?></label>
@@ -150,7 +150,7 @@
                                 <td><input type="text" name="start_selling" id="start_selling" class="date" /></td>
                             </tr>
                             <tr>
-                                <td><label for="restock_date"><?php echo $entry_restock_date; ?></label><br /><span class="help"><?php echo $help_restock_date ?></span></td>
+                                <td><label for="restock_date"><?php echo $entry_restock_date; ?></label><br /><span class="help-block"><?php echo $help_restock_date ?></span></td>
                                 <td><input type="text" name="restock_date" id="restock_date" class="date" /></td>
                             </tr>
                         </table>

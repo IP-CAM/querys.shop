@@ -9,7 +9,7 @@ $_['lang_desc1']                    = 'Enlazar tus Articulos te permitira contro
 $_['lang_desc2']                    = 'Puedes enlazar manualmente introduciendo el SKU de Amazon y el nombre del Producto o cargar todos los Productos desenlazados y entonces introducir los SKUs de Amazon US. (Cargando Productos desde OpenCart a AmazonUS automaticamente agregara los Enlaces)';
 $_['lang_load_btn']                 = 'Cargar';
 $_['lang_new_link']                 = 'Nuevo Enlace';
-$_['lang_autocomplete_product']     = 'Producto<span class="help">(Autocompletar desde Nombre)</span>';
+$_['lang_autocomplete_product']     = 'Producto<span class="help-block">(Autocompletar desde Nombre)</span>';
 $_['lang_amazonus_sku']             = 'SKU de Articulo Amazon';
 $_['lang_action']                   = 'Modificar';
 $_['lang_add']                      = 'Agregar';

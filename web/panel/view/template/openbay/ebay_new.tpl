@@ -50,7 +50,7 @@
                     <?php } ?>
 
                     <tr>
-                        <td><?php echo $lang_category_suggested; ?><span class="help"><?php echo $lang_category_suggested_help; ?></span></td>
+                        <td><?php echo $lang_category_suggested; ?><span class="help-block"><?php echo $lang_category_suggested_help; ?></span></td>
                         <td>
                             <p id="suggestedLoading" class="displayNone"><img src="view/image/loading.gif" id="imageLoadingSuggestedLoading" alt="Loading" /> <?php echo $lang_category_suggested_check; ?></p>
                             <div id="suggested_cats"></div>
@@ -59,7 +59,7 @@
 
                     <?php if(!empty($product['popular_cats'])){ ?>
                         <tr>
-                            <td><?php echo $lang_category_popular; ?><span class="help"><?php echo $lang_category_popular_help; ?></span></td>
+                            <td><?php echo $lang_category_popular; ?><span class="help-block"><?php echo $lang_category_popular_help; ?></span></td>
                             <td>
                                 <p><input type="radio" name="popular" value="" id="popular_default" checked /> <strong><?php echo $lang_none; ?></strong></p>
 
@@ -176,7 +176,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><?php echo $lang_template; ?><span class="help"><a href="http://shop.openbaypro.com/opencart_design_services/opencart_theme_design/ebay_html_template_openbay_pro" target="_BLANK"><?php echo $lang_template_link; ?></a></span></td>
+                        <td><?php echo $lang_template; ?><span class="help-block"><a href="http://shop.openbaypro.com/opencart_design_services/opencart_theme_design/ebay_html_template_openbay_pro" target="_BLANK"><?php echo $lang_template_link; ?></a></span></td>
                         <td>
                             <select name="template" id="template_id">
                                 <option value="None">None</option>
@@ -408,12 +408,12 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><?php echo $lang_price_ex_tax; ?> <span class="help"><?php echo $lang_price_ex_tax_help; ?></span></td>
+                            <td><?php echo $lang_price_ex_tax; ?> <span class="help-block"><?php echo $lang_price_ex_tax_help; ?></span></td>
                             <td><p><input type="text" name="price_no_tax[0]" id="taxEx" value="<?php echo number_format($product['price'], 2, '.', ''); ?>" onkeyup="updatePriceFromEx();" class="textRight width50" /></p></td>
                         </tr>
                         </tr>
                         <tr>
-                            <td><?php echo $lang_price_inc_tax; ?> <span class="help"><?php echo $lang_price_inc_tax_help; ?></span></td>
+                            <td><?php echo $lang_price_inc_tax; ?> <span class="help-block"><?php echo $lang_price_inc_tax_help; ?></span></td>
                             <td><p><input type="text" name="price[0]" value="0" id="taxInc" onkeyup="updatePriceFromInc();" class="textRight width50" /></p></td>
                         </tr>
                         <tr>
@@ -667,7 +667,7 @@
             </td>
           </tr>
           <tr id="previewFrameRow" class="displayNone">
-            <td valign="top"><?php echo $lang_review_preview; ?><span class="help"><?php echo $lang_review_preview_help; ?></span></td>
+            <td valign="top"><?php echo $lang_review_preview; ?><span class="help-block"><?php echo $lang_review_preview_help; ?></span></td>
             <td id="previewFrame"></td>
           </tr>
         </table>

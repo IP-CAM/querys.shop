@@ -49,12 +49,12 @@
                             <td><input class="ftpsetting width250" type="text" name="openbay_ftp_server" id="openbay_ftp_server" maxlength="" value="<?php echo $openbay_ftp_server;?>" /></td>
                         </tr>
                         <tr>
-                            <td><label for="openbay_ftp_rootpath"><?php echo $field_ftp_root_path; ?><span class="help"><?php echo $field_ftp_root_path_info; ?></span></label></td>
+                            <td><label for="openbay_ftp_rootpath"><?php echo $field_ftp_root_path; ?><span class="help-block"><?php echo $field_ftp_root_path_info; ?></span></label></td>
                             <td><input class="ftpsetting width250" type="text" name="openbay_ftp_rootpath" id="openbay_ftp_rootpath" maxlength="" value="<?php echo $openbay_ftp_rootpath;?>" /></td>
                         </tr>
                         </tr>
                         <tr>
-                            <td><label for="openbay_admin_directory"><?php echo $lang_admin_dir; ?><span class="help"><?php echo $lang_admin_dir_desc; ?></span></label></td>
+                            <td><label for="openbay_admin_directory"><?php echo $lang_admin_dir; ?><span class="help-block"><?php echo $lang_admin_dir_desc; ?></span></label></td>
                             <td><input class="ftpsetting width250" type="text" name="openbay_admin_directory" id="openbay_admin_directory" maxlength="" value="<?php echo $openbay_admin_directory;?>" /></td>
                         </tr>
                         <tr>
@@ -65,7 +65,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><label for="openbay_ftp_beta"><?php echo $lang_use_beta; ?><span class="help"><?php echo $lang_use_beta_2; ?></span></label></td>
+                            <td><label for="openbay_ftp_beta"><?php echo $lang_use_beta; ?><span class="help-block"><?php echo $lang_use_beta_2; ?></span></label></td>
                             <td>
                                 <input class="ftpsetting" type="hidden" name="openbay_ftp_beta" value="0" />
                                 <input class="ftpsetting" type="checkbox" name="openbay_ftp_beta" id="openbay_ftp_beta" value="1" <?php if(isset($openbay_ftp_beta) && $openbay_ftp_beta == 1){ echo 'checked="checked"'; } ?> />

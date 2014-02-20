@@ -13,12 +13,12 @@ $_['column_action']     = 'Modificar';
 
 // Entry
 $_['entry_name']        = 'Nombre del Idioma:';
-$_['entry_code']        = 'Código:<br /><span class="help">ejemplo: en. No lo cambie si este es su idioma predeterminado</span>';
-$_['entry_locale']      = 'Local:<br /><span class="help">ejemplo: es_ES.UTF-8, es_ES, UTF-8, spanish</span>';
-$_['entry_image']       = 'Imagen:<br /><span class="help">ejemplo: es.png</span>';
-$_['entry_directory']   = 'Directorio:<br /><span class="help">Nombre del Directorio de Idiomas (distingue mayúsculas y minúsculas)</span>';
-$_['entry_filename']    = 'Nombre del Archivo:<br /><span class="help">Nombre del Archivo principal de idioma sin extensión</span>';
-$_['entry_status']      = 'Estado:<br /><span class="help">Mostrar/Ocultar en la lista desplegable de idiomas</span>';
+$_['entry_code']        = 'Código:<br /><span class="help-block">ejemplo: en. No lo cambie si este es su idioma predeterminado</span>';
+$_['entry_locale']      = 'Local:<br /><span class="help-block">ejemplo: es_ES.UTF-8, es_ES, UTF-8, spanish</span>';
+$_['entry_image']       = 'Imagen:<br /><span class="help-block">ejemplo: es.png</span>';
+$_['entry_directory']   = 'Directorio:<br /><span class="help-block">Nombre del Directorio de Idiomas (distingue mayúsculas y minúsculas)</span>';
+$_['entry_filename']    = 'Nombre del Archivo:<br /><span class="help-block">Nombre del Archivo principal de idioma sin extensión</span>';
+$_['entry_status']      = 'Estado:<br /><span class="help-block">Mostrar/Ocultar en la lista desplegable de idiomas</span>';
 $_['entry_sort_order']  = 'Orden:';
 
 // Error
