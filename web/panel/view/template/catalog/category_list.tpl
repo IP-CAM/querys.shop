@@ -82,8 +82,11 @@
                     <input type="checkbox" class="group-checkable" data-set="#datatable .checkboxes">
                   </th>
                   <th width="1"><?php echo $column_id; ?></th>
+                  <th width="1"><?php echo $column_products; ?></th>
                   <th><?php echo $column_name; ?></th>
                   <th><?php echo $column_sort_order; ?></th>
+                  <th><?php echo $column_top; ?></th>
+                  <th><?php echo $column_status; ?></th>
                   <th><?php echo $column_action; ?></th>
                 </tr>
               </thead>
@@ -97,8 +100,23 @@
                     <input type="checkbox" name="selected[]" value="<?php echo $category['category_id']; ?>" class="checkboxes"/>
                     <?php } ?></td>
                   <td><?php echo $category['category_id']; ?></td>
+                  <td><?php echo $category['products']; ?></td>
                   <td><?php echo $category['name']; ?></td>
                   <td><?php echo $category['sort_order']; ?></td>
+                  <td>
+                    <?php if( $category['top'] ) : ?>
+                    <span class="badge badge-info"><?php echo $text_visible; ?></span>
+                    <?php else: ?>
+                    <span class="badge badge-default"><?php echo $text_hidden; ?></span>
+                    <?php endif; ?>
+                  </td>
+                  <td>
+                    <?php if( $category['status'] ) : ?>
+                    <span class="badge badge-success"><?php echo $text_enabled; ?></span>
+                    <?php else: ?>
+                    <span class="badge badge-danger"><?php echo $text_disabled; ?></span>
+                    <?php endif; ?>
+                  </td>
                   <td><?php foreach ($category['action'] as $action) { ?>
                     [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
                     <?php } ?></td>
@@ -131,7 +149,10 @@
                   { "bSortable": true },
                   { "bSortable": true },
                   { "bSortable": true },
-                  null
+                  { "bSortable": true },
+                  { "bSortable": true },
+                  { "bSortable": true },
+                  { "bSortable": false },
               ],
               "aLengthMenu": [
                   [10, 15, 20, -1],

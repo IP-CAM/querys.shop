@@ -14,6 +14,9 @@ $_['column_id']            	 = 'ID';
 $_['column_name']            = 'Category Name';
 $_['column_sort_order']      = 'Sort Order';
 $_['column_action']          = 'Action';
+$_['column_status']          = 'Status';
+$_['column_top']             = 'Top Menu';
+$_['column_products']        = 'Total Products';
 
 // Entry
 $_['entry_name']             = 'Category Name:';
