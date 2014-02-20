@@ -45,7 +45,7 @@
               <td class="right"><?php echo $storelocation_story['feature_flag']; ?></td>
               <td class="right"><?php echo $storelocation_story['status']; ?></td>
               <td class="right"><?php foreach ($storelocation_story['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

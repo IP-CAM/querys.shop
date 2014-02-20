@@ -118,7 +118,7 @@
                     <?php endif; ?>
                   </td>
                   <td><?php foreach ($category['action'] as $action) { ?>
-                    [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                    <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                     <?php } ?></td>
                 </tr>
                 <?php } ?>
@@ -155,17 +155,17 @@
                   { "bSortable": false },
               ],
               "aLengthMenu": [
-                  [10, 15, 20, -1],
-                  [10, 15, 20, "All"] // change per page values here
+                  [<?php echo $this->config->get('config_admin_limit') * 0.3; ?>, <?php echo $this->config->get('config_admin_limit') * 0.6  ; ?>, <?php echo $this->config->get('config_admin_limit') * 0.9; ?>, -1],
+                  [<?php echo $this->config->get('config_admin_limit') * 0.3; ?>, <?php echo $this->config->get('config_admin_limit') * 0.6  ; ?>, <?php echo $this->config->get('config_admin_limit') * 0.9; ?>, "All"] // change per page values here
               ],
               // set the initial value
-              "iDisplayLength": <?php echo $this->config->get('config_admin_limit');?>,
+              "iDisplayLength": <?php echo $this->config->get('config_admin_limit') * 0.3;?>,
               "sPaginationType": "bootstrap",
               "oLanguage": {
-                  "sLengthMenu": "_MENU_ records",
+                  "sLengthMenu": "_MENU_ registros",
                   "oPaginate": {
-                      "sPrevious": "Prev",
-                      "sNext": "Next"
+                      "sPrevious": "Anterior",
+                      "sNext": "Siguiente"
                   }
               },
               "aoColumnDefs": [

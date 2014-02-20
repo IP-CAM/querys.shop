@@ -24,7 +24,7 @@ $_['text_close']              		= 'Cerrar';
 $_['text_pagination']         		= 'Mostrando {start} de {end} de {total} ({pages} Páginas)';
 $_['text_no_results']         		= 'Sin Resultados!';
 $_['text_separator']          		= ' &gt; ';
-$_['text_edit']               		= 'Editar';
+$_['text_edit']               		= '<i class="fa fa-edit"></i> Editar';
 $_['text_view']               		= 'Ver';
 $_['text_home']               		= 'Inicio';
 $_['text_visible']               	= 'Visible';

@@ -97,7 +97,7 @@
                   <td class="left"></td>
                   <td class="right">
                     <?php foreach ($order['action'] as $action) { ?>
-                    [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                    <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                     <?php } ?>
                   </td>
                 </tr>
