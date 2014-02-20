@@ -146,13 +146,13 @@ class ControllerModuleStorelocation extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href'      => $this->url->link('extension/module', 'token=' . $this->session->data['token'], 'SSL'),
 			'text'      => $this->language->get('text_module'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href'      => $this->url->link('module/storelocation', 'token=' . $this->session->data['token'], 'SSL'),
 			'text'      => $this->language->get('heading_title'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['storelocation'] = $this->url->link('module/storelocation/listing', 'token=' . $this->session->data['token'], 'SSL');
@@ -259,7 +259,7 @@ class ControllerModuleStorelocation extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href'      => $this->url->link('module/storelocation/listing', 'token=' . $this->session->data['token'], 'SSL'),
 			'text'      => $this->language->get('heading_title'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['module'] = $this->url->link('module/storelocation', 'token=' . $this->session->data['token'], 'SSL');
@@ -365,7 +365,7 @@ class ControllerModuleStorelocation extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href'      => $this->url->link('module/storelocation/listing', 'token=' . $this->session->data['token'], 'SSL'),
 			'text'      => $this->language->get('heading_title'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if (!isset($this->request->get['storelocation_id'])) {

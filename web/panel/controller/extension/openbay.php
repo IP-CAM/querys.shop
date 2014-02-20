@@ -20,7 +20,7 @@ class ControllerExtensionOpenbay extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text' => $this->language->get('lang_heading_title'),
 			'href' => $this->url->link('extension/openbay', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['mcrypt']           = $this->model_openbay_openbay->checkMcrypt();
@@ -279,13 +279,13 @@ class ControllerExtensionOpenbay extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href' => HTTPS_SERVER . 'index.php?route=extension/openbay&token=' . $this->session->data['token'],
 			'text' => 'OpenBay Pro',
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => HTTPS_SERVER . 'index.php?route=extension/openbay/manage&token=' . $this->session->data['token'],
 			'text' => 'Manage',
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 
@@ -559,13 +559,13 @@ class ControllerExtensionOpenbay extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href' => HTTPS_SERVER . 'index.php?route=extension/openbay&token=' . $this->session->data['token'],
 			'text' => 'OpenBay Pro',
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => HTTPS_SERVER . 'index.php?route=extension/openbay/manage&token=' . $this->session->data['token'],
 			'text' => $this->data['lang_title_order_update'],
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['orders'] = array();
@@ -799,13 +799,13 @@ class ControllerExtensionOpenbay extends Controller {
 			$this->data['breadcrumbs'][] = array(
 				'href' => HTTPS_SERVER . 'index.php?route=extension/openbay&token=' . $this->session->data['token'],
 				'text' => 'OpenBay Pro',
-				'separator' => ' :: '
+				'separator' => ' <i class="fa fa-angle-right"></i> '
 			);
 
 			$this->data['breadcrumbs'][] = array(
 				'href' => HTTPS_SERVER . 'index.php?route=extension/openbay/manage&token=' . $this->session->data['token'],
 				'text' => $this->data['lang_title_order_update'],
-				'separator' => ' :: '
+				'separator' => ' <i class="fa fa-angle-right"></i> '
 			);
 
 			$this->template = 'openbay/openbay_orderlist_confirm.tpl';
@@ -1190,7 +1190,7 @@ class ControllerExtensionOpenbay extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('extension/openbay/itemList', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if ($this->config->get('amazon_status')) {

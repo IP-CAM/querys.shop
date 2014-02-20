@@ -44,19 +44,19 @@ class ControllerOpenbayEbayProfile extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('extension/openbay', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => $this->language->get('lang_openbay'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('openbay/openbay', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => $this->language->get('lang_ebay'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('openbay/ebay_profile/profileAll', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => $this->language->get('lang_heading'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->response->setOutput($this->render(true), $this->config->get('config_compression'));
@@ -188,19 +188,19 @@ class ControllerOpenbayEbayProfile extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('extension/openbay', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => 'OpenBay Pro',
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('openbay/openbay', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => 'eBay',
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'href' => $this->url->link('openbay/ebay_profile/profileAll', 'token=' . $this->session->data['token'], 'SSL'),
 			'text' => 'Profiles',
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if (isset($this->request->post['default'])) {

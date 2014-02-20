@@ -116,7 +116,7 @@ class ControllerSaleRecurring extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('sale/recurring', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$data = array(
@@ -372,7 +372,7 @@ class ControllerSaleRecurring extends Controller {
 			$this->data['breadcrumbs'][] = array(
 				'text' => $this->language->get('heading_title'),
 				'href' => $this->url->link('sale/recurring', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-				'separator' => ' :: '
+				'separator' => ' <i class="fa fa-angle-right"></i> '
 			);
 
 			if (isset($this->error['warning'])) {

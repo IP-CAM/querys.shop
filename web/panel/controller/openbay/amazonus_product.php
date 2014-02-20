@@ -83,7 +83,7 @@ class ControllerOpenbayAmazonusProduct extends Controller{
 		$this->data['breadcrumbs'][] = array(
 			'text' => 'Products',
 			'href' => $this->url->link('extension/openbay/itemList', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if(isset($this->request->get['product_id'])) {

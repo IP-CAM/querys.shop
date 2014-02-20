@@ -154,7 +154,7 @@ class ControllerDesignCustomField extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('design/custom_field', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['insert'] = $this->url->link('design/custom_field/insert', 'token=' . $this->session->data['token'] . $url, 'SSL');
@@ -397,7 +397,7 @@ class ControllerDesignCustomField extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('design/custom_field', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if (!isset($this->request->get['custom_field_id'])) {

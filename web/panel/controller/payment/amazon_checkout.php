@@ -248,13 +248,13 @@ class ControllerPaymentAmazonCheckout extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_payment'),
 			'href' => $this->url->link('extension/payment', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['breadcrumbs'][] = array(
 			'text' => $this->language->get('heading_title'),
 			'href' => $this->url->link('payment/amazon_checkout', 'token=' . $this->session->data['token'], 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['geo_zones'] = $this->model_localisation_geo_zone->getGeoZones();

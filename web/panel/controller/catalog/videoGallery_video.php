@@ -154,7 +154,7 @@ class ControllerCatalogVideoGalleryvideo extends Controller {
    		$this->data['breadcrumbs'][] = array(
        		'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('catalog/videoGallery_album', 'token=' . $this->session->data['token'], 'SSL'),
-      		'separator' => ' :: '
+      		'separator' => ' <i class="fa fa-angle-right"></i> '
    		);
 							
 		$this->data['insert'] = HTTPS_SERVER . 'index.php?route=catalog/videoGallery_video/insert&token=' . $this->session->data['token'] . $url;
@@ -331,7 +331,7 @@ class ControllerCatalogVideoGalleryvideo extends Controller {
    		$this->data['breadcrumbs'][] = array(
        		'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('catalog/videoGallery_album', 'token=' . $this->session->data['token'], 'SSL'),
-      		'separator' => ' :: '
+      		'separator' => ' <i class="fa fa-angle-right"></i> '
    		);
 							
 		if (!isset($this->request->get['video_id'])) {

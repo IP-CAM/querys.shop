@@ -380,7 +380,7 @@ class ControllerSaleCustomer extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('sale/customer', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		$this->data['approve'] = $this->url->link('sale/customer/approve', 'token=' . $this->session->data['token'] . $url, 'SSL');
@@ -797,7 +797,7 @@ class ControllerSaleCustomer extends Controller {
 		$this->data['breadcrumbs'][] = array(
 			'text'      => $this->language->get('heading_title'),
 			'href'      => $this->url->link('sale/customer', 'token=' . $this->session->data['token'] . $url, 'SSL'),
-			'separator' => ' :: '
+			'separator' => ' <i class="fa fa-angle-right"></i> '
 		);
 
 		if (!isset($this->request->get['customer_id'])) {
@@ -1103,7 +1103,7 @@ class ControllerSaleCustomer extends Controller {
 			$this->data['breadcrumbs'][] = array(
 				'text'      => $this->language->get('heading_title'),
 				'href'      => $this->url->link('error/not_found', 'token=' . $this->session->data['token'], 'SSL'),
-				'separator' => ' :: '
+				'separator' => ' <i class="fa fa-angle-right"></i> '
 			);
 
 			$this->template = 'error/not_found.tpl';

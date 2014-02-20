@@ -8,26 +8,26 @@
       <ul class="page-breadcrumb breadcrumb">
           <li class="btn-group">
             <button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
-            <span>
-              Herramientas
-            </span>
-            <i class="fa fa-angle-down"></i>
+              <span>
+                Herramientas
+              </span>
+              <i class="fa fa-angle-down"></i>
             </button>
             <ul class="dropdown-menu pull-right" role="menu">
               <li>
-                <a href="#">
+                <a href="javascript:;">
                   Exportar a Excel
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="javascript:;">
                   Imprimir Listado
                 </a>
               </li>
             </ul>
           </li>
         <?php foreach ($breadcrumbs as $key => $breadcrumb) { ?>
-          <li><?php if(!$key): ?> <i class="fa fa-home"></i> <?php endif; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a><i class="fa fa-angle-right"></i></li>
+          <li><?php if(!$key): ?> <i class="fa fa-home"></i> <?php endif; ?><?php echo $breadcrumb['separator'];?> <a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
         <?php } ?>
       </ul>
     </div>
@@ -36,10 +36,10 @@
   <div class="row">
     <div class="col-md-12">
       <?php if ($error_warning) { ?>
-      <div class="warning"><?php echo $error_warning; ?></div>
+      <div class="alert alert-warning"><?php echo $error_warning; ?></div>
       <?php } ?>
       <?php if ($success) { ?>
-      <div class="success"><?php echo $success; ?></div>
+      <div class="alert alert-success"><?php echo $success; ?></div>
       <?php } ?>
     </div>
   </div>
@@ -49,7 +49,11 @@
       <div class="portlet box blue">
         <div class="portlet-title">
           <div class="caption"><img src="view/image/category.png" alt="" /> <?php echo $heading_title; ?></div>
-          <div class="tools"><a href="javascript:;" class="collapse"></a><a href="#portlet-config" data-toggle="modal" class="config"></a><a href="javascript:;" class="reload"></a></div>
+          <div class="tools">
+            <!-- <a href="javascript:;" class="collapse"></a> -->
+            <!-- <a href="#portlet-config" data-toggle="modal" class="config"></a> -->
+            <!-- <a href="javascript:;" class="reload"></a> -->
+          </div>
         </div>
         <div class="portlet-body">
           <div class="table-toolbar">
@@ -77,6 +81,7 @@
                   <th class="table-checkbox" width="1" style="text-align: center;">
                     <input type="checkbox" class="group-checkable" data-set="#datatable .checkboxes">
                   </th>
+                  <th width="1"><?php echo $column_id; ?></th>
                   <th><?php echo $column_name; ?></th>
                   <th><?php echo $column_sort_order; ?></th>
                   <th><?php echo $column_action; ?></th>
@@ -91,6 +96,7 @@
                     <?php } else { ?>
                     <input type="checkbox" name="selected[]" value="<?php echo $category['category_id']; ?>" class="checkboxes"/>
                     <?php } ?></td>
+                  <td><?php echo $category['category_id']; ?></td>
                   <td><?php echo $category['name']; ?></td>
                   <td><?php echo $category['sort_order']; ?></td>
                   <td><?php foreach ($category['action'] as $action) { ?>
@@ -100,7 +106,7 @@
                 <?php } ?>
                 <?php } else { ?>
                 <tr>
-                  <td class="center" colspan="4"><?php echo $text_no_results; ?></td>
+                  <td class="center" colspan="5"><?php echo $text_no_results; ?></td>
                 </tr>
                 <?php } ?>
               </tbody>
@@ -122,6 +128,7 @@
           $('#datatable').dataTable({
               "aoColumns": [
                   null,
+                  { "bSortable": true },
                   { "bSortable": true },
                   { "bSortable": true },
                   null
@@ -146,10 +153,10 @@
               ]
           });
 
-          jQuery('#datatable .group-checkable').change(function () {
-              var set = jQuery(this).attr("data-set");
-              var checked = jQuery(this).is(":checked");
-              jQuery(set).each(function () {
+          $('#datatable .group-checkable').change(function () {
+              var set = $(this).attr("data-set");
+              var checked = $(this).is(":checked");
+              $(set).each(function () {
                   if (checked) {
                       $(this).attr("checked", true);
                       $(this).parents('tr').addClass("active");
@@ -158,21 +165,18 @@
                       $(this).parents('tr').removeClass("active");
                   }                    
               });
-              jQuery.uniform.update(set);
+              $.uniform.update(set);
           });
 
-          jQuery('#datatable').on('change', 'tbody tr .checkboxes', function(){
+          $('#datatable').on('change', 'tbody tr .checkboxes', function(){
                $(this).parents('tr').toggleClass("active");
           });
 
-          jQuery('#datatable_wrapper .dataTables_filter input').addClass("form-control input-medium input-inline"); // modify table search input
-          jQuery('#datatable_wrapper .dataTables_length select').addClass("form-control input-xsmall"); // modify table per page dropdown
+          $('#datatable_wrapper .dataTables_filter input').addClass("form-control input-medium input-inline"); // modify table search input
+          $('#datatable_wrapper .dataTables_length select').addClass("form-control input-xsmall"); // modify table per page dropdown
         }
 
     };
   }();
-  
- 
 </script>
-
 <?php echo $footer; ?>

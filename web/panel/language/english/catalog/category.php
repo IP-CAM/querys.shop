@@ -10,6 +10,7 @@ $_['text_browse']            = 'Browse';
 $_['text_clear']             = 'Clear';
 
 // Column
+$_['column_id']            	 = 'ID';
 $_['column_name']            = 'Category Name';
 $_['column_sort_order']      = 'Sort Order';
 $_['column_action']          = 'Action';
