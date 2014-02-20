@@ -101,7 +101,7 @@
               <td class="left"><?php echo $affiliate['approved']; ?></td>
               <td class="left"><?php echo $affiliate['date_added']; ?></td>
               <td class="right"><?php foreach ($affiliate['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

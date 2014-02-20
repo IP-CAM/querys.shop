@@ -59,7 +59,7 @@
               <td class="left"><?php echo $custom_field['location']; ?></td>
               <td class="right"><?php echo $custom_field['sort_order']; ?></td>
               <td class="right"><?php foreach ($custom_field['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

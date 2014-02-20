@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']          = 'Categoría';
+$_['heading_title']          = 'Categorías';
 
 // Text
 $_['text_success']           = 'Exito: Ha modificado Categorías!';

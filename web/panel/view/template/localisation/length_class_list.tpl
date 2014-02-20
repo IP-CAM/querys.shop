@@ -53,7 +53,7 @@
               <td class="left"><?php echo $length_class['unit']; ?></td>
               <td class="right"><?php echo $length_class['value']; ?></td>
               <td class="right"><?php foreach ($length_class['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

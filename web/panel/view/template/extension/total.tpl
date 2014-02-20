@@ -33,7 +33,7 @@
             <td class="left"><?php echo $extension['status'] ?></td>
             <td class="right"><?php echo $extension['sort_order']; ?></td>
             <td class="right"><?php foreach ($extension['action'] as $action) { ?>
-              [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+              <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
               <?php } ?></td>
           </tr>
           <?php } ?>

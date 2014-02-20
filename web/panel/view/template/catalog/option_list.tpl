@@ -47,7 +47,7 @@
               <td class="left"><?php echo $option['name']; ?></td>
               <td class="right"><?php echo $option['sort_order']; ?></td>
               <td class="right"><?php foreach ($option['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

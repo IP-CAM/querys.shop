@@ -47,7 +47,7 @@
               <td class="left"><?php echo $filter['name']; ?></td>
               <td class="right"><?php echo $filter['sort_order']; ?></td>
               <td class="right"><?php foreach ($filter['action'] as $action) { ?>
-                [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                 <?php } ?></td>
             </tr>
             <?php } ?>

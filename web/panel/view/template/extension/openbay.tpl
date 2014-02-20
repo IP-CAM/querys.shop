@@ -41,7 +41,7 @@
                         <td class="left"><?php echo $extension['name']; ?></td>
                         <td class="center"><?php echo $extension['status'] ?></td>
                         <td class="right"><?php foreach ($extension['action'] as $action) { ?>
-                            [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+                            <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
                             <?php } ?></td>
                     </tr>
                     <?php } ?>

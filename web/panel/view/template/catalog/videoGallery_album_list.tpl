@@ -63,7 +63,7 @@
             <td class="left"><img src="<?php echo $album['thumb']; ?>" /></td>
             <td class="right"><?php echo $album['sort_order']; ?></td>
             <td class="right"><?php foreach ($album['action'] as $action) { ?>
-              [ <a href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a> ]
+              <a class="btn default btn-xs dark" href="<?php echo $action['href']; ?>"><?php echo $action['text']; ?></a>
               <?php } ?></td>
           </tr>
           <?php } ?>
