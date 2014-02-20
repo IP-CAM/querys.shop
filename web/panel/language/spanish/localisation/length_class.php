@@ -14,7 +14,7 @@ $_['column_action']    = 'Modificar';
 // Entry
 $_['entry_title']      = 'Título de Tipo de Medida:';
 $_['entry_unit']       = 'Unidad de Medida:';
-$_['entry_value']      = 'Valor:<br /><span class="help">Poner 1.00000 si es su Medida predeterminada</span>';
+$_['entry_value']      = 'Valor:<br /><span class="help-block">Poner 1.00000 si es su Medida predeterminada</span>';
 
 // Error
 $_['error_permission'] = 'Advertencia: No tiene permiso para modificar Tipos de Medidas!';

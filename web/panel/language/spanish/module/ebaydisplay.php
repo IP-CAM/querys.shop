@@ -11,7 +11,7 @@ $_['text_column_left']    			= 'Columna Izquierda';
 $_['text_column_right']   			= 'Columna Derecha';
 
 // Entry
-$_['entry_product']       			= 'Productos:<br /><span class="help">(Autocompletar)</span>';
+$_['entry_product']       			= 'Productos:<br /><span class="help-block">(Autocompletar)</span>';
 $_['entry_limit']         			= 'Limite:';
 $_['entry_image']         			= 'Imagen (A x A) y Tipo de Ajustar:';
 $_['entry_layout']        			= 'Dise&#241;o:';

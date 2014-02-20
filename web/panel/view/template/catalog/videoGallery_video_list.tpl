@@ -48,7 +48,7 @@
               <?php } ?></td>
             <td class="left">
             	<?php echo $video['name']; ?><br />
-                <span class="help"><?php echo $video['date_added']; ?></span>
+                <span class="help-block"><?php echo $video['date_added']; ?></span>
             </td>
             <td class="left"><img src="<?php echo $video['thumb']; ?>" width="60" height="45" /></td>
             <td class="right"><?php echo $video['sort_order']; ?></td>

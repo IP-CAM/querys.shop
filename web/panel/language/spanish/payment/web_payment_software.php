@@ -16,7 +16,7 @@ $_['entry_login']               = 'ID de Comerciante:';
 $_['entry_key']                 = 'Clave de Comerciante:';
 $_['entry_mode']                = 'Modo de Transaccion:';
 $_['entry_method']              = 'Metodo de Transaccion:';
-$_['entry_total']               = 'Total:<br /><span class="help">Debes pasar por el Carro de Compras antes de que este metodo este activo</span>';
+$_['entry_total']               = 'Total:<br /><span class="help-block">Debes pasar por el Carro de Compras antes de que este metodo este activo</span>';
 $_['entry_order_status']        = 'Estado de Orden:';
 $_['entry_geo_zone']            = 'Zona Geografica:'; 
 $_['entry_status']              = 'Estado:';

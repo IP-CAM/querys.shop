@@ -682,7 +682,7 @@
                         <td><?php echo $entry_comment_admin_badge; ?></td>                        
 								<td>
 									<?php echo $entry_comment_admin_badge_help; ?>
-                           <span class="help"><b><i>(<?php foreach ($user_groups as $admGroup1) { ?><?php echo sprintf($admGroup1['name']); ?>. <?php } ?>)</i></b></span>
+                           <span class="help-block"><b><i>(<?php foreach ($user_groups as $admGroup1) { ?><?php echo sprintf($admGroup1['name']); ?>. <?php } ?>)</i></b></span>
 									<div class="scrollbox">
 										<?php $class = 'odd'; ?>
 										<?php foreach ($user_groups as $admGroup) { ?>
@@ -725,7 +725,7 @@
 								<td><?php echo $entry_comment_customer_badge; ?></td>
 								<td>
 									<?php echo $entry_comment_customer_badge_help; ?>
-                           <span class="help"><b><i>(<?php foreach ($customer_groups as $cusgroup1) { ?><?php echo sprintf($cusgroup1['name']); ?>. <?php } ?>)</i></b></span>
+                           <span class="help-block"><b><i>(<?php foreach ($customer_groups as $cusgroup1) { ?><?php echo sprintf($cusgroup1['name']); ?>. <?php } ?>)</i></b></span>
 									<div class="scrollbox">
 										<?php $class = 'odd'; ?>
 										<?php foreach ($customer_groups as $cusgroup) { ?>
@@ -836,7 +836,7 @@
 										<?php } ?>
 									</select>
 									<?php echo $entry_blog_feed_help; ?>
-                           <span class="help">
+                           <span class="help-block">
                               <a onClick="window.open('<?php echo HTTP_CATALOG; ?>index.php?route=feed/blog');" class="top"><?php echo $text_default; ?> <?php echo $text_blog_feed; ?></a><br>
                               <?php foreach ($stores as $store) { ?>
                                  <a onClick="window.open('<?php echo $store['url']; ?>index.php?route=feed/blog');"><?php echo $store['name']; ?> <?php echo $text_blog_feed; ?></a><br>
@@ -864,7 +864,7 @@
 										<?php } ?>
 									</select>
 									<?php echo $entry_blog_sitemap_help; ?>
-                           <span class="help">
+                           <span class="help-block">
                               <a onClick="window.open('<?php echo HTTP_CATALOG; ?>index.php?route=feed/blog_sitemap');" class="top"><?php echo $text_default; ?> <?php echo $text_blog_sitemap; ?></a><br>
                               <?php foreach ($stores as $store) { ?>
                                  <a onClick="window.open('<?php echo $store['url']; ?>index.php?route=feed/blog_sitemap');"><?php echo $store['name']; ?> <?php echo $text_blog_sitemap; ?></a><br>

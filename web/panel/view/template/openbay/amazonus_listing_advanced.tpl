@@ -60,7 +60,7 @@
                         <tr>
                             <td>
                                 <?php echo $category_selector_field_text; ?><br>
-                                <span class="help"></span>
+                                <span class="help-block"></span>
                             </td>
                             <td>
                                 <select id="category_selector">
@@ -231,7 +231,7 @@ function show_form(xml, formType) {
                     row += '<span class="required">* </span>';
                 }
                 row += fieldsArray[formType][i]['title'];
-                row += '<span class="help">' + fieldsArray[formType][i]['definition'] + '</span>';
+                row += '<span class="help-block">' + fieldsArray[formType][i]['definition'] + '</span>';
                 row += '</td>';
                 row += '<td>';
 

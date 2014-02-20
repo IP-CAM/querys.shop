@@ -80,7 +80,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <?php echo $lang_default_mp; ?><span class="help"><?php echo $lang_default_mp_help; ?></span>
+                                <?php echo $lang_default_mp; ?><span class="help-block"><?php echo $lang_default_mp_help; ?></span>
                             </td>
                             <td>
                                 <?php foreach ($marketplaces as $marketplace): ?>
@@ -164,7 +164,7 @@
                         <tr>
                             <td>
                                 <label for="customer_group_input"><?php echo $lang_customer_group ?></label><br />
-                                <span class="help"><?php echo $lang_customer_group_help ?></span>
+                                <span class="help-block"><?php echo $lang_customer_group_help ?></span>
                             </td>
                             <td>
                                 <select class="width120" name="openbay_amazon_order_customer_group">

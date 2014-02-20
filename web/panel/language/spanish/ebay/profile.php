@@ -37,13 +37,13 @@ $_['lang_tab_settings']             = 'Configuracion';
 
 $_['lang_shipping_postcode']    = 'Codigo Postal';
 $_['lang_shipping_location']    = 'Ciudad o Estado';
-$_['lang_shipping_despatch']    = 'Tiempo de Envio <span class="help">(Max dias a enviar)</span>';
+$_['lang_shipping_despatch']    = 'Tiempo de Envio <span class="help-block">(Max dias a enviar)</span>';
 $_['lang_shipping_nat']         = 'Servicios de Envio nacional';
 $_['lang_shipping_intnat']      = 'Servicios de Envio internacional';
 $_['lang_shipping_first']       = 'Primer Articulo: ';
 $_['lang_shipping_add']         = 'Articulos adicionales: ';
 $_['lang_shipping_service']     = 'Servicio: ';
-$_['lang_shipping_in_desc']     = 'Info de Transportacion en descripcion<span class="help">US, UK, AU & CA solamente</span>';
+$_['lang_shipping_in_desc']     = 'Info de Transportacion en descripcion<span class="help-block">US, UK, AU & CA solamente</span>';
 $_['lang_shipping_getitfast']   = 'Comprar ya!';
 
 
@@ -61,14 +61,14 @@ $_['lang_returns_costs']        = 'Costos de Envio de Devolucion';
 $_['lang_returns_costs_b']      = 'Comprador paga';
 $_['lang_returns_costs_s']      = 'Vendedor paga';
 
-$_['lang_template_choose']      = 'Plantilla default<span class="help">Una Plantilla default se autocargara para el Listado para ahorrar tiempo</span>';
-$_['lang_image_gallery']        = 'Galeria<span class="help">Tama&#241;o en pixeles de Galeria de Imágenes que son agregados a tu Plantilla</span>';
-$_['lang_image_thumb']          = 'Tama&#241;o de Imagen de Miniatura<span class="help">Tama&#241;o en pixeles de Miniatura de Imágenes que son agregados a tu Plantilla</span>';
+$_['lang_template_choose']      = 'Plantilla default<span class="help-block">Una Plantilla default se autocargara para el Listado para ahorrar tiempo</span>';
+$_['lang_image_gallery']        = 'Galeria<span class="help-block">Tama&#241;o en pixeles de Galeria de Imágenes que son agregados a tu Plantilla</span>';
+$_['lang_image_thumb']          = 'Tama&#241;o de Imagen de Miniatura<span class="help-block">Tama&#241;o en pixeles de Miniatura de Imágenes que son agregados a tu Plantilla</span>';
 $_['lang_image_super']          = 'Agrandar Imágenes';
 $_['lang_image_gallery_plus']   = 'Galeria plus';
 $_['lang_image_all_ebay']       = 'Agregar las Imágenes a eBay';
 $_['lang_image_all_template']   = 'Agregar las Imágenes a Plantilla';
-$_['lang_image_exclude_default']= 'Excluir Imagen default<span class="help">Solamente para la funcion Listado masivo! No incluira la Imagen del Producto default en la lista de Imágenes</span>';
+$_['lang_image_exclude_default']= 'Excluir Imagen default<span class="help-block">Solamente para la funcion Listado masivo! No incluira la Imagen del Producto default en la lista de Imágenes</span>';
 $_['lang_confirm_delete']       = 'Estas segur@ que deseas borrar el Perfil?';
 
 $_['lang_private_auction']      = 'Listar Articulos como Subasta privada';

@@ -66,7 +66,7 @@ $_['lang_category_suggested_check'] = 'Checando sugerencias de Categorias con eB
 $_['lang_category_popular']         = 'Categorías Populares';
 $_['lang_category_popular_help']    = 'Basado en tu Historial';
 $_['lang_category_checking']        = 'Checando requerimientos de Categoria en eBay, favor de esperar';
-$_['lang_category_features']        = 'Especificaciones de Articulo<span class="help">Introducir especificaciones acerca de tu Articulo ayudara a los Compradores a encontrar lo que necesitan. Mejorara la presentacion del Producto y eBay te ayudara en el posicionamiento del Listado</span>';
+$_['lang_category_features']        = 'Especificaciones de Articulo<span class="help-block">Introducir especificaciones acerca de tu Articulo ayudara a los Compradores a encontrar lo que necesitan. Mejorara la presentacion del Producto y eBay te ayudara en el posicionamiento del Listado</span>';
 
 /**
  * Description Tab
@@ -90,8 +90,8 @@ $_['lang_template_image']           = 'Imagen de Plantilla';
 $_['lang_main_image_ebay']          = 'Imagen principal de eBay';
 $_['lang_image_ebay']               = 'Imagen de eBay';
 $_['lang_images_none']              = 'No tienes Imágenes para este Producto';
-$_['lang_images_supersize']         = 'Agrandar Imágenes<span class="help">Fotos extra grandes</span>';
-$_['lang_images_gallery_plus']      = 'Galeria plus<span class="help">Foto mas grande en busqueda</span>';
+$_['lang_images_supersize']         = 'Agrandar Imágenes<span class="help-block">Fotos extra grandes</span>';
+$_['lang_images_gallery_plus']      = 'Galeria plus<span class="help-block">Foto mas grande en busqueda</span>';
 
 /**
  * Price y details tab
@@ -113,7 +113,7 @@ $_['lang_stock_col_qty_reserve']    = 'Reservado';
 $_['lang_stock_col_comb']           = 'Combinacion';
 $_['lang_stock_col_price']          = 'Precio';
 $_['lang_stock_col_enabled']        = 'Habilitar';
-$_['lang_qty']                      = 'Cantidad a listar<span class="help">Introducir un monto menor si deseas mantener bajo tu Inventario en eBay</span>';
+$_['lang_qty']                      = 'Cantidad a listar<span class="help-block">Introducir un monto menor si deseas mantener bajo tu Inventario en eBay</span>';
 $_['lang_price_ex_tax']             = 'Precio sin Impuesto';
 $_['lang_price_ex_tax_help']        = 'Tu precio standard de Articulo incluido el Impuesto. Este valor no es enviado a eBay';
 $_['lang_price_inc_tax']            = 'Precio con Impuesto';
@@ -129,9 +129,9 @@ $_['lang_payment_instruction']      = 'Instrucciones de Pago';
 /**
  * Shipping tab
  */
-$_['lang_item_postcode']            = 'Codigo Postal<span class="help">Un Codigo Postal ayudara a eBay a escoger el lugar correcto para tu Listado</span>';
-$_['lang_item_location']            = 'Ciudad o Estado<span class="help">Introducir una Ciudad es menos confiable que un Codigo Postal</span>';
-$_['lang_despatch_time']            = 'Hora de Envio<span class="help">Max dias para enviar</span>';
+$_['lang_item_postcode']            = 'Codigo Postal<span class="help-block">Un Codigo Postal ayudara a eBay a escoger el lugar correcto para tu Listado</span>';
+$_['lang_item_location']            = 'Ciudad o Estado<span class="help-block">Introducir una Ciudad es menos confiable que un Codigo Postal</span>';
+$_['lang_despatch_time']            = 'Hora de Envio<span class="help-block">Max dias para enviar</span>';
 $_['lang_shipping_national']        = 'Servicio Domestico (nacional)';
 $_['lang_shipping_international']   = 'Servicio International';
 $_['lang_service']                  = '<strong>Servicio</strong>';
@@ -186,10 +186,10 @@ $_['lang_failed_li1']               = 'Si eres un nuevo Vendedor en eBay (o no h
 $_['lang_failed_li2']               = 'No te has subscrito al Selling Manager Pro en eBay - estos son los requisitos';
 $_['lang_failed_li3']               = 'Tu Cuenta OpenBay Pro esta suspendida, favor de checar via el Modulo Admin debajo de la seccion "Mi Cuenta"';
 $_['lang_failed_contact']           = 'Si el error continua, favor de contactar a Soporte hasta que hayas asegurado que el problema no es ninguno de los de arriba';
-$_['lang_gallery_select_all']       = 'Seleccionar todo<span class="help">Checar la caja para seleccionar todas las Imágenes a la vez</span>';
+$_['lang_gallery_select_all']       = 'Seleccionar todo<span class="help-block">Checar la caja para seleccionar todas las Imágenes a la vez</span>';
 $_['lang_template_images']          = 'Plantilla de Imágenes';
 $_['lang_ebay_images']              = 'Imágenes de eBay';
-$_['lang_shipping_in_description']  = 'Info de Transportacion en descripcion<span class="help">US, UK, AU & CA solamente</span>';
+$_['lang_shipping_in_description']  = 'Info de Transportacion en descripcion<span class="help-block">US, UK, AU & CA solamente</span>';
 $_['lang_profile_load']             = 'Cargar Perfil';
 $_['lang_shipping_first']           = 'Primer Articulo: ';
 $_['lang_shipping_add']             = 'Articulos adicionales: ';
@@ -210,7 +210,7 @@ $_['lang_option_description']       = 'Variaciones en Imágenes pueden ser usada
  * Product catalog
  */
 $_['lang_search_catalog']           = 'Buscar en Catalogo eBay:';
-$_['lang_image_catalog']            = 'Usar Imagen default:<span class="help">Esto cambiara la Imagen principal y sera fijada para usar la Imagen de Catalogo en eBay</span>';
+$_['lang_image_catalog']            = 'Usar Imagen default:<span class="help-block">Esto cambiara la Imagen principal y sera fijada para usar la Imagen de Catalogo en eBay</span>';
 
 /**
  * Errors

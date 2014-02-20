@@ -48,4 +48,4 @@ $_['lang_default_item_condition']   = 'Condicion de Articulo';
 $_['lang_order_new_notify']         = 'Notificar al Cliente de nueva Orden';
 $_['lang_order_new_notify_admin']   = 'Notificar al Admin de nueva Orden';
 $_['lang_order_update_notify']      = 'Notificar al Cliente de actualizacion de Orden';
-$_['lang_obp_tax']                  = 'Tasa de Impuesto<span class="help">Usado cuando una Orden no esta enlazada a un Producto para obtener la tasa de Impuesto</span>';
+$_['lang_obp_tax']                  = 'Tasa de Impuesto<span class="help-block">Usado cuando una Orden no esta enlazada a un Producto para obtener la tasa de Impuesto</span>';

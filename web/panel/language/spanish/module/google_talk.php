@@ -11,7 +11,7 @@ $_['text_column_left']    = 'Columna Izquierda';
 $_['text_column_right']   = 'Columna Derecha';
 
 // Entry
-$_['entry_code']          = 'Código Chat Google:<br /><span class="help">Ir a <a onclick="window.open(\'http://www.google.com/talk/service/badge/New\');"><u>Crea una Cuenta del Chat Google</u></a> copie y pegue el Código generado detro de la caja de texto</span>';
+$_['entry_code']          = 'Código Chat Google:<br /><span class="help-block">Ir a <a onclick="window.open(\'http://www.google.com/talk/service/badge/New\');"><u>Crea una Cuenta del Chat Google</u></a> copie y pegue el Código generado detro de la caja de texto</span>';
 $_['entry_layout']        = 'Ubicación:';
 $_['entry_position']      = 'Posición:';
 $_['entry_status']        = 'Estado:';

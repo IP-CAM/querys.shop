@@ -7,7 +7,7 @@ $_['text_shipping']    = 'Envío';
 $_['text_success']     = 'Exito: Ha modificado Envío Basado por el Peso!';
 
 // Entry
-$_['entry_rate']       = 'Tarifas:<br /><span class="help">Ejemplo: 5:10.00,7:12.00  Peso:Costo,Peso:Costo, etc</span>';
+$_['entry_rate']       = 'Tarifas:<br /><span class="help-block">Ejemplo: 5:10.00,7:12.00  Peso:Costo,Peso:Costo, etc</span>';
 $_['entry_tax_class']        = 'Impuesto:';
 $_['entry_geo_zone']   = 'Zona Geográfica:';
 $_['entry_status']     = 'Estado:';

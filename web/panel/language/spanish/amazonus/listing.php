@@ -147,7 +147,7 @@ $_['links_desc1_text'] 				= 'Enlazar tus Articulos permitira controlar tu Inven
 $_['links_desc2_text'] 				= 'Puedes enlazar Articulos manualmente e introduciendo el SKU Amazon y Nombre de Producto o cargar todos los Productos desenlazados y entonces introducir los SKUs de Amazon. (Cargar Productos desde OpenCart a Amazon creara Enlaces automaticamente)';
 $_['links_load_btn_text'] 			= 'Cargar';
 $_['links_new_link_text'] 			= 'Nuevo Enlace';
-$_['links_autocomplete_product_text']	= 'Producto<span class="help">(Autocompletar desde Nombre)</span>';
+$_['links_autocomplete_product_text']	= 'Producto<span class="help-block">(Autocompletar desde Nombre)</span>';
 $_['links_amazonus_sku_text'] 		= 'SKU de Articulo Amazon';
 $_['links_action_text'] 			= 'Modificar';
 $_['links_add_text'] 				= 'Agregar';

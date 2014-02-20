@@ -14,8 +14,8 @@ $_['column_action']        = 'Modificar';
 
 // Entry
 $_['entry_title']          = 'Nombre de la Moneda:';
-$_['entry_code']           = 'Codigo:<br /><span class="help">No lo cambie si es su moneda predeterminada</span>';
-$_['entry_value']          = 'Valor:<br /><span class="help">Poner 1.00000 si es su moneda predeterminada</span>';
+$_['entry_code']           = 'Codigo:<br /><span class="help-block">No lo cambie si es su moneda predeterminada</span>';
+$_['entry_value']          = 'Valor:<br /><span class="help-block">Poner 1.00000 si es su moneda predeterminada</span>';
 $_['entry_symbol_left']    = 'Símbolo a la Izquierda:';
 $_['entry_symbol_right']   = 'Símbolo a la Derecha:';
 $_['entry_decimal_place']  = 'Lugares Decimales:';

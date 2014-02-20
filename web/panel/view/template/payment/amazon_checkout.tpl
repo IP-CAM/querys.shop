@@ -174,14 +174,14 @@
           <tr>
             <td>
                 <label for="amazon_checkout_cron_job_token"><?php echo $text_cron_job_token ?></label><br />
-                <span class="help"><?php echo $help_cron_job_token ?></span>
+                <span class="help-block"><?php echo $help_cron_job_token ?></span>
             </td>
             <td><input name="amazon_checkout_cron_job_token" value="<?php echo $amazon_checkout_cron_job_token ?>" id="amazon_checkout_cron_job_token" /></td>
           </tr>
           <tr>
             <td>
                 <?php echo $text_cron_job_url ?><br />
-                <span class="help"><?php echo $help_cron_job_url ?></span>
+                <span class="help-block"><?php echo $help_cron_job_url ?></span>
             </td>
             <td>
                 <span id="cron-job-url"><?php echo $cron_job_url ?></span>
@@ -192,7 +192,7 @@
             <td><?php echo $last_cron_job_run ?></td>
           </tr>
           <tr>
-              <td><?php echo $text_allowed_ips ?><br /><span class="help"><?php echo $help_allowed_ips ?></span></td>
+              <td><?php echo $text_allowed_ips ?><br /><span class="help-block"><?php echo $help_allowed_ips ?></span></td>
               <td>
                   <input type="text" name="allowed-ip" />
                   <a class="button" id="add-ip"><?php echo $text_add ?></a>

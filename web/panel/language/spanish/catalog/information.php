@@ -16,9 +16,9 @@ $_['entry_title']       = 'Título Información:';
 $_['entry_description'] = 'Descripción:';
 $_['entry_store']       = 'Tiendas:';
 $_['entry_keyword']     = 'Introduce URLs SEO:';
-$_['entry_bottom']      = 'Activar:<br/><span class="help">Mostrar en la seccion Inferior</span>';
+$_['entry_bottom']      = 'Activar:<br/><span class="help-block">Mostrar en la seccion Inferior</span>';
 $_['entry_status']      = 'Estado:';
-$_['entry_sort_order']  = 'Orden:<br/><span class="help">Coloca "-1" para ocultar el Menú</span>';
+$_['entry_sort_order']  = 'Orden:<br/><span class="help-block">Coloca "-1" para ocultar el Menú</span>';
 $_['entry_layout']      = 'Ubicación:';
 
 // Error

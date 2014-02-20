@@ -44,17 +44,17 @@ $_['lang_obp_secret']           = 'Secreta';
 $_['lang_obp_string1']          = 'Cadena de Encriptacion 1';
 $_['lang_obp_string2']          = 'Cadena de Encriptacion 2';
 $_['lang_app_setting_msg']      = 'Las Configuraciones de tu Aplicacion te permite configurar como trabaja OpenBay Pro y se integra con tu Sistema';
-$_['lang_app_end_ebay']         = 'Finalizar Articulos?<span class="help">Si los Articulos se venden, debe el Listado finalizar en eBay?</span>';
-$_['lang_app_relist_ebay']      = 'Relistar cuando vuelva al Inventario?<span class="help">Si un Enlace de Articulo existe anteriormente sera relistado como Articulo nuevo si vuelve al Inventario</span>';
+$_['lang_app_end_ebay']         = 'Finalizar Articulos?<span class="help-block">Si los Articulos se venden, debe el Listado finalizar en eBay?</span>';
+$_['lang_app_relist_ebay']      = 'Relistar cuando vuelva al Inventario?<span class="help-block">Si un Enlace de Articulo existe anteriormente sera relistado como Articulo nuevo si vuelve al Inventario</span>';
 $_['lang_app_logging']          = 'Habilitar conexion';
 $_['lang_app_currency']         = 'Moneda default';
 $_['lang_app_currency_msg']     = 'Basado en la Moneda de tu Tienda';
-$_['lang_app_cust_grp']         = 'Grupo de Clientes<span class="help">Cuando los nuevos Clientes son creados, a que Grupo deben pertenecer?</span>';
+$_['lang_app_cust_grp']         = 'Grupo de Clientes<span class="help-block">Cuando los nuevos Clientes son creados, a que Grupo deben pertenecer?</span>';
 
-$_['lang_app_stock_allocate']   = 'Asignar Inventario<span class="help">Cuando debe el Inventario ser asignado desde la Tienda?</span>';
+$_['lang_app_stock_allocate']   = 'Asignar Inventario<span class="help-block">Cuando debe el Inventario ser asignado desde la Tienda?</span>';
 $_['lang_app_stock_1']          = 'Cuando el Cliente compra';
 $_['lang_app_stock_2']          = 'Cuando el Cliente paga';
-$_['lang_created_hours']        = 'Limite en Horas para nueva Orden<span class="help">Ordenes son nuevas cuando es menor que este limite (en horas). El default es 72</span>';
+$_['lang_created_hours']        = 'Limite en Horas para nueva Orden<span class="help-block">Ordenes son nuevas cuando es menor que este limite (en horas). El default es 72</span>';
 
 $_['lang_import_ebay_items']    = 'Importar Articulos de eBay';
 
@@ -78,20 +78,20 @@ $_['lang_payment_card']         = 'Tarjeta aceptada';
 $_['lang_payment_desc']         = 'Ver descripcion (ejemplo: Transferencia Bancaria)';
 $_['lang_payment_desc']         = 'Ver descripcion (ejemplo: Transferencia Bancaria)';
 $_['lang_payment_imediate']     = 'Pago inmediato requerido';
-$_['lang_tax_listing']          = 'Impuesto de Producto<span class="help">Si usas la opcion de los Listados asegurate que tus Articulos tienen el Impuesto correcto en eBay</span>';
+$_['lang_tax_listing']          = 'Impuesto de Producto<span class="help-block">Si usas la opcion de los Listados asegurate que tus Articulos tienen el Impuesto correcto en eBay</span>';
 $_['lang_tax_use_listing']      = 'Usar el Impuesto fijado en el Listado de eBay';
 $_['lang_tax_use_value']        = 'Usar un valor fijo para todo';
-$_['lang_tax']                  = 'Impuesto % usado para todo<span class="help">Usado cuando importas Articulos u Ordenes</span>';
+$_['lang_tax']                  = 'Impuesto % usado para todo<span class="help-block">Usado cuando importas Articulos u Ordenes</span>';
 
 $_['lang_ajax_dev_enter_pw']    = 'Favor de introducir tu Contrase&#241;a de Admin';
 $_['lang_ajax_dev_enter_warn']  = 'Esta accion es peligrosa por eso esta protegida con Contrase&#241;a';
 
 $_['lang_legend_notify_settings']           = 'Configuracion de Notificaciones';
-$_['lang_openbaypro_update_notify']         = 'Actualizar Ordenes<span class="help">Esto es solamente para actualizaciones automaticas</span>';
+$_['lang_openbaypro_update_notify']         = 'Actualizar Ordenes<span class="help-block">Esto es solamente para actualizaciones automaticas</span>';
 $_['lang_notify_setting_msg']               = 'Controlar cuando los Clientes reciben Notificaciones desde la aplicacion. Habilitar actualizaciones de Emails mejora tus calificaciones DSR asi como el Usuario obtendra Emails de sus Ordenes';
-$_['lang_openbaypro_confirm_notify']        = 'Nueva Orden - Comprador<span class="help">Notificar al Usuario con el Email de nueva Orden</span>';
-$_['lang_openbaypro_confirmadmin_notify']   = 'Nueva Orden - Admin<span class="help">Notificar al Admin de la Tienda con el Email de nueva Orden</span>';
-$_['lang_openbaypro_brand_disable']         = 'Deshabilitar Enlace<span class="help">Remueve el Enlace del Email de Orden de OpenBay Pro</span>';
+$_['lang_openbaypro_confirm_notify']        = 'Nueva Orden - Comprador<span class="help-block">Notificar al Usuario con el Email de nueva Orden</span>';
+$_['lang_openbaypro_confirmadmin_notify']   = 'Nueva Orden - Admin<span class="help-block">Notificar al Admin de la Tienda con el Email de nueva Orden</span>';
+$_['lang_openbaypro_brand_disable']         = 'Deshabilitar Enlace<span class="help-block">Remueve el Enlace del Email de Orden de OpenBay Pro</span>';
 
 $_['lang_listing_1day']             = '1 dia';
 $_['lang_listing_3day']             = '3 dias';
@@ -100,13 +100,13 @@ $_['lang_listing_7day']             = '7 dias';
 $_['lang_listing_10day']            = '10 dias';
 $_['lang_listing_30day']            = '30 dias';
 $_['lang_listing_gtc']              = 'GTC- Bueno hasta cancelado';
-$_['lang_openbay_duration']         = 'Duracion default de Listado<span class="help">GTC solo esta disponible si tienes Tienda eBay</span>';
-$_['lang_address_format']           = 'Parametro default de Direccion<span class="help">Solamente usado si el Pais no tiene un parametro fijado para sus direcciones</span>';
+$_['lang_openbay_duration']         = 'Duracion default de Listado<span class="help-block">GTC solo esta disponible si tienes Tienda eBay</span>';
+$_['lang_address_format']           = 'Parametro default de Direccion<span class="help-block">Solamente usado si el Pais no tiene un parametro fijado para sus direcciones</span>';
 
 $_['lang_legend_stock_rep']         = 'Reportes de Inventario';
 $_['lang_desc_stock_rep']           = 'Envia un Email a los Admins de la Tienda periodicamente acerca de los Articulos Enlazados. Esta funcion solo esta disponible en algunos Planes';
 $_['lang_stock_reports']            = 'Enviar Reportes';
-$_['lang_stock_summary']            = 'Enviar Reporte completo<span class="help">Si se deshabilita solo el Sumario sera enviado</span>';
+$_['lang_stock_summary']            = 'Enviar Reporte completo<span class="help-block">Si se deshabilita solo el Sumario sera enviado</span>';
 
 $_['lang_api_status']               = 'Estado de conexion API';
 $_['lang_api_checking']             = 'Checando';
@@ -121,4 +121,4 @@ $_['lang_create_date_1']            = 'Cuando es creado en eBay';
 $_['lang_obp_detail_update']        = 'Presionar aqui para actualizar tu URL de Tienda & Email';
 $_['lang_developer_repairlinks']    = 'Reparar Enlaces de Articulo';
 
-$_['lang_timezone_offset']          = 'Zona Horaria<span class="help">Basado en horas. 0 es la zona GMT. Solo funciona si el tiempo de eBay es usado para la creacion de Ordenes</span>';
+$_['lang_timezone_offset']          = 'Zona Horaria<span class="help-block">Basado en horas. 0 es la zona GMT. Solo funciona si el tiempo de eBay es usado para la creacion de Ordenes</span>';

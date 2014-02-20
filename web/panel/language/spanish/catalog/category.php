@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']          = 'Categorías';
+$_['heading_title']          = 'Categoría';
 
 // Text
 $_['text_success']           = 'Exito: Ha modificado Categorías!';
@@ -24,12 +24,12 @@ $_['entry_meta_keyword'] 	 = 'Etiquetas Meta:';
 $_['entry_meta_description'] = 'Descripción Etiquetas Meta:';
 $_['entry_description']      = 'Descripción:';
 $_['entry_parent']           = 'Categoría Superior:';
-$_['entry_filter']           = 'Filtros:<br /><span class="help">(Autocompletar)</span>';
+$_['entry_filter']           = 'Filtros:<br /><span class="help-block">(Autocompletar)</span>';
 $_['entry_store']            = 'Tiendas:';
-$_['entry_keyword']          = 'Introduce URLs SEO:<br/><span class="help">Estas deben ser Globalmente unicas</span>';
+$_['entry_keyword']          = 'Introduce URLs SEO:<br/><span class="help-block">Estas deben ser Globalmente unicas</span>';
 $_['entry_image']            = 'Imagen:';
-$_['entry_top']              = 'Superior:<br/><span class="help">Muestra en la barra del Menú superior. Solo funciona para las Categorías superiores</span>';
-$_['entry_column']           = 'Columnas:<br/><span class="help">Número de columnas para las 3 Categorías de inferiores. Solo funciona para las Categorías superiores</span>';
+$_['entry_top']              = 'Superior:<br/><span class="help-block">Muestra en la barra del Menú superior. Solo funciona para las Categorías superiores</span>';
+$_['entry_column']           = 'Columnas:<br/><span class="help-block">Número de columnas para las 3 Categorías de inferiores. Solo funciona para las Categorías superiores</span>';
 $_['entry_sort_order']       = 'Orden:';
 $_['entry_status']           = 'Estado:';
 $_['entry_layout']           = 'Ubicación:';

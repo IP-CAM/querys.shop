@@ -17,7 +17,7 @@
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
             <table class="form">
                 <tr>
-                    <td><span class="required">*</span> <?php echo $entry_vendor; ?><br /><span class="help"><?php echo $help_vendor ?></span></td>
+                    <td><span class="required">*</span> <?php echo $entry_vendor; ?><br /><span class="help-block"><?php echo $help_vendor ?></span></td>
                     <td><input type="text" name="pp_payflow_iframe_vendor" value="<?php echo $pp_payflow_iframe_vendor; ?>" />
                         <?php if ($error_vendor) { ?>
                             <span class="error"><?php echo $error_vendor; ?></span>
@@ -25,7 +25,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><span class="required">*</span> <?php echo $entry_user; ?><br /><span class="help"><?php echo $help_user ?></span></td>
+                    <td><span class="required">*</span> <?php echo $entry_user; ?><br /><span class="help-block"><?php echo $help_user ?></span></td>
                     <td><input type="text" name="pp_payflow_iframe_user" value="<?php echo $pp_payflow_iframe_user; ?>" />
                         <?php if ($error_user) { ?>
                             <span class="error"><?php echo $error_user; ?></span>
@@ -33,7 +33,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><span class="required">*</span> <?php echo $entry_password; ?><br /><span class="help"><?php echo $help_password ?></span></td>
+                    <td><span class="required">*</span> <?php echo $entry_password; ?><br /><span class="help-block"><?php echo $help_password ?></span></td>
                     <td><input type="text" name="pp_payflow_iframe_password" value="<?php echo $pp_payflow_iframe_password; ?>" />
                         <?php if ($error_password) { ?>
                             <span class="error"><?php echo $error_password; ?></span>
@@ -41,7 +41,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><span class="required">*</span> <?php echo $entry_partner; ?><br /><span class="help"><?php echo $help_partner ?></span></td>
+                    <td><span class="required">*</span> <?php echo $entry_partner; ?><br /><span class="help-block"><?php echo $help_partner ?></span></td>
                     <td><input type="text" name="pp_payflow_iframe_partner" value="<?php echo $pp_payflow_iframe_partner; ?>" />
                         <?php if ($error_partner) { ?>
                             <span class="error"><?php echo $error_partner; ?></span>
@@ -79,7 +79,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><?php echo $entry_debug; ?><br /><span class="help"><?php echo $help_debug ?></span></td>
+                    <td><?php echo $entry_debug; ?><br /><span class="help-block"><?php echo $help_debug ?></span></td>
                     <td>
                         <select name="pp_payflow_iframe_debug">
                             <?php if ($pp_payflow_iframe_debug) { ?>
@@ -93,7 +93,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><?php echo $entry_checkout_method ?><br /><span class="help"><?php echo $help_checkout_method ?></span></td>
+                    <td><?php echo $entry_checkout_method ?><br /><span class="help-block"><?php echo $help_checkout_method ?></span></td>
                     <td>
                         <select name="pp_payflow_iframe_checkout_method">
                             <?php if ($pp_payflow_iframe_checkout_method == 'iframe'): ?>

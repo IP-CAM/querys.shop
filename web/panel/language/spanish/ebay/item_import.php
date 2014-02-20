@@ -9,7 +9,7 @@ $_['lang_sync_import_line2']            = 'Esta opcion hace muchas llamadas a la
 $_['lang_sync_import_line3']            = 'Necesitas asegurarte que tu Servidor acepta y procesa publicaciones GRANDES. 1000 Articulos de eBay es alrededor de 40Mb de tama&#241;o, necesitaras calcular lo que requieres. Si la publicacion falla lo mas seguro es que sea el tama&#241;o de tu Memoria. Tu limite de Memoria PHP debe ser de 128Mb o mas';
 $_['lang_sync_server_size']             = 'Tu Servidor puede soportar: ';
 $_['lang_sync_memory_size']             = 'Tu limite de Memoria PHP: ';
-$_['lang_sync_item_description']        = 'Importar descripcion de Articulo<span class="help">Esto importara todo<br />incluyendo HTML, contadores, etc</span>';
+$_['lang_sync_item_description']        = 'Importar descripcion de Articulo<span class="help-block">Esto importara todo<br />incluyendo HTML, contadores, etc</span>';
 $_['lang_sync_notes_location']          = 'Importar notas de eBay';
 $_['lang_import_ebay_items']            = 'Importar Articulos de eBay';
 $_['lang_import']                       = 'Importar';

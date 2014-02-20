@@ -15,7 +15,7 @@ $_['column_action']           = 'Modificar';
 $_['entry_name']              = 'Nombre del País:';
 $_['entry_iso_code_2']        = 'Código ISO (2):';
 $_['entry_iso_code_3']        = 'Código ISO (3):';
-$_['entry_address_format']    = 'Formato de Dirección:<br /><span class="help">
+$_['entry_address_format']    = 'Formato de Dirección:<br /><span class="help-block">
 Nombre = {firstname}<br />
 Apellidos = {lastname}<br />
 Empresa = {company}<br />

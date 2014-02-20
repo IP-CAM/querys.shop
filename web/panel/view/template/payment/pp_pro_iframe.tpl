@@ -77,7 +77,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><?php echo $entry_debug; ?><br /><span class="help"><?php echo $help_debug ?></span></td>
+                        <td><?php echo $entry_debug; ?><br /><span class="help-block"><?php echo $help_debug ?></span></td>
                         <td>
                             <select name="pp_pro_iframe_debug">
                                 <?php if ($pp_pro_iframe_debug) { ?>
@@ -91,7 +91,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><?php echo $entry_checkout_method ?><br /><span class="help"><?php echo $help_checkout_method ?></span></td>
+                        <td><?php echo $entry_checkout_method ?><br /><span class="help-block"><?php echo $help_checkout_method ?></span></td>
                         <td>
                             <select name="pp_pro_iframe_checkout_method">
                                 <?php if ($pp_pro_iframe_checkout_method == 'iframe'): ?>
