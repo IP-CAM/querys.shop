@@ -19,7 +19,8 @@ class ControllerPaymentWebPay extends Controller {
 		$order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
         //Seteamos los valores que van irán a WebPay
-        $this->data['tbk_monto']            = $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false)."00";
+        // $this->data['tbk_monto']            = $this->currency->format($order_info['total'], $order_info['currency_code'], $order_info['currency_value'], false)."00";
+        $this->data['tbk_monto']            = $order_info['total']."00";
         $this->data['tbk_tipo_transaccion'] = 'TR_NORMAL'; 
         $this->data['tbk_orden_compra']     = $order_info['order_id'];
 		$this->data['tbk_id_sesion']        = $order_info['order_id'];
@@ -42,7 +43,7 @@ class ControllerPaymentWebPay extends Controller {
     /* Página de Fracaso si la transacción no fue completada correctamente */
 	public function fracaso(){
 
-        $tbk_orden_compra = ($this->request->get['TBK_ORDEN_COMPRA']?$this->request->get['TBK_ORDEN_COMPRA']:'');
+        $tbk_orden_compra = (isset($this->request->get['TBK_ORDEN_COMPRA'])?$this->request->get['TBK_ORDEN_COMPRA']:'');
         $this->language->load('payment/webpay');
 		$this->language->load('payment/webpay');
 		$this->language->load('checkout/checkout');
@@ -104,11 +105,28 @@ class ControllerPaymentWebPay extends Controller {
 
         if (!empty($_POST['TBK_ORDEN_COMPRA'])) {
 
-            $this->load->model('checkout/order');
+            $this->data['breadcrumbs'][] = array(
+                'text'      => $this->language->get('text_home'),
+                'href'      => $this->url->link('common/home'),
+                'separator' => false
+            );  
 
+            $this->data['breadcrumbs'][] = array(
+                'text'      => 'Compra',
+                'href'      => $this->url->link('checkout/checkout'),
+                'separator' => $this->language->get('text_separator')
+            );
+
+            $this->data['breadcrumbs'][] = array(
+                'text'      => 'Exito',
+                'href'      => $this->url->link('payment/webpay/exito'),
+                'separator' => $this->language->get('text_separator')
+            );
+
+
+            $this->load->model('checkout/order');
             $this->load->model('payment/webpay');
            
-
             $this->language->load('payment/webpay');
             $this->language->load('checkout/checkout');
             
@@ -138,6 +156,7 @@ class ControllerPaymentWebPay extends Controller {
             
             $order_id       =   $_POST['TBK_ORDEN_COMPRA'];
 
+            $order_info     =   $this->model_checkout_order->getOrder($order_id);
             $order_webpay   =   $this->model_payment_webpay->getOrderWebPay($order_id);
             $order_customer =   $this->model_payment_webpay->getCustomerByOrder($order_id);
 
@@ -159,56 +178,23 @@ class ControllerPaymentWebPay extends Controller {
             $this->data['continue'] = $this->url->link('checkout/success');
            
             #Data para imprimir vista, requeridos por Certificación Transbank
-            $this->data['nombre_comercio']  = $this->config->get('config_name');
-            $this->data['url_comercio']     = $this->config->get('config_url');
-            $this->data['nombre']               = $order_customer->row['firstname']." ".$order_customer->row['lastname'];
-            $this->data['fecha_transaccion']    = date('d-m-Y');
-            $this->data['tipo_transaccion']     = 'Venta';
-            $this->data['codigo_autorizacion']  = $order_webpay->row['tbk_codigo_autorizacion'];
-            $this->data['numero_tarjeta']       = $order_webpay->row['tbk_final_numero_tarjeta'];
-            $this->data['numero_orden_pedido']  = $order_id;
-            $this->data['cantidad_cuotas']      = $order_webpay->row['tbk_numero_cuotas'];
-            $this->data['vn']         			= $vn;            
-            $this->data['tipo_pago']			=	$tipo_pago;
+            $this->data['nombre_comercio']          = $this->config->get('config_name');
+            $this->data['url_comercio']             = $this->config->get('config_url');
+            $this->data['nombre']                   = $order_customer->row['firstname']." ".$order_customer->row['lastname'];
+            $this->data['fecha_transaccion']        = date('d-m-Y');
+            $this->data['tipo_transaccion']         = 'Venta';
+            $this->data['codigo_autorizacion']      = $order_webpay->row['tbk_codigo_autorizacion'];
+            $this->data['numero_tarjeta']           = $order_webpay->row['tbk_final_numero_tarjeta'];
+            $this->data['numero_orden_pedido']      = $order_id;
+            $this->data['cantidad_cuotas']          = $order_webpay->row['tbk_numero_cuotas'];
+            $this->data['vn']         			    = $vn;            
+            $this->data['tipo_pago']			    =	$tipo_pago;
             $this->data['tbk_fecha_transaccion']	=	$order_webpay->row['tbk_fecha_transaccion'];
             ###
 
-			$this->data['products'] = array();
-	
-			foreach ($this->cart->getProducts() as $product) {
-				$option_data = array();
-	
-				foreach ($product['option'] as $option) {
-					if ($option['type'] != 'file') {
-						$value = $option['option_value'];	
-					} else {
-						$filename = $this->encryption->decrypt($option['option_value']);
-						
-						$value = utf8_substr($filename, 0, utf8_strrpos($filename, '.'));
-					}
-										
-					$option_data[] = array(
-						'name'  => $option['name'],
-                        'value' => $value
-					);
-				}  
-	 
-				$this->data['products'][] = array(
-					'product_id' => $product['product_id'],
-					'name'       => $product['name'],
-					'model'      => $product['model'],
-					'option'     => $option_data,
-					'quantity'   => $product['quantity'],
-					'subtract'   => $product['subtract'],
-					'price'      => $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax'))),
-					'total'      => $this->currency->format($this->tax->calculate($product['total'], $product['tax_class_id'], $this->config->get('config_tax'))),
-					'href'       => $this->url->link('product/product', 'product_id=' . $product['product_id'])
-				); 
-			}
-
             $this->data['products'] = array();
-
-            $order_detail = $this->model_checkout_order->getOrderDetails($order_id);
+            
+            $order_detail = $this->model_payment_webpay->getOrderDetails($order_info);
             foreach ($order_detail['productos'] as $key => $product) {
 
                 $option_data = $product['option'];
