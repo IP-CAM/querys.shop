@@ -108,5 +108,56 @@ class ModelPaymentWebPay extends Model {
          }
         return $vn;
     }
+
+
+    public function getOrderDetails($order_info = array()) {
+     
+      if ($order_info) {
+    
+        $order_product_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_product WHERE order_id = '" . (int)$order_info['order_id'] . "'");
+        $order_total_query   = $this->db->query("SELECT * FROM `" . DB_PREFIX . "order_total` WHERE order_id = '" . (int)$order_info['order_id'] . "' ORDER BY sort_order ASC");
+        
+        $products = array();
+          
+        foreach ($order_product_query->rows as $product) {
+          $option_data = array();
+          
+          $order_option_query = $this->db->query("SELECT * FROM " . DB_PREFIX . "order_option WHERE order_id = '" . (int)$order_info['order_id'] . "' AND order_product_id = '" . (int)$product['order_product_id'] . "'");
+          
+          foreach ($order_option_query->rows as $option) {
+            if ($option['type'] != 'file') {
+              $value = $option['value'];
+            } else {
+              $value = utf8_substr($option['value'], 0, utf8_strrpos($option['value'], '.'));
+            }
+            
+            $option_data[] = array(
+              'name'  => $option['name'],
+              'value' => $value
+            );          
+          }
+          
+          $products[] = array(
+            'product_id'    => $product['product_id'],
+            'name'          => $product['name'],
+            'model'         => $product['model'],
+            'option'        => $option_data,
+            'quantity'      => $product['quantity'],
+            'price'         => $this->currency->format($product['price'] + ($this->config->get('config_tax') ? $product['tax'] : 0), $order_info['currency_code'], $order_info['currency_value']),
+            'total'         => $this->currency->format($product['total'] + ($this->config->get('config_tax') ? ($product['tax'] * $product['quantity']) : 0), $order_info['currency_code'], $order_info['currency_value'])
+          );
+        }
+    
+        $totals = $order_total_query->rows;
+
+        $data_info = array(
+          'productos' => $products,
+          'totals'  => $totals
+        );
+        return $data_info;
+        #PRODUCTOS
+        #TOTALES
+      }
+    }
 }
 ?>

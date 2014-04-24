@@ -1,14 +1,13 @@
 <?php
 /**
-* Joomla! 1.5 component JHShop
 *
-* @version $Id: config.php 2010-03-08 02:50:09 svn $
-* @author JHShop
-* @package Joomla
-* @subpackage JHShop
+* @author Sebastian Gonzalez Riffo
+* @email  sebastian@gonzalezr.cl
+* @package OpenCart
+* @subpackage Payment Webpay
 * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see license.txt
 *
-* JHShop - eCommerce Solution for Joomla
+* OpenCart eCommerce Solution
 */
 class ControllerPaymentWebPay extends Controller {
 	private $error = array(); 
@@ -116,7 +115,6 @@ class ControllerPaymentWebPay extends Controller {
 			'common/footer'	
 		);
 		
-		//$this->response->setOutput($this->render(TRUE), $this->config->get('config_compression'));
         $this->response->setOutput($this->render());
 	}
 

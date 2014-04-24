@@ -1,48 +1,46 @@
 # Config and Htaccess Files
-/web/.htaccess
-/web/config.php
-/web/admin/config.php
-/web/panel/config.php
+.htaccess
+config.php
+admin/config.php
+panel/config.php
 
 # System Cache Files
-/web/system/cache/*
-!/web/system/cache/index.html
+system/cache/*
+!system/cache/index.html
 
 # Image File
-!/web/image/no_image.jpg
+!image/no_image.jpg
 
 # Image Cache Files
-/web/image/cache/*
-!/web/image/cache/index.html
+image/cache/*
+!image/cache/index.html
 
 # Templates Files
-/web/image/templates/*
-/web/image/templates/default.jpg
+image/templates/*
+image/templates/default.jpg
 
 # Download Files
-/web/download/*
-!/web/download/index.html
+download/*
+!download/index.html
 
-!/web/data/index.html
+!data/index.html
 
 # Flags 
 # remove sharp char if you want to add flags to gitignore
-# /web/flags/*
+# flags/*
 
 # Log Files
-/web/system/logs/*
-!/web/system/logs/index.html
+system/logs/*
+!system/logs/index.html
 
 # If you want to ignore install file use following lines [on development mode]
-# /web/backup.install/*
-# /web/install/*
+# backup.install/*
+# install/*
 
 # Custom
-/cgi-bin/*
-/log/
-/web/stats/
-/web/vqmod/logs/*
-/web/vqmod/vqcache/*
-/web/vqmod/mods.cache
-!/web/vqmod/vqmod.php
-/web/error/*
+stats/
+vqmod/logs/*
+vqmod/vqcache/*
+vqmod/mods.cache
+!vqmod/vqmod.php
+error/*
